@@ -6,6 +6,7 @@
 <head runat="server">
     <title>Edit Profile</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body {
             background-color: #2C3E50;
@@ -163,6 +164,76 @@ small{
     font-weight: normal;
     border-radius: 0px;
 }
+
+
+
+
+
+/**footer style *****/
+.footer {
+     background-color: #2C3E50 !important; / Same as navbar */
+     color: #F4F1DE;
+     padding: 4px 0;
+     font-size: 14px;
+ }
+
+     .footer h4 {
+         color: #F1C40F;
+     }
+
+     .footer a {
+         color: #FFFFFF;
+         font-size: 14px;
+         text-decoration: none;
+         transition: color 0.3s ease-in-out;
+     }
+
+         .footer a:hover {
+             color: #F1C40F !important;
+         }
+
+     .footer .btn-social {
+         color: #F4F1DE;
+         border: 1px solid #F4F1DE;
+         margin-right: 8px;
+         width: 40px;
+         height: 40px;
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 50%;
+         transition: 0.3s;
+     }
+
+         .footer .btn-social:hover {
+             background-color: #F1C40F;
+             color: #2C3E50;
+         }
+
+     .footer .copyright {
+         border-top: 1px solid #F1C40F;
+         padding-top: 2px;
+         text-align: center;
+     }
+
+ .pf {
+     font-size: 0.9rem;
+     margin-left: 5vw;
+ }
+
+ .copyright a {
+     color: #F1C40F;
+     text-decoration: none;
+ }
+
+ #Image1 {
+     Width: 11vw;
+     Height: 5vw;
+ }
+
+ .foot {
+     box-shadow: 0.4vw 0.4vw 0.9vw black;
+ }
     </style>
 </head>
 <body>
@@ -248,54 +319,46 @@ small{
 
 
     
-    <!-- Footer Start -->
+   <!-- Footer Start -->
     <footer>
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5" style="justify-content: space-between !important;">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3" style="margin-bottom:-2px !important">
-                          <asp:Image ID="Image1" runat="server" ImageUrl="Images/Screenshot_2025-01-31_020111-removebg-preview.png" AlternateText="My Image" Width="224px" Height="77" />
-                    </h4>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <p>The Library Management System** streamlines book borrowing, room reservations, and feedback management for students and administrators in a university library.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="">Home</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Books</a>
-                    <a class="btn btn-link" href="">Rooms</a>
-                    <a class="btn btn-link" href="">About us</a>
+<div class="foot container-fluid footer text-light pt-5 mt-5">
+    <div class="container py-1">
+        <div class="row g-5 justify-content-between">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="mb-3">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="Img/logo11.png" AlternateText="My Image" />
+                </h4>
+                <p>The Library Management System streamlines book borrowing, room reservations, and feedback management for students and administrators in a university library.</p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4>Contact</h4>
+                <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" style="    width: 100%;
-    text-align: center !important;">
-                        &copy; <a class="border-bottom" href="#">Horizon</a>, All Right Reserved.</a>
-                    </div>
-                </div>
+            <div class="col-lg-3 col-md-6">
+                <h4>Quick Links</h4>
+                <a class="btn btn-link" href="">Home</a>
+                <a class="btn btn-link" href="">Contact Us</a>
+                <a class="btn btn-link" href="">Books</a>
+                <a class="btn btn-link" href="">Rooms</a>
+                <a class="btn btn-link" href="">About Us</a>
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="copyright">
+            <p>&copy; 2025 Horizon Library. All rights reserved. <a class="pfa" href="policy.aspx">Privacy Policy</a> | <a class="pfa" href="terms.aspx">Terms of Service</a></p>
+        </div>
+    </div>
     </footer>
-
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 </body>
 </html>
 

@@ -1,19 +1,25 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="updateImg.aspx.cs" Inherits="Group5.updateImg" %> 
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="updateImg.aspx.cs" Inherits="Group5.updateImg" %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head runat="server">
+    <meta charset="utf-8" />
     <title>Update Profile Image</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
     <style>
         body {
             background-color: #2C3E50;
             color: white;
+            font-family: Arial, sans-serif;
         }
         .container {
             background-color: #F4F1DE;
             border-radius: 15px;
             padding: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 40%;
+            margin-top: 50px;
         }
         .profile-section {
             text-align: center;
@@ -21,7 +27,7 @@
         .profile-section img {
             border: 3px solid #F1C40F;
         }
-        h4 {
+        h2 {
             color: #F1C40F;
             font-weight: bold;
         }
@@ -29,17 +35,24 @@
             color: #2C3E50;
             font-weight: bold;
         }
-        .profile-button {
-            background-color: #2C3E50;
-            color: white;
+        .btn {
+            padding: 10px 15px;
             border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 10px;
             transition: 0.3s ease-in-out;
         }
-        .profile-button:hover {
+        .btn-upload {
+            background-color: #2C3E50;
+            color: white;
+        }
+        .btn-upload:hover {
             background-color: #F1C40F;
             color: #2C3E50;
         }
-        .btn-secondary {
+        .btn-cancel {
             background-color: #F1C40F !important;
             color: #2C3E50 !important;
         }
@@ -47,50 +60,37 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="container mt-5">
-            <div class="row">
-                <!-- Profile Image Section -->
-                <div class="col-md-3 border-end text-center">
-                    <div class="profile-section p-3">
-                        <img class="rounded-circle mt-3" width="150px" src="\img\img1.png">
-                        <h5 class="mt-3 text-dark">Edogaru</h5>
-                        <div class="d-grid gap-2 mt-3">
-                            <asp:Button ID="Button5" runat="server" Text="Edit Information" class="btn profile-button"/>
-                            <asp:Button ID="resetPassword" runat="server" Text="Reset Password" class="btn profile-button" OnClick="resetPassword_Click"/>
-                            <asp:Button ID="editimg" runat="server" Text="Update Image" class="btn profile-button" OnClick="editimg_Click"/>
-                            <asp:Button ID="showBooks" runat="server" Text="View Books" class="btn profile-button" OnClick="showBooks_Click"/>
-                            <asp:Button ID="showRooms" runat="server" Text="View Rooms" class="btn profile-button" OnClick="showRooms_Click"/>
-                        </div>
-                    </div>
-                </div>
+        <div class="container">
+            <h2 class="text-center">Update Profile Image</h2>
 
-                <!-- Profile Form Section -->
-                <div class="col-md-5">
-                    <div class="p-3">
-                        <h4 class="text-center">Update Profile Image</h4>
-                        <div class="row mt-3">
-                         <!-- File Upload Section -->
-                            <div class="col-md-12">
-                                <label for="fileUpload" class="labels">Profile Image</label>
-                                <asp:FileUpload ID="fileUpload" runat="server" class="form-control" />
-                                <asp:Image ID="profileImg" runat="server" src="" class="rounded-circle mt-3" width="150px" />
-                            </div>
-
-  />
-
-
-
-                            <asp:Label ID="Editmessage" runat="server" Visible="false" CssClass="text-danger mt-3"></asp:Label>
-                        </div>
-
-                        <!-- Action Buttons -->
-                        <div class="mt-4 text-center">
-                            <asp:Button ID="update" runat="server" OnClick="update_Click" Text="Update Image" class="btn profile-button"/>
-                            <asp:Button ID="cancel" runat="server" OnClick="cancel_Click" Text="Cancel" class="btn btn-secondary"/>
-                        </div>
-                    </div>
-                </div>
+            <!-- Profile Image -->
+            <div class="profile-section">
+                <asp:Image ID="imgProfile" runat="server" CssClass="rounded-circle mt-3" Width="100" Height="100" 
+                    ImageUrl="/img/default.png" alt="Profile Image" />
             </div>
+
+            <br />
+
+            <!-- File Upload -->
+            <label for="fileUpload" class="form-label">Choose Profile Image</label>
+            <asp:FileUpload ID="fileUpload" runat="server" CssClass="form-control" />
+
+            <br />
+
+            <!-- Upload Button -->
+            <div class="text-center">
+                <asp:Button ID="editimg" runat="server" Text="Upload Image" CssClass="btn btn-upload" 
+                    OnClick="Editimg_Click" />
+
+                <!-- Cancel Button -->
+                <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-cancel"
+                    OnClick="cancel_Click" />
+            </div>
+
+            <br />
+
+            <!-- Success/Error Message -->
+            <asp:Label ID="Editmessage" runat="server" ForeColor="Red" Visible="false"></asp:Label>
         </div>
     </form>
 </body>

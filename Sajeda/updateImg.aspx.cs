@@ -84,94 +84,138 @@
 using System;
 using System.Data.SqlClient;
 using System.IO;
+using System.Security.Policy;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
-namespace Group5.Sajeda
+namespace Group5
 {
     public partial class updateImg : System.Web.UI.Page
     {
+        private string imageFolderPath;
+        private string imgTxtFile;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            imageFolderPath = Server.MapPath("~/img/");
+            imgTxtFile = Server.MapPath("~/img/img.txt");
 
+            if (!IsPostBack)
+            {
+                LoadProfileImage();
+            }
         }
 
-        protected void editimg_Click(object sender, EventArgs e)
+        private void LoadProfileImage()
         {
-            string imgfile = Server.MapPath("~/img.txt");
-            string imageFolderPath = Server.MapPath("~/img/");
-            string imgPath = "/img/img1.png";
+            if (File.Exists(imgTxtFile))
+            {
+                string[] lines = File.ReadAllLines(imgTxtFile);
+                if (lines.Length > 0)
+                {
+                    imgProfile.ImageUrl = lines[0]; // Load the first saved image
+                    Session["UserImagePath"] = lines[0];
+                }
+                else
+                {
+                    imgProfile.ImageUrl = "/img/default.png"; // Default image if file is empty
+                }
+            }
+            else
+            {
+                imgProfile.ImageUrl = "/img/default.png"; // Default image if file doesn't exist
+            }
+        }
+
+        protected void Editimg_Click(object sender, EventArgs e)
+        {
+            if (fileUpload.HasFile)
+            {
+                try
+                {
+                    // Ensure the image folder exists
+                    if (!Directory.Exists(imageFolderPath))
+                    {
+                        Directory.CreateDirectory(imageFolderPath);
+                    }
+
+                    // Generate a unique filename
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(fileUpload.FileName);
+                    string savePath = Path.Combine(imageFolderPath, fileName);
+
+                    // Save the uploaded file
+                    fileUpload.SaveAs(savePath);
+
+                    // Store relative path
+                    string imagePath = "/img/" + fileName;
+
+                    // Ensure img.txt file exists
+                    if (!File.Exists(imgTxtFile))
+                    {
+                        File.Create(imgTxtFile).Close(); // Create and close the file
+                    }
+
+                    // Save image path to img.txt (overwrite previous image path)
+                    File.WriteAllText(imgTxtFile, imagePath);
+
+                    // Store in session to reflect update immediately
+                    Session["UserImagePath"] = imagePath;
+
+                    // Update the displayed image
+                    imgProfile.ImageUrl = imagePath;
+
+                    // Show success message
+                    Editmessage.Text = "Image uploaded successfully!";
+                    Editmessage.ForeColor = System.Drawing.Color.Green;
+                    Editmessage.Visible = true;
+                }
+                catch (Exception ex)
+                {
+                    Editmessage.Text = "Error: " + ex.Message;
+                    Editmessage.ForeColor = System.Drawing.Color.Red;
+                    Editmessage.Visible = true;
+                }
+            }
+            else
+            {
+                Editmessage.Text = "Please select an image.";
+                Editmessage.ForeColor = System.Drawing.Color.Red;
+                Editmessage.Visible = true;
+            }
+        }
+
+        protected void cancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Profile.aspx");
+        }
+    
 
 
-        //    if (File.Exists(imgfile))
-        //    {
-        //        // Read all lines from the file to check for the URL
-        //        string[] fileContent = File.ReadAllLines(imgfile);
-
-            //        // Open the file for writing, and overwrite it
-            //        using (StreamWriter writeBook2 = new StreamWriter(imgfile, false))
-            //        {
-            //            foreach (var line in fileContent)
-            //            {
-            //                // Check if the line contains the old URL or image reference
-            //                if (line.Contains("http://") || line.Contains("https://"))
-            //                {
-            //                    // Replace the old URL with the new one
-            //                    writeBook2.WriteLine($"{imageFolderPath}"); // new image URL
-            //                }
-            //                else
-            //                {
-            //                    // If it's not a URL line, keep the original line
-            //                    writeBook2.WriteLine(line);
-            //                }
-            //            }
-            //        }
-            //    }
-
-      
-    //        if (fileUpload.HasFile)
-    //        {
-    //            string fileName = Path.GetFileName(fileUpload.FileName);
-    //            string savePath = Path.Combine(imageFolderPath, fileName);
-    //            fileUpload.SaveAs(savePath);
-
-    //            lblMessage.Text = "Image uploaded successfully!";
-    //            lblMessage.ForeColor = System.Drawing.Color.Green;
-    //        }
-    //        else
-    //        {
-    //            lblMessage.Text = "Please select an image to upload.";
-    //            lblMessage.ForeColor = System.Drawing.Color.Red;
-    //        }
-    //    }
-
-    //}
-
-}
 
 
-    //if (File.Exists(imgfile))
-    //{
-    //    //string[] userImg = File.ReadAllLines(imgfile);
 
-    //    using (StreamWriter writeBook2 = new StreamWriter(imgfile,false))
-    //    {
-    //        writeBook2.WriteLine($"{fileUpload.Text}");
-    //    }
+//if (File.Exists(imgfile))
+//{
+//    //string[] userImg = File.ReadAllLines(imgfile);
+
+//    using (StreamWriter writeBook2 = new StreamWriter(imgfile,false))
+//    {
+//        writeBook2.WriteLine($"{fileUpload.Text}");
+//    }
 
 
-    //if (fileUpload.HasFile)
-    //{
-    //    string fileName = Path.GetFileName(fileUpload.FileName);
-    //    string savePath = Path.Combine(imageFolderPath, fileName);
-    //    fileUpload.SaveAs(savePath);
-    //    imgPath = "img/" + fileName;
-    //    string newimg = $"{imgPath}";
-    //    File.AppendAllLines(imgfile, new[] { newimg });
+//if (fileUpload.HasFile)
+//{
+//    string fileName = Path.GetFileName(fileUpload.FileName);
+//    string savePath = Path.Combine(imageFolderPath, fileName);
+//    fileUpload.SaveAs(savePath);
+//    imgPath = "img/" + fileName;
+//    string newimg = $"{imgPath}";
+//    File.AppendAllLines(imgfile, new[] { newimg });
 
-    //}
+//}
 
 
 
@@ -179,27 +223,27 @@ namespace Group5.Sajeda
 
 
 
-    //string usersFile = Server.MapPath("users.txt");
-    //if (File.Exists(usersFile))
-    //{
-    //    string[] readData = File.ReadAllLines(usersFile);
-    //    for (int i = 0; i < readData.Length; i++)
-    //    {
-    //        string[] studentData = readData[i].Split(',');
-    //        if (studentData[7] == "true")
-    //        {
-    //            // Add the image path as the last index
-    //            Array.Resize(ref studentData, studentData.Length + 1);
-    //            studentData[8] = imgPath;
-    //            readData[i] = string.Join(",", studentData);
-    //            File.WriteAllLines(usersFile, readData);
-    //            break; // Stop after updating the correct record
-    //        }
-    //    }
-    //}
+//string usersFile = Server.MapPath("users.txt");
+//if (File.Exists(usersFile))
+//{
+//    string[] readData = File.ReadAllLines(usersFile);
+//    for (int i = 0; i < readData.Length; i++)
+//    {
+//        string[] studentData = readData[i].Split(',');
+//        if (studentData[7] == "true")
+//        {
+//            // Add the image path as the last index
+//            Array.Resize(ref studentData, studentData.Length + 1);
+//            studentData[8] = imgPath;
+//            readData[i] = string.Join(",", studentData);
+//            File.WriteAllLines(usersFile, readData);
+//            break; // Stop after updating the correct record
+//        }
+//    }
+//}
 
 
-        protected void resetPassword_Click(object sender, EventArgs e)
+protected void resetPassword_Click(object sender, EventArgs e)
         {
             Response.Redirect("resetPassword.aspx");
         }
@@ -224,9 +268,9 @@ namespace Group5.Sajeda
             // Update user data
         }
 
-        protected void cancel_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Profile.aspx");
-        }
-    }
+        //protected void cancel_Click(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("Profile.aspx");
+        //}
+    } 
 }
