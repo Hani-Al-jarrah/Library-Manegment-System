@@ -15,6 +15,7 @@ namespace Group5.Suhaib
         {
             // Get user input values
             string fullName = name.Text.Trim();
+            //string fullName = name.Text.Trim();
             string phoneNumber = phone.Text.Trim();
             string universityId = uniID.Text.Trim();
             string emailAddress = email.Text.Trim();

@@ -29,6 +29,7 @@
                                 </div>
                                 <div class="text-center mt-4">
                                     <asp:Button ID="login" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="login_Click" />
+                                    <%--<asp:Button ID="login" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="login_Click" />--%>
                                 </div>
                             </div>
                         </div>
@@ -40,3 +41,5 @@
     </form>
 </body>
 </html>
+
+
