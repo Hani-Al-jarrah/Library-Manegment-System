@@ -11,6 +11,7 @@
         body {
             background-color: #2C3E50;
             color: #F4F1DE;
+/*            font-family: Garamond;*/
         }
 
         .container {
@@ -277,7 +278,14 @@
                 <asp:HiddenField ID="hiddenOriginalBookId" runat="server" />
                 <asp:HiddenField ID="hiddenOriginalBookName" runat="server" />
 
-                <h3 class="mt-4">Book List</h3>
+                <h3 class="mt-4 d-flex justify-content-between">Book List
+   
+                    <asp:LinkButton ID="btnDownloadBooksPDF" runat="server" CssClass="btn btn-outline-light btn-sm"
+                        OnClick="btnDownloadBooksPDF_Click" ToolTip="Download as PDF">
+        <i class="fa fa-download"></i>
+    </asp:LinkButton>
+                </h3>
+
                 <asp:GridView ID="gvBooks" runat="server" CssClass="table table-striped" AutoGenerateColumns="False">
                     <Columns>
                         <asp:BoundField DataField="BookID" HeaderText="Book ID" />
@@ -292,14 +300,25 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Actions">
                             <ItemTemplate>
-                                <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btn btn-warning btn-sm" CommandArgument='<%# Eval("BookID") %>' OnClick="btnEdit_Click" />
-                                <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-danger btn-sm" CommandArgument='<%# Eval("BookID") %>' OnClick="btnDelete_Click" />
+                                <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btn btn-warning btn-sm"
+                                    CommandArgument='<%# Eval("BookID") %>' OnClick="btnEdit_Click"
+                                    CausesValidation="false" UseSubmitBehavior="false" />
+
+                                <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-danger btn-sm"
+                                    CommandArgument='<%# Eval("BookID") %>' OnClick="btnDelete_Click"
+                                    CausesValidation="false" UseSubmitBehavior="false" />
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
 
-                <h3 class="mt-4">Borrow Requests</h3>
+                <h3 class="mt-4 d-flex justify-content-between">Borrow Requests
+   
+                    <asp:LinkButton ID="btnDownloadRequestsPDF" runat="server" CssClass="btn btn-outline-light btn-sm"
+                        OnClick="btnDownloadRequestsPDF_Click" ToolTip="Download as PDF">
+        <i class="fa fa-download"></i>
+    </asp:LinkButton>
+                </h3>
                 <asp:GridView ID="gvRequestedBooks" runat="server" CssClass="table table-striped" AutoGenerateColumns="False">
                     <Columns>
                         <asp:BoundField DataField="BookID" HeaderText="Book ID" />
@@ -313,11 +332,11 @@
                             <ItemTemplate>
                                 <asp:Button ID="btnApprove" runat="server" Text="Approve" CssClass="btn btn-success btn-sm"
                                     CommandArgument='<%# Eval("BookID") %>' OnClick="btnApprove_Click"
-                                    Visible='<%# Eval("ShowActionButtons") %>' />
+                                    Visible='<%# Eval("ShowActionButtons") %>' CausesValidation="false" UseSubmitBehavior="false" />
 
                                 <asp:Button ID="btnReject" runat="server" Text="Reject" CssClass="btn btn-danger btn-sm"
                                     CommandArgument='<%# Eval("BookID") %>' OnClick="btnReject_Click"
-                                    Visible='<%# Eval("ShowActionButtons") %>' />
+                                    Visible='<%# Eval("ShowActionButtons") %>' CausesValidation="false" UseSubmitBehavior="false" />
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
@@ -327,45 +346,45 @@
 
             </div>
         </div>
-         <!-- Footer Start -->
- <div class="foot container-fluid footer text-light pt-5 mt-5">
-     <div class="container py-1">
-         <div class="row g-5 justify-content-between">
-             <div class="col-lg-3 col-md-6">
-                 <h4 class="mb-3">
-                     <asp:Image ID="Image1" runat="server" ImageUrl="Img/logo11.png" AlternateText="My Image" />
-                 </h4>
-                 <p>The Library Management System streamlines book borrowing, room reservations, and feedback management for students and administrators in a university library.</p>
-             </div>
-             <div class="col-lg-3 col-md-6">
-                 <h4>Contact</h4>
-                 <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                 <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                 <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                 <div class="d-flex pt-2">
-                     <a class="btn btn-social" href=""><i class="fab fa-twitter"></i></a>
-                     <a class="btn btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                     <a class="btn btn-social" href=""><i class="fab fa-youtube"></i></a>
-                     <a class="btn btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                 </div>
-             </div>
-             <div class="col-lg-3 col-md-6">
-                 <h4>Quick Links</h4>
-                 <a class="btn btn-link" href="">Home</a>
-                 <a class="btn btn-link" href="">Contact Us</a>
-                 <a class="btn btn-link" href="">Books</a>
-                 <a class="btn btn-link" href="">Rooms</a>
-                 <a class="btn btn-link" href="">About Us</a>
-             </div>
-         </div>
-     </div>
-     <div class="container">
-         <div class="copyright">
-             <p>&copy; 2025 Horizon Library. All rights reserved. <a class="pfa" href="policy.aspx">Privacy Policy</a> | <a class="pfa" href="terms.aspx">Terms of Service</a></p>
-         </div>
-     </div>
+        <!-- Footer Start -->
+        <div class="foot container-fluid footer text-light pt-5 mt-5">
+            <div class="container py-1">
+                <div class="row g-5 justify-content-between">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="mb-3">
+                            <asp:Image ID="Image1" runat="server" ImageUrl="Img/logo11.png" AlternateText="My Image" />
+                        </h4>
+                        <p>The Library Management System streamlines book borrowing, room reservations, and feedback management for students and administrators in a university library.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4>Contact</h4>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4>Quick Links</h4>
+                        <a class="btn btn-link" href="">Home</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Books</a>
+                        <a class="btn btn-link" href="">Rooms</a>
+                        <a class="btn btn-link" href="">About Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; 2025 Horizon Library. All rights reserved. <a class="pfa" href="policy.aspx">Privacy Policy</a> | <a class="pfa" href="terms.aspx">Terms of Service</a></p>
+                </div>
+            </div>
 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     </form>
 </body>
 </html>
