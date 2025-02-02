@@ -70,6 +70,7 @@
     <Content Include="Habib\Habib1.aspx" />
     <Content Include="Hani\Hani1.aspx" />
     <Content Include="Mona\AdminBooks.aspx" />
+    <Content Include="Mona\intro.aspx" />
     <Content Include="Mona\StudentsBooks.aspx" />
     <Content Include="Hani\AddRoom.aspx" />
     <Content Include="Hani\AdminRooms.aspx" />
@@ -142,6 +143,13 @@
     </Compile>
     <Compile Include="Mona\AdminBooks.aspx.designer.cs">
       <DependentUpon>AdminBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mona\intro.aspx.cs">
+      <DependentUpon>intro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mona\intro.aspx.designer.cs">
+      <DependentUpon>intro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mona\StudentsBooks.aspx.cs">
       <DependentUpon>StudentsBooks.aspx</DependentUpon>
