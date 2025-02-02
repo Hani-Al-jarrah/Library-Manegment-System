@@ -1,0 +1,301 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="editProfile.aspx.cs" Inherits="Group5.editProfile" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Edit Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #2C3E50;
+            color: white;
+        }
+        .container {
+            background-color: #F4F1DE;
+            border-radius: 15px;
+            padding: 30px;
+        }
+        .profile-section {
+            text-align: center;
+        }
+        .profile-section img {
+            border: 3px solid #F1C40F;
+        }
+        h4 {
+            color: #F1C40F;
+            font-weight: bold;
+        }
+        label {
+            color: #2C3E50;
+            font-weight: bold;
+        }
+        .profile-button {
+            background-color: #2C3E50;
+            color: white;
+            border: none;
+            transition: 0.3s ease-in-out;
+        }
+        .profile-button:hover {
+            background-color: #F1C40F;
+            color: #2C3E50;
+        }
+        .btn-secondary {
+            background-color: #F1C40F !important;
+            color: #2C3E50 !important;
+        }
+
+        /*NAvbar*/ 
+
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color:#F1C40F;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .dropdown-menu.fade-down {
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+ nav .btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+    color: white;
+    background-color: #2C3E50;
+    border: none;
+    border-left: 20px;
+}
+.btn:hover{
+    background-color: #F1C40F;
+    color: black;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+small{
+    color: #F1C40F;
+}
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 0px;
+}
+    </style>
+</head>
+<body>
+        <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg  navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+              <asp:Image ID="Image2" runat="server" ImageUrl="Images/Screenshot_2025-01-31_020111-removebg-preview.png" AlternateText="My Image" Width="300px" />
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">AboutUS</a>
+                <a href="courses.html" class="nav-item nav-link">Rooms</a>
+                <a href="courses.html" class="nav-item nav-link">Books</a>
+                <a href="courses.html" class="nav-item nav-link">Contactus</a>
+                <a href="courses.html" class="nav-item nav-link">LogOut</a>
+            </div>
+            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+
+
+
+    <form id="form1" runat="server">
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Profile Image Section -->
+                <div class="col-md-3 border-end text-center">
+                    <div class="profile-section p-3">
+                        <img class="rounded-circle mt-3" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                        <h5 class="mt-3 text-dark">Edogaru</h5>
+                        <div class="d-grid gap-2 mt-3">
+                            <asp:Button ID="Button5" runat="server" Text="Edit Information" class="btn profile-button"/>
+                            <asp:Button ID="resetPassword" runat="server" Text="Reset Password" class="btn profile-button" OnClick="resetPassword_Click"/>
+                            <asp:Button ID="editimg" runat="server" Text="Update Image" class="btn profile-button" OnClick="editimg_Click"/>
+                            <asp:Button ID="showBooks" runat="server" Text="View Books" class="btn profile-button" OnClick="showBooks_Click"/>
+                            <asp:Button ID="showRooms" runat="server" Text="View Rooms" class="btn profile-button" OnClick="showRooms_Click"/>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Form Section -->
+                <div class="col-md-5">
+                    <div class="p-3">
+                        <h4 class="text-center">Profile</h4>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label class="labels">Name</label>
+                                <asp:TextBox ID="name" runat="server" class="form-control"></asp:TextBox>
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <label class="labels">Email</label>
+                                <asp:TextBox ID="email" runat="server" class="form-control"></asp:TextBox>
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <label class="labels">Mobile Number</label>
+                                <asp:TextBox ID="phone" runat="server" class="form-control"></asp:TextBox>
+                            </div>
+                            <asp:TextBox ID="flag" runat="server" class="form-control" Visible="false"></asp:TextBox>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="mt-4 text-center">
+                            <asp:Button ID="edit" runat="server" OnClick="edit_Click" Text="Save Changes" class="btn profile-button"/>
+                            <asp:Button ID="cancel" runat="server" OnClick="cancel_Click" Text="Cancel" class="btn btn-secondary"/>
+                        </div>
+
+                        <!-- Message -->
+                        <asp:Label ID="Editmessage" runat="server" Visible="false" CssClass="text-danger mt-3"></asp:Label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+    
+    <!-- Footer Start -->
+    <footer>
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5" style="justify-content: space-between !important;">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3" style="margin-bottom:-2px !important">
+                          <asp:Image ID="Image1" runat="server" ImageUrl="Images/Screenshot_2025-01-31_020111-removebg-preview.png" AlternateText="My Image" Width="224px" Height="77" />
+                    </h4>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <p>The Library Management System** streamlines book borrowing, room reservations, and feedback management for students and administrators in a university library.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">Home</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Books</a>
+                    <a class="btn btn-link" href="">Rooms</a>
+                    <a class="btn btn-link" href="">About us</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" style="    width: 100%;
+    text-align: center !important;">
+                        &copy; <a class="border-bottom" href="#">Horizon</a>, All Right Reserved.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+</body>
+</html>
+
