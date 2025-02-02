@@ -14,7 +14,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            animation: fadeIn 1.5s ease-in-out;
+            animation: fadeIn 1s ease-in-out;
         }
 
         /* Login Container */
@@ -62,6 +62,21 @@
             animation: fadeInUp 1.5s ease-out forwards;
         }
 
+        /* Stylish Textbox */
+        .form-control {
+            border-radius: 25px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-control:focus {
+            border-color: #F4F1DE;
+            box-shadow: 0px 0px 10px rgba(244, 241, 222, 0.7);
+            outline: none;
+        }
+
         /* Login Header */
         .login-title {
             font-size: 2.2rem;
@@ -69,7 +84,7 @@
             margin-bottom: 25px;
             color: #34495E;
             opacity: 0;
-            animation: fadeInUp 1.5s ease-out forwards;
+            animation: fadeInUp 1s ease-out forwards;
         }
 
         /* Button Styling */
@@ -86,6 +101,24 @@
         .btn-login:hover {
             background-color: #E0DAC6;
             transform: scale(1.05);
+        }
+
+        /* Register Link */
+        .register-link {
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .register-link a {
+            color: #524d27;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .register-link a:hover {
+            color: #E0DAC6;
+            text-decoration: underline;
         }
 
         /* Footer */
@@ -176,6 +209,12 @@
                     <div class="form-group">
                         <asp:Button ID="login" runat="server" Text="Login" CssClass="btn btn-login" OnClick="login_Click" />
                     </div>
+
+                    <!-- Register Link -->
+                    <div class="register-link">
+                        Don't have an account? <a href="registration.aspx">Sign up here</a>
+                    </div>
+
                 </div>
             </div>
         </div>

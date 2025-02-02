@@ -27,47 +27,51 @@
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
+
         .btn {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-    transition: .5s;
-    color: white;
-    background-color: #2C3E50;
-    border: none;
-    border-left: 20px;
-}
-.btn:hover{
-    background-color: #F1C40F;
-    color: black;
-}
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            transition: .5s;
+            color: white;
+            background-color: #2C3E50;
+            border: none;
+            border-left: 20px;
+        }
 
-.btn-square {
-    width: 38px;
-    height: 38px;
-}
+            .btn:hover {
+                background-color: #F1C40F;
+                color: black;
+            }
 
-.btn-sm-square {
-    width: 32px;
-    height: 32px;
-}
-small{
-    color: #F1C40F;
-}
-.btn-lg-square {
-    width: 48px;
-    height: 48px;
-}
+        .btn-square {
+            width: 38px;
+            height: 38px;
+        }
 
-.btn-square,
-.btn-sm-square,
-.btn-lg-square {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: normal;
-    border-radius: 0px;
-}
+        .btn-sm-square {
+            width: 32px;
+            height: 32px;
+        }
+
+        small {
+            color: #F1C40F;
+        }
+
+        .btn-lg-square {
+            width: 48px;
+            height: 48px;
+        }
+
+        .btn-square,
+        .btn-sm-square,
+        .btn-lg-square {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: normal;
+            border-radius: 0px;
+        }
 
 
         body {
@@ -76,7 +80,7 @@ small{
             display: flex;
             flex-direction: column;
             justify-content: center;
-/*            align-items: center;*/
+            /*            align-items: center;*/
             background-color: #2C3E50;
             /* Deep Blue */
             background-image: url(https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
@@ -85,91 +89,91 @@ small{
             position: relative;
         }
         /*** Navbar ***/
-.navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
-}
+        .navbar .dropdown-toggle::after {
+            border: none;
+            content: "\f107";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
 
-.navbar-light .navbar-nav .nav-link {
-    margin-right: 30px;
-    padding: 25px 0;
-    color: #FFFFFF;
-    font-size: 15px;
-    text-transform: uppercase;
-    outline: none;
-}
+        .navbar-light .navbar-nav .nav-link {
+            margin-right: 30px;
+            padding: 25px 0;
+            color: #FFFFFF;
+            font-size: 15px;
+            text-transform: uppercase;
+            outline: none;
+        }
 
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-    color:#F1C40F;
-}
-
-@media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
-        margin-right: 0;
-        padding: 10px 0;
-    }
-
-    .navbar-light .navbar-nav {
-        border-top: 1px solid #EEEEEE;
-    }
-}
-
-.navbar-light .navbar-brand,
-.navbar-light a.btn {
-    height: 75px;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: var(--dark);
-    font-weight: 500;
-}
-
-.navbar-light.sticky-top {
-    top: -100px;
-    transition: .5s;
-}
-
-@media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        margin-top: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
-    }
-
-    .navbar .dropdown-menu.fade-down {
-        top: 100%;
-        transform: rotateX(-75deg);
-        transform-origin: 0% 0%;
-    }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        top: 100%;
-        transform: rotateX(0deg);
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
-    }
-}
-
-
-
-            body::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                background-color: rgba(44, 62, 80, 0.9);
-                /* Deep Blue with opacity */
+            .navbar-light .navbar-nav .nav-link:hover,
+            .navbar-light .navbar-nav .nav-link.active {
+                color: #F1C40F;
             }
+
+        @media (max-width: 991.98px) {
+            .navbar-light .navbar-nav .nav-link {
+                margin-right: 0;
+                padding: 10px 0;
+            }
+
+            .navbar-light .navbar-nav {
+                border-top: 1px solid #EEEEEE;
+            }
+        }
+
+        .navbar-light .navbar-brand,
+        .navbar-light a.btn {
+            height: 75px;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .navbar-light.sticky-top {
+            top: -100px;
+            transition: .5s;
+        }
+
+        @media (min-width: 992px) {
+            .navbar .nav-item .dropdown-menu {
+                display: block;
+                margin-top: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: .5s;
+            }
+
+            .navbar .dropdown-menu.fade-down {
+                top: 100%;
+                transform: rotateX(-75deg);
+                transform-origin: 0% 0%;
+            }
+
+            .navbar .nav-item:hover .dropdown-menu {
+                top: 100%;
+                transform: rotateX(0deg);
+                visibility: visible;
+                transition: .5s;
+                opacity: 1;
+            }
+        }
+
+
+
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(44, 62, 80, 0.9);
+            /* Deep Blue with opacity */
+        }
 
         /* Navigation Bar */
         nav {
@@ -427,12 +431,12 @@ small{
                     transition: 0.5s;
                 }
 
-                    .contact-form .input-box #btnSubmit {
-                        background: #F1C40F;
-                        /* Warm Gold */
-                        color: #2C3E50;
-                        /* Deep Blue */
-                    }
+                .contact-form .input-box #btnSubmit {
+                    background: #F1C40F;
+                    /* Warm Gold */
+                    color: #2C3E50;
+                    /* Deep Blue */
+                }
 
         /* Responsive Design */
         @media (max-width: 991px) {
@@ -519,73 +523,75 @@ small{
                 transform: translateX(0);
             }
         }
+
         .footer .btn.btn-social {
-    margin-right: 5px;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--light);
-    font-weight: normal;
-    border: 1px solid #FFFFFF;
-    border-radius: 35px;
-    transition: .3s;
-}
+            margin-right: 5px;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            font-weight: normal;
+            border: 1px solid #FFFFFF;
+            border-radius: 35px;
+            transition: .3s;
+        }
 
-.footer .btn.btn-social:hover {
-    color: var(--primary);
-}
+            .footer .btn.btn-social:hover {
+                color: var(--primary);
+            }
 
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
-    color: #FFFFFF;
-    font-size: 15px;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-}
+        .footer .btn.btn-link {
+            display: block;
+            margin-bottom: 5px;
+            padding: 0;
+            text-align: left;
+            color: #FFFFFF;
+            font-size: 15px;
+            font-weight: normal;
+            text-transform: capitalize;
+            transition: .3s;
+        }
 
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
-}
+            .footer .btn.btn-link::before {
+                position: relative;
+                content: "\f105";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                margin-right: 10px;
+            }
 
-.footer .btn.btn-link:hover {
-    letter-spacing: 1px;
-    box-shadow: none;
-}
+            .footer .btn.btn-link:hover {
+                letter-spacing: 1px;
+                box-shadow: none;
+            }
 
-.footer .copyright {
-    padding: 25px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
+        .footer .copyright {
+            padding: 25px 0;
+            font-size: 15px;
+            border-top: 1px solid rgba(256, 256, 256, .1);
+        }
 
-.footer .copyright a {
-    color: var(--light);
-}
+            .footer .copyright a {
+                color: var(--light);
+            }
 
-.footer .footer-menu a {
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
-}
+        .footer .footer-menu a {
+            margin-right: 15px;
+            padding-right: 15px;
+            border-right: 1px solid rgba(255, 255, 255, .1);
+        }
 
-.footer .footer-menu a:last-child {
-    margin-right: 0;
-    padding-right: 0;
-    border-right: none;
-}
-.footer{
-    z-index:3000;
-}
+            .footer .footer-menu a:last-child {
+                margin-right: 0;
+                padding-right: 0;
+                border-right: none;
+            }
+
+        .footer {
+            z-index: 3000;
+        }
     </style>
 </head>
 <body>
@@ -600,14 +606,14 @@ small{
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">AboutUS</a>
-                <a href="courses.html" class="nav-item nav-link">Rooms</a>
-                <a href="courses.html" class="nav-item nav-link">Books</a>
-                <a href="courses.html" class="nav-item nav-link">Contactus</a>
-                <a href="courses.html" class="nav-item nav-link">LogOut</a>
+                <a href="Home.aspx" class="nav-item nav-link active">Home</a>
+       <a href="aboutus.aspx" class="nav-item nav-link">About Us</a>
+       <a href="/Hani/Rooms.aspx" class="nav-item nav-link">Rooms</a>
+       <a href="/Mona/StudentsBooks.aspx" class="nav-item nav-link">Books</a>
+       <a href="Contact.aspx" class="nav-item nav-link">Contact Us</a>
+       <a href="/Suhaib/Loginpage.aspx" class="nav-item nav-link">LogOut</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
+            <a href="/Sajeda/Profile.aspx" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
         </div>
     </nav>
 
@@ -629,9 +635,11 @@ small{
                             </div>
                             <div class="contact-info-content">
                                 <h4>Address</h4>
-                                <p>123 Library Lane,<br />
-                                    Knowledge City,<br />
-                                    45678</p>
+<p>Harvard Library<br />
+    1 Harvard Yard,<br />
+    Cambridge, MA 02138,<br />
+    USA</p>
+
                             </div>
                         </div>
 
@@ -641,7 +649,7 @@ small{
                             </div>
                             <div class="contact-info-content">
                                 <h4>Phone</h4>
-                                <p>+1 234 567 890</p>
+                                <p>+962 777 999 1234</p>
                             </div>
                         </div>
 
@@ -703,8 +711,8 @@ small{
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-3">Contact</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+962 777 999 1234</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>support@librarymanagement.com</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -714,11 +722,11 @@ small{
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-3">Quick Link</h4>
-                <a class="btn btn-link" href="">Home</a>
-                <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Books</a>
-                <a class="btn btn-link" href="">Rooms</a>
-                <a class="btn btn-link" href="">About us</a>
+                 <a class="btn btn-link" href="/Habib/Home.aspx">Home</a>
+      <a class="btn btn-link" href="/Habib/Contact.aspx">Contact Us</a>
+      <a class="btn btn-link" href="/Mona/StudentsBooks.aspx">Books</a>
+      <a class="btn btn-link" href="/Hani/Rooms.aspx">Rooms</a>
+      <a class="btn btn-link" href="aboutus.aspx">About Us</a>
             </div>
         </div>
     </div>
@@ -737,7 +745,7 @@ text-align: center !important;">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
     (function () {
-        emailjs.init("YOUR_USER_ID"); 
+        emailjs.init("YOUR_USER_ID");
     })();
 
     const menuToggle = document.querySelector('.menu-toggle');
@@ -747,7 +755,7 @@ text-align: center !important;">
         navUl.classList.toggle('active');
     });
     (function () {
-        emailjs.init("ak8XwcvPwPsxFSSIU"); 
+        emailjs.init("ak8XwcvPwPsxFSSIU");
     })();
     function sendEmail() {
         // Hardcoded values for testing

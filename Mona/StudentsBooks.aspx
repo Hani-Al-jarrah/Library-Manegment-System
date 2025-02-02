@@ -234,27 +234,27 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg  navbar-light shadow sticky-top p-0">
-            <a href="index.html" class="navbar-brand d-flex align-items-center">
-                <asp:Image ID="Image2" runat="server" ImageUrl="img/logo1.png" AlternateText="My Image" Width="300px" />
-            </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="courses.html" class="nav-item nav-link">Rooms</a>
-                    <a href="courses.html" class="nav-item nav-link">Books</a>
-                    <a href="courses.html" class="nav-item nav-link">Contact</a>
-                    <a href="courses.html" class="nav-item nav-link">LogOut</a>
-                </div>
-                <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
-            </div>
-        </nav>
-        <!-- Navbar End -->
+    <!-- Navbar Start -->
+ <nav class="navbar navbar-expand-lg  navbar-light shadow sticky-top p-0">
+     <a href="index.html" class="navbar-brand d-flex align-items-center">
+           <asp:Image ID="Image2" runat="server" ImageUrl="Images/Screenshot_2025-01-31_020111-removebg-preview.png" AlternateText="My Image" Width="300px" />
+     </a>
+     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+         <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarCollapse">
+         <div class="navbar-nav ms-auto p-4 p-lg-0">
+             <a href="/Habib/Home.aspx" class="nav-item nav-link active">Home</a>
+             <a href="aboutus.aspx" class="nav-item nav-link">About Us</a>
+             <a href="/Hani/Rooms.aspx" class="nav-item nav-link">Rooms</a>
+             <a href="/Mona/StudentsBooks.aspx" class="nav-item nav-link">Books</a>
+             <a href="/Habib/Contact.aspx" class="nav-item nav-link">Contact Us</a>
+             <a href="/Suhaib/Loginpage.aspx" class="nav-item nav-link">LogOut</a>
+         </div>
+         <a href="/Sajeda/Profile.aspx" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
+     </div>
+ </nav>
+ <!-- Navbar End -->
         <div class="container">
             <h2 class="text-center">Student Book List</h2>
 
@@ -317,11 +317,12 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4>Quick Links</h4>
-                        <a class="btn btn-link" href="">Home</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Books</a>
-                        <a class="btn btn-link" href="">Rooms</a>
-                        <a class="btn btn-link" href="">About Us</a>
+ 
+                        <a class="btn btn-link" href="/Habib/Home.aspx">Home</a>
+                        <a class="btn btn-link" href="/Habib/Contact.aspx">Contact Us</a>
+                        <a class="btn btn-link" href="/Mona/StudentsBooks.aspx">Books</a>
+                        <a class="btn btn-link" href="/Hani/Rooms.aspx">Rooms</a>
+                        <a class="btn btn-link" href="aboutus.aspx">About Us</a>
                     </div>
                 </div>
             </div>

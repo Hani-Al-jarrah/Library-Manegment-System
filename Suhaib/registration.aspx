@@ -20,6 +20,37 @@
                 max-width: 1099px;
             }
         }
+        /* Sign-in Link Styling */
+.sign-in-link {
+    text-align:center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #34495E;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.sign-in-link a {
+    color: #F4F1DE;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sign-in-link a:hover {
+    color: #E0DAC6;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+.mt-3 {
+    margin-top: 4rem !important;
+    margin-left: 8rem;
+}
+.ms-2 {
+    width: 464px;
+    /* margin-right: 17rem; */
+    margin-left: 0.5rem !important;
+}
+
     </style>
 </head>
 <body>
@@ -82,7 +113,7 @@
 
 
 
-                                                
+
                                                 <div class="col-md-6 mb-4">
                                                     <div data-mdb-input-init class="form-outline">
 
@@ -161,6 +192,15 @@
 
                                                 <asp:Button ID="submit" Text="Register" runat="server" OnClick="submit_Click" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2" />
                                             </div>
+
+                                            <!-- Sign-in Link -->
+                                            <p class="mt-3">
+                                                Already have an account? 
+        <a href="Loginpage.aspx" class="text-decoration-none fw-bold" style="color: #2C3E50;">Sign in here
+        </a>
+                                            </p>
+                                        </div>
+
 
                                         </div>
                                     </div>

@@ -15,12 +15,12 @@ namespace Group5.Mona
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            Response.Redirect("register.aspx");
+            Response.Redirect("~/Suhaib/registration.aspx");
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            Response.Redirect("login.aspx");
+            Response.Redirect("~/Suhaib/loginpage.aspx");
         }
     }
 }
