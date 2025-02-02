@@ -86,7 +86,7 @@
     <Content Include="Habib\Rooms.txt" />
     <Content Include="Habib\why.js" />
     <Content Include="Habib\wow.js" />
-    <Content Include="Hani\Hani1.aspx" />
+    <Content Include="loggedinuser.txt" />
     <Content Include="Mona\AdminBooks.aspx" />
     <Content Include="Mona\StudentsBooks.aspx" />
     <Content Include="Hani\AddRoom.aspx" />
@@ -108,7 +108,8 @@
     <Content Include="Sajeda\rooms.txt" />
     <Content Include="Sajeda\sajeda1.aspx" />
     <Content Include="Sajeda\updateImg.aspx" />
-    <Content Include="Sajeda\users.txt" />
+    <Content Include="Suhaib\Loginpage.aspx" />
+    <Content Include="Suhaib\registration.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -133,9 +134,6 @@
     <Compile Include="Habib\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-	  <Compile Include="Hani\Hani1.aspx.cs">
-		  <DependentUpon>Hani1.aspx</DependentUpon>
-	  </Compile>
     <Compile Include="Hani\AddRoom.aspx.cs">
       <DependentUpon>AddRoom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -235,7 +233,18 @@
     <Compile Include="Sajeda\updateImg.aspx.designer.cs">
       <DependentUpon>updateImg.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Suhaib\Suhaib\registration.aspx.designer.cs">
+    <Compile Include="Suhaib\Loginpage.aspx.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suhaib\Loginpage.aspx.designer.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suhaib\registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suhaib\registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
