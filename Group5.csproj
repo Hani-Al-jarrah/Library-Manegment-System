@@ -67,7 +67,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Habib\animates.css" />
+    <Content Include="Habib\bootstrap.css" />
+    <Content Include="Habib\Contact.aspx" />
+    <Content Include="Habib\esting.js" />
     <Content Include="Habib\Habib1.aspx" />
+    <Content Include="Habib\Home.aspx" />
+    <Content Include="Habib\Images\Screenshot 2025-02-01 170355.png" />
+    <Content Include="Habib\Images\Screenshot_2025-01-31_020111-removebg-preview.png" />
+    <Content Include="Habib\Images\woman %283%29.png" />
+    <Content Include="Habib\img\testimonial-1.jpg" />
+    <Content Include="Habib\img\testimonial-2.jpg" />
+    <Content Include="Habib\img\testimonial-3.jpg" />
+    <Content Include="Habib\img\testimonial-4.jpg" />
+    <Content Include="Habib\jojo.js" />
+    <Content Include="Habib\owl.carousel.min.css" />
+    <Content Include="Habib\owl.carousel.min.js" />
+    <Content Include="Habib\Rooms.txt" />
+    <Content Include="Habib\why.js" />
+    <Content Include="Habib\wow.js" />
     <Content Include="Hani\Hani1.aspx" />
     <Content Include="Mona\Mona1.aspx" />
     <Content Include="Sajeda\sajeda1.aspx" />
@@ -75,12 +93,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Habib\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Habib\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Habib\Habib1.aspx.cs">
       <DependentUpon>Habib1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Habib\Habib1.aspx.designer.cs">
       <DependentUpon>Habib1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Habib\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Habib\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Hani\Hani1.aspx.cs">
       <DependentUpon>Hani1.aspx</DependentUpon>
