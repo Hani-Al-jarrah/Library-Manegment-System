@@ -133,8 +133,9 @@
     <Compile Include="Habib\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Hani\Hani1.aspx.cs">
-      <DependentUpon>Hani1.aspx</DependentUpon>
+	  <Compile Include="Hani\Hani1.aspx.cs">
+		  <DependentUpon>Hani1.aspx</DependentUpon>
+	  </Compile>
     <Compile Include="Hani\AddRoom.aspx.cs">
       <DependentUpon>AddRoom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
