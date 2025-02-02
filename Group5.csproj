@@ -76,6 +76,10 @@
     <Content Include="Hani\Rooms.aspx" />
     <Content Include="Mona\Mona1.aspx" />
     <Content Include="Sajeda\sajeda1.aspx" />
+    <Content Include="Suhaib\Suhaib\login.jpg" />
+    <Content Include="Suhaib\Suhaib\login.txt" />
+    <Content Include="Suhaib\Suhaib\Loginpage.aspx" />
+    <Content Include="Suhaib\Suhaib\registration.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +140,20 @@
     <Compile Include="Sajeda\sajeda1.aspx.designer.cs">
       <DependentUpon>sajeda1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Suhaib\Suhaib\Loginpage.aspx.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suhaib\Suhaib\Loginpage.aspx.designer.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suhaib\Suhaib\registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suhaib\Suhaib\registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -146,9 +164,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Suhaib\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
