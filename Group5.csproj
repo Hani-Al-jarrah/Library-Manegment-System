@@ -71,7 +71,26 @@
     <Content Include="Hani\Hani1.aspx" />
     <Content Include="Mona\AdminBooks.aspx" />
     <Content Include="Mona\StudentsBooks.aspx" />
+    <Content Include="Hani\AddRoom.aspx" />
+    <Content Include="Hani\AdminRooms.aspx" />
+    <Content Include="Hani\EditRoom.aspx" />
+    <Content Include="Hani\Requests.aspx" />
+    <Content Include="Hani\Reservations.txt" />
+    <Content Include="Hani\Rooms.aspx" />
+    <Content Include="Mona\Mona1.aspx" />
+    <Content Include="Sajeda\Books.aspx" />
+    <Content Include="Sajeda\books.txt" />
+    <Content Include="Sajeda\editProfile.aspx" />
+    <Content Include="Sajeda\img.txt" />
+    <Content Include="Sajeda\img\img1.png" />
+    <Content Include="Sajeda\img\img2.png" />
+    <Content Include="Sajeda\Profile.aspx" />
+    <Content Include="Sajeda\resetPassword.aspx" />
+    <Content Include="Sajeda\rooms.aspx" />
+    <Content Include="Sajeda\rooms.txt" />
     <Content Include="Sajeda\sajeda1.aspx" />
+    <Content Include="Sajeda\updateImg.aspx" />
+    <Content Include="Sajeda\users.txt" />
     <Content Include="Suhaib\Suhaib.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -83,12 +102,40 @@
     <Compile Include="Habib\Habib1.aspx.designer.cs">
       <DependentUpon>Habib1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Hani\Hani1.aspx.cs">
-      <DependentUpon>Hani1.aspx</DependentUpon>
+    <Compile Include="Hani\AddRoom.aspx.cs">
+      <DependentUpon>AddRoom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Hani\Hani1.aspx.designer.cs">
-      <DependentUpon>Hani1.aspx</DependentUpon>
+    <Compile Include="Hani\AddRoom.aspx.designer.cs">
+      <DependentUpon>AddRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hani\AdminRooms.aspx.cs">
+      <DependentUpon>AdminRooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hani\AdminRooms.aspx.designer.cs">
+      <DependentUpon>AdminRooms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hani\EditRoom.aspx.cs">
+      <DependentUpon>EditRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hani\EditRoom.aspx.designer.cs">
+      <DependentUpon>EditRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hani\Requests.aspx.cs">
+      <DependentUpon>Requests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hani\Requests.aspx.designer.cs">
+      <DependentUpon>Requests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hani\Rooms.aspx.cs">
+      <DependentUpon>Rooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hani\Rooms.aspx.designer.cs">
+      <DependentUpon>Rooms.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mona\AdminBooks.aspx.cs">
       <DependentUpon>AdminBooks.aspx</DependentUpon>
@@ -105,6 +152,41 @@
       <DependentUpon>StudentsBooks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sajeda\Books.aspx.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sajeda\Books.aspx.designer.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sajeda\editProfile.aspx.cs">
+      <DependentUpon>editProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sajeda\editProfile.aspx.designer.cs">
+      <DependentUpon>editProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sajeda\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sajeda\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sajeda\resetPassword.aspx.cs">
+      <DependentUpon>resetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sajeda\resetPassword.aspx.designer.cs">
+      <DependentUpon>resetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sajeda\rooms.aspx.cs">
+      <DependentUpon>rooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sajeda\rooms.aspx.designer.cs">
+      <DependentUpon>rooms.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sajeda\sajeda1.aspx.cs">
       <DependentUpon>sajeda1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -112,12 +194,19 @@
     <Compile Include="Sajeda\sajeda1.aspx.designer.cs">
       <DependentUpon>sajeda1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Sajeda\updateImg.aspx.cs">
+      <DependentUpon>updateImg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sajeda\updateImg.aspx.designer.cs">
+      <DependentUpon>updateImg.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Suhaib\Suhaib.aspx.cs">
       <DependentUpon>Suhaib.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Suhaib\Suhaib.aspx.designer.cs">
-      <DependentUpon>Suhaib.aspx</DependentUpon>
+    <Compile Include="Suhaib\Suhaib\registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
