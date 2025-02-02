@@ -68,7 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Habib\Habib1.aspx" />
-    <Content Include="Hani\Hani1.aspx" />
+    <Content Include="Hani\AddRoom.aspx" />
+    <Content Include="Hani\AdminRooms.aspx" />
+    <Content Include="Hani\EditRoom.aspx" />
+    <Content Include="Hani\Requests.aspx" />
+    <Content Include="Hani\Reservations.txt" />
+    <Content Include="Hani\Rooms.aspx" />
     <Content Include="Mona\Mona1.aspx" />
     <Content Include="Sajeda\Books.aspx" />
     <Content Include="Sajeda\books.txt" />
@@ -94,12 +99,40 @@
     <Compile Include="Habib\Habib1.aspx.designer.cs">
       <DependentUpon>Habib1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Hani\Hani1.aspx.cs">
-      <DependentUpon>Hani1.aspx</DependentUpon>
+    <Compile Include="Hani\AddRoom.aspx.cs">
+      <DependentUpon>AddRoom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Hani\Hani1.aspx.designer.cs">
-      <DependentUpon>Hani1.aspx</DependentUpon>
+    <Compile Include="Hani\AddRoom.aspx.designer.cs">
+      <DependentUpon>AddRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hani\AdminRooms.aspx.cs">
+      <DependentUpon>AdminRooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hani\AdminRooms.aspx.designer.cs">
+      <DependentUpon>AdminRooms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hani\EditRoom.aspx.cs">
+      <DependentUpon>EditRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hani\EditRoom.aspx.designer.cs">
+      <DependentUpon>EditRoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hani\Requests.aspx.cs">
+      <DependentUpon>Requests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hani\Requests.aspx.designer.cs">
+      <DependentUpon>Requests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hani\Rooms.aspx.cs">
+      <DependentUpon>Rooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hani\Rooms.aspx.designer.cs">
+      <DependentUpon>Rooms.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mona\Mona1.aspx.cs">
       <DependentUpon>Mona1.aspx</DependentUpon>
@@ -162,8 +195,8 @@
       <DependentUpon>Suhaib.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Suhaib\Suhaib.aspx.designer.cs">
-      <DependentUpon>Suhaib.aspx</DependentUpon>
+    <Compile Include="Suhaib\Suhaib\registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
