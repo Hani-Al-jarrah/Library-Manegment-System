@@ -91,7 +91,6 @@
     <Content Include="Sajeda\sajeda1.aspx" />
     <Content Include="Sajeda\updateImg.aspx" />
     <Content Include="Sajeda\users.txt" />
-    <Content Include="Suhaib\Suhaib.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -200,10 +199,6 @@
     </Compile>
     <Compile Include="Sajeda\updateImg.aspx.designer.cs">
       <DependentUpon>updateImg.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Suhaib\Suhaib.aspx.cs">
-      <DependentUpon>Suhaib.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Suhaib\Suhaib\registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
