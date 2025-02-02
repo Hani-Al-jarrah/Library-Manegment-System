@@ -68,6 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Habib\Habib1.aspx" />
+    <Content Include="Hani\Hani1.aspx" />
+    <Content Include="Mona\AdminBooks.aspx" />
+    <Content Include="Mona\StudentsBooks.aspx" />
     <Content Include="Hani\AddRoom.aspx" />
     <Content Include="Hani\AdminRooms.aspx" />
     <Content Include="Hani\EditRoom.aspx" />
@@ -133,12 +136,19 @@
     <Compile Include="Hani\Rooms.aspx.designer.cs">
       <DependentUpon>Rooms.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Mona\Mona1.aspx.cs">
-      <DependentUpon>Mona1.aspx</DependentUpon>
+    <Compile Include="Mona\AdminBooks.aspx.cs">
+      <DependentUpon>AdminBooks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Mona\Mona1.aspx.designer.cs">
-      <DependentUpon>Mona1.aspx</DependentUpon>
+    <Compile Include="Mona\AdminBooks.aspx.designer.cs">
+      <DependentUpon>AdminBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mona\StudentsBooks.aspx.cs">
+      <DependentUpon>StudentsBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mona\StudentsBooks.aspx.designer.cs">
+      <DependentUpon>StudentsBooks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sajeda\Books.aspx.cs">
@@ -203,7 +213,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Mona\img\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
