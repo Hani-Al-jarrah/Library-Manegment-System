@@ -1,0 +1,10 @@
+1|Conference Room|30|Spacious and well-lit|~/Uploads/ec42696a-4d38-4394-8a43-a5eb788c74f5.png|Reserved|2025-02-20 18
+2|Study Room|5000000000000|Perfect for group studyyyyyyyyyy|~/Uploads/83e62bc8-db8b-49aa-ac0e-7216f271a909.png|Reserved
+3|Meeting Room|00000|Ideal for meetings|~/Uploads/10cda90c-df68-4323-8fdf-12430aec6ce7.jpg|Available
+4|Ammar|2|Ammar Room|~/Uploads/f2d5423b-c4a4-43e7-abb5-70e51c763007.png|Available
+5|Hani|9|Hani Room|~/Uploads/cf407265-f665-4303-979d-9bc4bfa5bd5c.png|Available
+6|Toqa1|44|Scrum Masterrrrrrrrrr|~/Uploads/d84451e8-5ca9-4f77-a855-45ce018d5e40.png|Available
+7|ra|12|wsfeWSEF|~/Uploads/411cd17b-0933-45bd-a81b-fb37f2f11077.png|Available
+8|AAAAAAAAAAAAAAAAAAAAAAAAAA|111111111111111111111111111111|ASEFASDFASDFASDFASDFASDFASDFASDF|~/Uploads/136c1e3d-5020-4ebb-98ee-134ce013912d.png|Available
+10|Ammar|8989|lkn/lkjn|~/Uploads/af4a0dbe-0029-470d-93ee-a039587f65c7.png|Available
+11|wqew|123|ewgWGE|~/Uploads/fc65da15-7e41-4bd2-8962-82881bcadfba.png|Available
