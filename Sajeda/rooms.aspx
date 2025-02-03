@@ -249,7 +249,7 @@ small{
        <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
         <a href="/Habib/Home.aspx" class="nav-item nav-link active">Home</a>
-        <a href="aboutus.aspx" class="nav-item nav-link">About Us</a>
+        <a href="/Habib/AboutPage.aspx" class="nav-item nav-link">About Us</a>
         <a href="/Hani/Rooms.aspx" class="nav-item nav-link">Rooms</a>
         <a href="/Mona/StudentsBooks.aspx" class="nav-item nav-link">Books</a>
         <a href="/Habib/Contact.aspx" class="nav-item nav-link">Contact Us</a>
@@ -318,7 +318,7 @@ small{
       <a class="btn btn-link" href="/Habib/Contact.aspx">Contact Us</a>
       <a class="btn btn-link" href="/Mona/StudentsBooks.aspx">Books</a>
       <a class="btn btn-link" href="/Hani/Rooms.aspx">Rooms</a>
-      <a class="btn btn-link" href="aboutus.aspx">About Us</a>
+      <a class="btn btn-link" href="/Habib/AboutPage.aspx">About Us</a>
             </div>
         </div>
     </div>

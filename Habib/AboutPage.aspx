@@ -286,12 +286,12 @@
             
 				<!-- <li><a href="#home" class="smoothScroll">HOME</a></li> -->
                 
-				<li><a href="#" class="smoothScroll">Home</a></li>
-				<li><a href="#" class="smoothScroll">Books</a></li>
-				<li><a href="" class="smoothScroll">Rooms</a></li>
-				<li><a href="#" class="smoothScroll">About</a></li>
-				<li><a href="#" class="smoothScroll">Contact</a></li>
-				<li><a href="#" class="smoothScroll">Login</a></li>
+				<li><a href="/Habib/Home.aspx" class="smoothScroll">Home</a></li>
+				<li><a href="/Mona/StudentsBooks.aspx" class="smoothScroll">Books</a></li>
+				<li><a href="/Hani/Rooms.aspx" class="smoothScroll">Rooms</a></li>
+				<li><a href="AboutPage.aspx" class="smoothScroll">About</a></li>
+				<li><a href="/Habib/Contact.aspx" class="smoothScroll">Contact</a></li>
+				<li><a href="/Suhaib/Loginpage.aspx" class="smoothScroll">Login</a></li>
 			</ul>
 		</div>
 
@@ -613,11 +613,11 @@
             </div>
             <div class="col-lg-3 col-md-6" id="sos">
                 <h4>Quick Links</h4>
-                <a class="btn btn-link" href="">Home</a>
-                <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Books</a>
-                <a class="btn btn-link" href="">Rooms</a>
-                <a class="btn btn-link" href="">About Us</a>
+                <a class="btn btn-link" href="/Habib/Home.aspx">Home</a>
+                <a class="btn btn-link" href="/Habib/Contact.aspx">Contact Us</a>
+                <a class="btn btn-link" href="/Mona/StudentsBooks.aspx">Books</a>
+                <a class="btn btn-link" href="/Hani/Rooms.aspx">Rooms</a>
+                <a class="btn btn-link" href="AboutPage.aspx">About Us</a>
             </div>
         </div>
     </div>
