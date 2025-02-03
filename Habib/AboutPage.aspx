@@ -51,38 +51,208 @@
    ================================================== -->
 	<link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
 	<style>
-		 .site-slider {
-            max-width: 100%; /* Set the maximum width of the slider */
-            /*margin: 0 auto;*/ /* Center the slider */
-        }
+		body {
+			background-color: #2C3E50;
+		}
 
-        /* Adjust the size of the slider images */
-        .bxslider img {
-            width: 80%; /* Ensure images fill the container */
-            height: auto; /* Maintain aspect ratio */
-        }
+		#work .col-md-4 {
+			display: block;
+			width: 100%;
+			border: 4px solid transparent;
+			padding: 42px;
+			transition: all 0.4s linear;
+		}
 
-        /* Adjust the size of the thumbnail container */
-        /*.bx-thumbnail-wrapper {
+		#work:hover .col-md-4:hover {
+			border: 4px solid #F1C40F;
+		}
+
+		#sos {
+			margin-top: 37px;
+		}
+
+		.rows {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.bx-thumbnail-wrapper {
+			/* background-color: #161616; */
+			text-align: center;
+			margin-top: -1px;
+			position: relative;
+		}
+
+		.site-slider {
+			max-width: 100%; /* Set the maximum width of the slider */
+			/*margin: 0 auto;*/ /* Center the slider */
+		}
+
+		/* Adjust the size of the slider images */
+		.bxslider img {
+			width: 80%; /* Ensure images fill the container */
+			height: auto; /* Maintain aspect ratio */
+		}
+
+		/* Adjust the size of the thumbnail container */
+		/*.bx-thumbnail-wrapper {
             max-width: 2000px;*/ /* Match the slider width */
-            /*margin: 10px auto;*/ /* Center the thumbnails */
-        /*}*/
+		/*margin: 10px auto;*/ /* Center the thumbnails */
+		/*}*/
 		.bx-wrapper {
-    height: 600px;
-}
+			height: 600px;
+		}
 
 		.bxslider img {
 			width: 100%;
 			height: 600px !important;
 		}
-	
 
-        /* Adjust the size of the thumbnails */
-        /*#bx-pager img {
+
+		/* Adjust the size of the thumbnails */
+		/*#bx-pager img {
             width: 60px;*/ /* Set thumbnail width */
-            /*height: 40px;*/ /* Set thumbnail height */
-            /*margin: 0 5px;*/ /* Add spacing between thumbnails */
-        /*}*/
+		/*height: 40px;*/ /* Set thumbnail height */
+		/*margin: 0 5px;*/ /* Add spacing between thumbnails */
+		}
+		/*** Footer ***/
+		.footer {
+			background-color: #2C3E50 !important;
+			color: #F4F1DE;
+			padding: 4px 0;
+			font-size: 14px;
+		}
+
+			.footer h4 {
+				color: #F1C40F;
+			}
+
+			.footer a {
+				color: #FFFFFF;
+				font-size: 14px;
+				text-decoration: none;
+				transition: color 0.3s ease-in-out;
+			}
+
+				.footer a:hover {
+					color: #F1C40F !important;
+				}
+
+			.footer .btn-social {
+				color: #F4F1DE;
+				border: 1px solid #F4F1DE;
+				margin-right: 8px;
+				width: 40px;
+				height: 40px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				transition: 0.3s;
+			}
+
+				.footer .btn-social:hover {
+					background-color: #F1C40F;
+					color: #2C3E50;
+				}
+
+			.footer .copyright {
+				border-top: 1px solid #F1C40F;
+				padding-top: 2px;
+				text-align: center;
+			}
+
+		.pf {
+			font-size: 0.9rem;
+			margin-left: 5vw;
+		}
+
+		.copyright a {
+			color: #F1C40F;
+			text-decoration: none;
+		}
+
+		#Image1 {
+			Width: 11vw;
+			Height: 5vw;
+		}
+
+		.foot {
+			box-shadow: 0.4vw 0.4vw 0.9vw black;
+			background-color: black;
+			margin-top: 74px;
+		}
+
+		#contact .contact-detail {
+			background: #ffffff;
+			border: 4px solid #F1C40F;
+			position: relative;
+			top: 140px;
+		}
+
+			#contact .contact-detail .col-md-6:first-child {
+				border-right: 4px solid #F1C40F;
+			}
+
+		#contact input[type="submit"] {
+			background: #2C3E50;
+			border: 4px solid transparent;
+			color: #ffffff;
+			letter-spacing: 1px;
+			margin-top: 18px;
+			height: 58px;
+		}
+
+			#contact input[type="submit"]:hover {
+				border: 4px solid #F1C40F;
+				color: black;
+			}
+
+		.section-title {
+			border: 4px solid #fff;
+			padding: 50px;
+			position: relative;
+			text-align: center;
+			margin-bottom: 92px;
+			color: #ffffff;
+		}
+
+		.heading {
+			color: #F1C40F;
+			font-size: 62px;
+		}
+
+		p {
+			color: #fff;
+			letter-spacing: 0.9px;
+			line-height: 28px;
+		}
+
+		h3 {
+			color: #F1C40F;
+			letter-spacing: 1px;
+		}
+
+		#contact .contact-detail {
+			background: transparent;
+			border: 4px solid #F1C40F;
+			position: relative;
+			top: 140px;
+		}
+
+		.custom-navbar .navbar-brand {
+			/* border: 4px solid #ffffff; */
+			color: #ffffff;
+			font-weight: 600;
+			font-size: 24px;
+			padding-top: 11px;
+		}
+		.custom-navbar {
+    background:#425262;
+    border: none;
+    margin-bottom: 0;
+    text-align: center;
+}
 	</style>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -109,19 +279,19 @@
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
-			<a href="#home" class="smoothScroll navbar-brand">ADVENTURE</a>
+			<asp:Image ID="Image11" runat="server" ImageUrl="~/Mona/img/logo11.png" height="50px" AlternateText="My Image" />
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
             
 				<!-- <li><a href="#home" class="smoothScroll">HOME</a></li> -->
                 
-				<li><a href="#work" class="smoothScroll">WORK</a></li>
-				<li><a href="#about" class="smoothScroll">ABOUT</a></li>
-				<li><a href="#team" class="smoothScroll">TEAM</a></li>
-				<li><a href="#portfolio" class="smoothScroll">GALLERY</a></li>
-				<li><a href="#plan" class="smoothScroll">PLANS</a></li>
-				<li><a href="#contact" class="smoothScroll">CONTACT</a></li>
+				<li><a href="#" class="smoothScroll">Home</a></li>
+				<li><a href="#" class="smoothScroll">Books</a></li>
+				<li><a href="" class="smoothScroll">Rooms</a></li>
+				<li><a href="#" class="smoothScroll">About</a></li>
+				<li><a href="#" class="smoothScroll">Contact</a></li>
+				<li><a href="#" class="smoothScroll">Login</a></li>
 			</ul>
 		</div>
 
@@ -196,7 +366,7 @@
                 </div>
             </li>
         </ul> <!-- /.bxslider -->
-        <div class="bx-thumbnail-wrapper">
+        <div class="bx-thumbnail-wrapper" style="background-color:transparent">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -252,21 +422,21 @@
 				</div>
 
 				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
-					<i class="icon-bike medium-icon"></i>
+					<i class="fa-solid fa-star medium-icon"></i>
 						<h3>Reserve Meeting Rooms</h3>
 						<hr>
 						<p>View available meeting rooms and reserve them for a fixed 2-hour duration. This allows students to plan and book study spaces in advance.</p>
 				</div>
 
 				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
-					<i class="icon-flag medium-icon"></i>
+					<i class="fa-solid fa-comment medium-icon"></i>
 						<h3>Provide Feedback</h3>
 						<hr>
 						<p>Submit feedback about library services. This gives students a voice and helps the library improve its offerings.</p>
 				</div>
 
 				<div class="item col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
-					<i class="icon-basket medium-icon"></i>
+					<i class="fa-solid fa-star medium-icon"></i>
 						<h3>Manage Profile</h3>
 						<hr>
 						<p>View and edit personal details (name, email, phone number, profile picture, etc.). This allows students to keep their information up-to-date.</p>
@@ -289,18 +459,16 @@
 			================================================== -->
 			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
 				<div class="section-title">
-					<h5 class="wow bounceIn">ACTIVE PEOPLE</h5>
-					<h1 class="heading color-white">WHO WE ARE</h1>
+					<h1 class="heading color-black">WHO WE ARE</h1>
 					<hr>
-					<p class="color-white">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia deserunt.</p>
+					<p class="color-black">We're driven by innovation. Horizon is built on cutting-edge technology to provide a seamless and efficient library management experience."</p>
 				</div>
 			</div>
 
 			<div class="col-md-6 col-sm-12">
-				<h3 class="color-white">OUR STORY</h3>
+				<h3 class="color-black">OUR STORY</h3>
 				<h2>ADVENTURE STUDIO</h2>
-				<p class="color-white">Adventure is free Bootstrap web template by <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a>. Download, edit, and use this layout for your website. Feel free to modify or remove anything to meet your requirements. Excepteu sunt in culpa qui officia deserunt mollit.</p>
-				<p class="color-white">Excepteu sunt in culpa qui officia deserunt mollit anim id. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				<p class="color-black">We're driven by innovation. Horizon is built on cutting-edge technology to provide a seamless and efficient library management experience."</p>
 			</div>
 
 			<div class="col-md-6 col-sm-12">
@@ -311,13 +479,13 @@
    						<div class="panel-heading" role="tab" id="headingOne">
       						<h4 class="panel-title">
         						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          							Very Quick Response
+          							Horizon began with a simple idea
         						</a>
       						</h4>
     					</div>
    						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       						<div class="panel-body">
-        						<p>Phasellus odio lacus, posuere vel sodales a, facilisis vitae ligula. Pellentesque leo ligula, lobortis ut sapien blandit, convallis pulvinar nisi. Proin tempor congue nibh. Nam non maximus metus, nec tincidunt nulla.</p>
+        						<p>We saw a need for a modern, intuitive library management system, and that's how Horizon</p>
       						</div>
    						 </div>
  					 </div>
@@ -332,7 +500,7 @@
     					</div>
    						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       						<div class="panel-body">
-        						<p>Nullam vehicula tincidunt ultrices. Curabitur id magna velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut pretium tortor ultrices ligula dictum placerat. Donec eget augue sapien. Curabitur vel orci magna. Sed id eros consequat nibh congue euismod.</p>
+        						<p>Our team comprises experienced software developers, library science professionals, and user experience experts.</p>
       						</div>
    						 </div>
  					 </div>
@@ -341,48 +509,18 @@
    						<div class="panel-heading" role="tab" id="headingThree">
       						<h4 class="panel-title">
         						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-          							Special Awards
+          							Software Development Expertise
         						</a>
       						</h4>
     					</div>
    						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
       						<div class="panel-body">
-        						<p>Morbi pellentesque nisl at sapien congue facilisis. Proin consequat pharetra hendrerit. Aliquam vulputate, ligula ut pellentesque molestie, dolor nisi semper augue, sit amet porta risus sem non sapien. Cras vel pulvinar sapien, in consequat purus. Aliquam at varius augue.</p>
+        						<p>Our team's software development expertise spans the full spectrum of the development lifecycle, encompassing everything from crafting elegant and user-friendly front-end interfaces to building robust and scalable back-end systems.  We're proficient in a wide range of technologies, including [list key technologies/languages, e.g., JavaScript, React, Python, Java, SQL], allowing us to tailor our approach to the specific needs of each project.</p>
       						</div>
    						 </div>
  					 </div>
-
  				 </div>
 			</div>
-
-			<div class="col-md-3 col-sm-3 col-xs-6">
-				<div class="about-fact border-right">
-					<span>32</span>
-					<h4>TOURS</h4>
-				</div>
-			</div>
-
-			<div class="col-md-3 col-sm-3 col-xs-6">
-				<div class="about-fact border-right">
-					<span>16</span>
-					<h4>AWARDS</h4>
-				</div>
-			</div>
-
-			<div class="col-md-3 col-sm-3 col-xs-6">
-				<div class="about-fact border-right">
-					<span>128</span>
-					<h4>TRIPS</h4>
-				</div>
-			</div>
-
-			<div class="col-md-3 col-sm-3 col-xs-6">
-				<div class="about-fact">
-					<span>24</span>
-					<h4>PLANS</h4>
-				</div>
-			</div>
-
 		</div>
 	</div>
 </section>
@@ -390,265 +528,8 @@
 
 <!-- team section
 ================================================== -->
-<section id="team" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<!-- Section title
-			================================================== -->
-			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
-				<div class="section-title">
-					<h5 class="wow bounceIn">WE ARE READY</h5>
-					<h1 class="heading">OUR TEAM</h1>
-					<hr>
-					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia deserunt.</p>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
-				<div class="team-wrapper">
-					<img src="images/team1.jpg" class="img-responsive" alt="team img">
-						<div class="team-des">
-							<h4>George Chan</h4>
-							<h3>Trip Planner</h3>
-							<ul class="social-icon">
-								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
-								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
-								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.6s"></a></li>
-								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.6"></a></li>
-							</ul>
-						</div>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1.3s">
-				<div class="team-wrapper">
-					<img src="images/team2.jpg" class="img-responsive" alt="team img">
-						<div class="team-des">
-							<h4>Kitty Sandar</h4>
-							<h3>Trip Manager</h3>
-							<ul class="social-icon">
-								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
-								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
-								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.6s"></a></li>
-								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.6"></a></li>
-							</ul>
-						</div>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1.6s">
-				<div class="team-wrapper">
-					<img src="images/team3.jpg" class="img-responsive" alt="team img">
-						<div class="team-des">
-							<h4>Johnny Lynn</h4>
-							<h3>Location Explorer</h3>
-							<ul class="social-icon">
-								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
-								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
-								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.6s"></a></li>
-								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.6"></a></li>
-							</ul>
-						</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
-
-
-<!-- Portfolio section
-================================================== -->
-<section id="portfolio" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<!-- Section title
-			================================================== -->
-			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
-				<div class="section-title">
-					<h5 class="wow bounceIn">WE ARE DELIGENT</h5>
-					<h1 class="heading">SHOWCASE</h1>
-					<hr>
-					<p>Pellentesque mollis purus ipsum. Fusce tristique ante et est placerat dignissim. Curabitur tincidunt risus non dui vulputate tincidunt.</p>
-				</div>
-			</div>
-
-            <div class="col-md-4 col-sm-6">
-				<div class="grid">
-              		<figure class="effect-zoe">
-						<img src="images/portfolio-img1.jpg" alt="portfolio img"/>
-							<figcaption>
-								<h2>Mobile App</h2>
-								<p class="icon-links">
-									<a href="images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-								</p>
-							</figcaption>			
-					</figure>
-				</div>
-            </div>   
-
-            <div class="col-md-4 col-sm-6">
-				<div class="grid">
-              		<figure class="effect-zoe">
-						<img src="images/portfolio-img2.jpg" alt="portfolio img"/>
-							<figcaption>
-								<h2>Trip Planning</h2>
-								<p class="icon-links">
-									<a href="images/portfolio-img2.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-								</p>
-							</figcaption>			
-					</figure>
-				</div>
-            </div> 
-
-            <div class="col-md-4 col-sm-6">
-				<div class="grid">
-              		<figure class="effect-zoe">
-						<img src="images/portfolio-img3.jpg" alt="portfolio img"/>
-							<figcaption>
-								<h2>Scheduling</h2>
-								<p class="icon-links">
-									<a href="images/portfolio-img3.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-								</p>
-							</figcaption>			
-					</figure>
-				</div>
-            </div> 
-          	
-          	<div class="col-md-4 col-sm-6">
-				<div class="grid">
-              		<figure class="effect-zoe">
-						<img src="images/portfolio-img4.jpg" alt="portfolio img"/>
-							<figcaption>
-								<h2>Arranging</h2>
-								<p class="icon-links">
-									<a href="images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-								</p>
-							</figcaption>			
-					</figure>
-				</div>
-            </div> 
-
-            <div class="col-md-4 col-sm-6">
-				<div class="grid">
-              		<figure class="effect-zoe">
-						<img src="images/portfolio-img5.jpg" alt="portfolio img"/>
-							<figcaption>
-								<h2>Organizing</h2>
-								<p class="icon-links">
-									<a href="images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-								</p>
-							</figcaption>			
-					</figure>
-				</div>
-            </div> 
-
-            <div class="col-md-4 col-sm-6">
-				<div class="grid">
-              		<figure class="effect-zoe">
-						<img src="images/portfolio-img6.jpg" alt="portfolio img"/>
-							<figcaption>
-								<h2>Grouping</h2>
-								<p class="icon-links">
-									<a href="images/portfolio-img6.jpg" data-lightbox-gallery="portfolio-gallery"><span class="icon icon-attachment"></span></a>
-								</p>
-							</figcaption>			
-					</figure>
-				</div>
-            </div> 
-
-            <!-- Portfolio bottom section
-			================================================== -->
-            <div class="col-md-offset-2 col-md-8 col-sm-12">
-            	<div class="portfolio-bottom">
-            		<h2>INTERESTED?</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Lorem ipsum dolor sit 	amet.</p>
-					<a href="#plan" class="smoothScroll btn btn-default">LET'S GO!</a>
-            	</div>
-            </div>    
-
-		</div>
-	</div>
-</section>		
-
-
 <!-- Plan section
 ================================================== -->
-<section id="plan" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<!-- Section title
-			================================================== -->
-			<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 wow fadeInUp">
-				<div class="section-title">
-					<h5 class="wow bounceIn">UNIQUE ADVENTURES</h5>
-					<h1 class="heading color-white">TRIP PLANS</h1>
-					<hr>
-					<p class="color-white">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia deserunt.</p>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-				<div class="plan">
-					<h2 class="plan-title">Villager</h2>
-					<div class="plan-price">
-						<h1 class="plan-price-title">$500 / <small>trip</small></h1>
-					</div>
-					<ul class="plan-list">
-						<li>4 days 3 nights</li>
-						<li>Explore Forest</li>
-						<li>Visit Waterfalls</li>
-						<li>Group of 10 people</li>
-					</ul>
-					<div class="plan-button">
-						<button class="btn btn-default">CHOOSE PLAN</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
-				<div class="plan">
-					<h2 class="plan-title">Tourer</h2>
-					<div class="plan-price">
-						<h1 class="plan-price-title">$800 / <small>trip</small></h1>
-					</div>
-					<ul class="plan-list">
-						<li>8 days 7 nights</li>
-						<li>Explore Mountains</li>
-						<li>Touring Villages</li>
-						<li>Group of 15 people</li>
-					</ul>
-					<div class="plan-button">
-						<button class="btn btn-default">CHOOSE PLAN</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
-				<div class="plan">
-					<h2 class="plan-title">Explorer</h2>
-					<div class="plan-price">
-						<h1 class="plan-price-title">$1,400 / <small>trip</small></h1>
-					</div>
-					<ul class="plan-list">
-						<li>12 days 11 nights</li>
-						<li>Multiple Cities</li>
-						<li>Unique Experiences</li>
-						<li>Group of 20 people</li>
-					</ul>
-					<div class="plan-button">
-						<button class="btn btn-default">CHOOSE PLAN</button>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</section>
-
 
 <!-- Contact section
 ================================================== -->
@@ -709,28 +590,43 @@
 
 <!-- Footer section
 ================================================== -->
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 col-sm-12">
-
-				<h2 class="wow bounceIn">ADVENTURE STUDIO</h2>
-				<ul class="social-icon">
-					<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
-					<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
-					<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
-					<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="1s"></a></li>
-					<li><a href="#" class="fa fa-github wow fadeIn" data-wow-delay="1.3s"></a></li>
-					<li><a href="#" class="fa fa-tumblr wow fadeIn" data-wow-delay="1.6s"></a></li>
-				</ul>
-				<p>Copyright &copy; 2016 Adventure Studio 
-                
-                | Design: <a rel="nofollow" href="http://www.tooplate.com/free-templates" target="_parent">Tooplate</a></p>
-
-			</div>
-		</div>
-	</div>
-</footer>
+<div class="foot container-fluid footer pt-5 mt-5">
+    <div class="containers py-1">
+        <div class="rows">
+            <div class="col-lg-3 col-md-10">
+                <h4>
+                    <asp:Image ID="Image1" runat="server" ImageUrl="Images/Screenshot_2025-01-31_020111-removebg-preview.png" AlternateText="My Image" />
+                </h4>
+                <p>The Library Management System streamlines book borrowing, room reservations, and feedback management for students and administrators in a university library.</p>
+            </div>
+            <div class="col-lg-3 col-md-6" id="sos">
+                <h4>Contact</h4>
+                <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" id="sos">
+                <h4>Quick Links</h4>
+                <a class="btn btn-link" href="">Home</a>
+                <a class="btn btn-link" href="">Contact Us</a>
+                <a class="btn btn-link" href="">Books</a>
+                <a class="btn btn-link" href="">Rooms</a>
+                <a class="btn btn-link" href="">About Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <p>&copy; 2025 Horizon Library. All rights reserved. <a class="pfa" href="policy.aspx">Privacy Policy</a> | <a class="pfa" href="terms.aspx">Terms of Service</a></p>
+        </div>
+    </div>
+</div>
         </div>
     </form>
 <script src="js/jquery.js"></script>
