@@ -158,7 +158,7 @@ small{
 .navbar-light .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
-    color: #FFFFFF;
+    color: #F4F1DE !important;
     font-size: 15px;
     text-transform: uppercase;
     outline: none;
@@ -166,7 +166,7 @@ small{
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color:#F1C40F;
+    color:#F1C40F !important;
 }
 
 @media (max-width: 991.98px) {
@@ -286,6 +286,8 @@ small{
     position: relative;
     display: inline-block;
     text-transform: uppercase;
+    border:none;
+    color:#F1C40F !important;
 }
 
 .section-title::before {
@@ -295,7 +297,7 @@ small{
     height: 2px;
     top: 4px;
     left: -40px;
-    background: var(--primary);
+    background: #F1C40F;
     z-index: -1;
 }
 
@@ -306,7 +308,7 @@ small{
     height: 2px;
     bottom: 5px;
     left: -60px;
-    background: var(--primary);
+    background: #F1C40F;
     z-index: -1;
 }
 
@@ -507,6 +509,9 @@ small{
  .foot {
      box-shadow: 0.4vw 0.4vw 0.9vw black;
  }
+ p{
+     color:#F4F1DE;
+ }
     </style>
 </head>
 <body>
@@ -582,7 +587,7 @@ small{
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4" style="color:#2C3E50 !important;"></i>
                             <h5 class="mb-3"> Smart Catalog System</h5>
                             <p>Search for books instantly and access detailed information.</p>
                         </div>
@@ -591,7 +596,7 @@ small{
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <i class="fa fa-3x fa-globe text-primary mb-4" style="color:#2C3E50 !important;"></i>
                             <h5 class="mb-3">Student & Faculty Access</h5>
                             <p>A seamless experience tailored for university students and professors.</p>
                         </div>
@@ -600,7 +605,7 @@ small{
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                            <i class="fa fa-3x fa-home text-primary mb-4" style="color:#2C3E50 !important;"></i>
                             <h5 class="mb-3"> Advanced Search & Filters</h5>
                             <p>Find books by title, author, genre, or subject in seconds!</p>
                         </div>
@@ -609,7 +614,7 @@ small{
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <i class="fa fa-3x fa-book-open text-primary mb-4" style="color:#2C3E50 !important;"></i>
                             <h5 class="mb-3">Book Reservation System</h5>
                             <p>"Reserve books in advance and pick them up when ready!</p>
                         </div>
@@ -631,28 +636,28 @@ small{
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                    <h1 class="mb-4">Welcome to Horizon</h1>
+                    <h6 class="section-title text-start text-primary pe-3"> Welcome to Horizon</h6>
+                    <%--<h1 class="mb-4">Welcome to Horizon</h1>--%>
                     <p class="mb-4">At our University Library Management System, we believe in making knowledge accessible to everyone. Our platform seamlessly connects students and faculty with books, research materials, and digital resources, ensuring a smooth and efficient learning experience</p>
                     <p class="mb-4">We are committed to transforming university libraries into smart, efficient, and technology-driven hubs of knowledge. With advanced search features, automated borrowing, and digital access, we make learning more convenient than ever.</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>User-Friendly Interface</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>User-Friendly Interface</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Smart Search & Filtering</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>Smart Search & Filtering</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Automated Borrow & Return System</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>Automated Borrow & Return System</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Book Search & Reservation </p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>Online Book Search & Reservation </p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Library Access</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>24/7 Library Access</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>International Certificate</p>
                         </div>
                     </div>
                     <a class="btn btn-primary py-3 px-5 mt-2" href="" style="border: solid 1px white;">Read More</a>
@@ -667,8 +672,8 @@ small{
     <div class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
-                <h1 class="mb-5">Our Services</h1>
+                <h6 class="section-title text-center text-primary px-3">Our Services</h6>
+               <%-- <h1 class="mb-5">Our Services</h1>--%>
             </div>
             <div class="row g-3">
                 <div class="col-lg-7 col-md-6">
@@ -676,7 +681,7 @@ small{
                         <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="https://i.pinimg.com/736x/8f/2f/e3/8f2fe351847a82957dce973fe208f194.jpg" alt="">
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                <div class=" text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                     <h5 class="m-0">Borrow Book</h5>
                                 </div>
                             </a>
@@ -684,7 +689,7 @@ small{
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="https://i.pinimg.com/736x/d8/32/99/d83299887c4bc4f3ba24e3c49261ffb1.jpg" alt="">
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                <div class=" text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                     <h5 class="m-0">Search Books</h5>
                                 </div>
                             </a>
@@ -692,7 +697,7 @@ small{
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="https://i.pinimg.com/736x/d2/41/6d/d2416db69fac9d882a8941c975bbee54.jpg" alt="">
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                <div class=" text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
                                     <h5 class="m-0">View Available Rooms</h5>
                                 </div>
                             </a>
@@ -702,7 +707,7 @@ small{
                 <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
                     <a class="position-relative d-block h-100 overflow-hidden" href="">
                         <img class="img-fluid position-absolute w-100 h-100" src="https://i.pinimg.com/736x/bf/a8/30/bfa830b9f4ded5e6e623faa9020ee664.jpg" alt="" style="object-fit: cover;">
-                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+                        <div class=" text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
                             <h5 class="m-0">Reserve a Room</h5>
                         </div>
                     </a>
@@ -711,11 +716,10 @@ small{
         </div>
     </div>
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <%--<div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h1 class="mb-5">Team</h1>
+                <h6 class="section-title text-center text-primary px-3">Team</h6>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -792,7 +796,7 @@ small{
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
     <!-- Team End -->
 
 
@@ -800,12 +804,12 @@ small{
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="mb-5">Testimonial!</h1>
+                <h6 class="section-title text-center text-primary px-3">Testimonial</h6>
+               <%-- <h1 class="mb-5">Testimonial!</h1>--%>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
-                    <img class="rounded-circle p-2 mx-auto mb-3" src="https://i.pinimg.com/236x/b5/51/82/b55182df9efa010dea0e2558a9cf968a.jpg" style="width: 80px; height: 80px;">
+                    <img class="rounded-circle p-2 mx-auto mb-3" src="https://i.pinimg.com/236x/b5/51/82/b55182df9efa010dea0e2558a9cf968a.jpg" style="width: 126px; height: 116px">
                     <h5 class="mb-0">Tariq</h5>
                     <p>Profession</p>
                     <div class="testimonial-text bg-light text-center p-4">
@@ -813,7 +817,7 @@ small{
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="rounded-circle p-2 mx-auto mb-3" src="https://i.pinimg.com/236x/b5/b3/05/b5b30504f47c108fea1943757c87b0a6.jpg" style="width: 80px; height: 80px;">
+                    <img class="rounded-circle p-2 mx-auto mb-3" src="https://i.pinimg.com/236x/b5/b3/05/b5b30504f47c108fea1943757c87b0a6.jpg" style="width: 126px; height: 116px">
                     <h5 class="mb-0">Nabil</h5>
                     <p>Profession</p>
                     <div class="testimonial-text bg-light text-center p-4">
@@ -821,7 +825,7 @@ small{
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class=" rounded-circle p-2 mx-auto mb-3" src="https://i.pinimg.com/236x/d1/e3/59/d1e35928bb6a26c3433d2eb6b812ac8e.jpg" style="width: 80px; height: 80px;">
+                    <img class=" rounded-circle p-2 mx-auto mb-3" src="https://i.pinimg.com/236x/d1/e3/59/d1e35928bb6a26c3433d2eb6b812ac8e.jpg" style="width: 126px; height: 116px">
                     <h5 class="mb-0">Rami</h5>
                     <p>Profession</p>
                     <div class="testimonial-text bg-light text-center p-4">
@@ -829,7 +833,7 @@ small{
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class=" rounded-circle p-2 mx-auto mb-3" src="https://i.pinimg.com/236x/0b/5c/d0/0b5cd0b51e431bbac4dffa331a3cbed5.jpg" style="width: 80px; height: 80px;">
+                    <img class=" rounded-circle p-2 mx-auto mb-3" src="https://i.pinimg.com/236x/0b/5c/d0/0b5cd0b51e431bbac4dffa331a3cbed5.jpg" style="width: 126px; height: 116px">
                     <h5 class="mb-0">Zayd</h5>
                     <p>Profession</p>
                     <div class="testimonial-text bg-light text-center p-4">
