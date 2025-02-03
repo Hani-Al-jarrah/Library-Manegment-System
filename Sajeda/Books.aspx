@@ -323,7 +323,7 @@ small{
       <a class="btn btn-link" href="/Habib/Contact.aspx">Contact Us</a>
       <a class="btn btn-link" href="/Mona/StudentsBooks.aspx">Books</a>
       <a class="btn btn-link" href="/Hani/Rooms.aspx">Rooms</a>
-      <a class="btn btn-link" href="aboutus.aspx">About Us</a>
+      <a class="btn btn-link" href="/Habib/aboutPage.aspx">About Us</a>
             </div>
         </div>
     </div>
