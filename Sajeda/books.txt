@@ -1,2 +1,0 @@
-1212,bookname1,author1,10/5/2019,1/2/2023,Lorem ipsum dolor sit amet consectetur. adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?
-2512,bookname2,author1,10/5/2019,1/2/2023,Lorem ipsum dolor sit amet consectetur. adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?

@@ -14,11 +14,11 @@ namespace Group5
         {
 
 
-            string roomsFile = Server.MapPath("/Sajeda/rooms.txt");
-            string[] book = File.ReadAllLines(roomsFile);
-            foreach (string line in book)
+            string roomsFile = Server.MapPath("/Hani/Reservations.txt");
+            string[] room = File.ReadAllLines(roomsFile);
+            foreach (string line in room)
             {
-                string[] roomData = line.Split(',');
+                string[] roomData = line.Split('|');
                 roomsHistory.InnerHtml += $"<tr><td>{roomData[0]}</td><td>{roomData[1]}</td><td>{roomData[2]}</td><td>{roomData[3]}</td></tr>";
 
 

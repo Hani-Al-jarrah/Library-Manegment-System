@@ -104,14 +104,12 @@
     <Content Include="Hani\Rooms.aspx" />
     <Content Include="Mona\Mona1.aspx" />
     <Content Include="Sajeda\Books.aspx" />
-    <Content Include="Sajeda\books.txt" />
     <Content Include="Sajeda\editProfile.aspx" />
     <Content Include="Sajeda\img\img1.png" />
     <Content Include="Sajeda\img\img2.png" />
     <Content Include="Sajeda\Profile.aspx" />
     <Content Include="Sajeda\resetPassword.aspx" />
     <Content Include="Sajeda\rooms.aspx" />
-    <Content Include="Sajeda\rooms.txt" />
     <Content Include="Sajeda\sajeda1.aspx" />
     <Content Include="Sajeda\updateImg.aspx" />
     <Content Include="Suhaib\Loginpage.aspx" />

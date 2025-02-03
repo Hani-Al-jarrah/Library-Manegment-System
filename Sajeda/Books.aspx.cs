@@ -13,12 +13,12 @@ namespace Group5
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            string booksFile = Server.MapPath("~/Sajeda/books.txt");
+            string booksFile = Server.MapPath("~/borrowDetails.txt");
             string[] book = File.ReadAllLines(booksFile);
             foreach (string line in book)
             {
                 string[] bookData = line.Split(',');
-                bookhistory.InnerHtml +=  $"<tr><td>{bookData[0]}</td><td>{bookData[1]}</td><td>{bookData[2]}</td><td>{bookData[3]}</td></tr>";
+                bookhistory.InnerHtml +=  $"<tr><td>{bookData[0]}</td><td>{bookData[1]}</td><td>{bookData[2]}</td><td>{bookData[3]}</td><td>{bookData[4]}</td><td>{bookData[5]}</td></tr>";
             }
         }
 

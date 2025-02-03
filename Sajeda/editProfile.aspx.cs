@@ -13,80 +13,65 @@ namespace Group5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                load();
+            }
         }
 
-        //protected void edit_Click(object sender, EventArgs e)
-        //{
-        //    string users = Server.MapPath("users.txt");
-        //    if (File.Exists(users))
-        //    {
-        //        string[] readData = File.ReadAllLines(users);
-
-        //        for (int i = 0; i < readData.Length; i++)
-        //        {
-        //            string[] studentData = readData[i].Split(',');
-        //            if (studentData[7] == "true")
-        //            {
-        //                readData[i] = $"{studentData[0]},{name.Text},{email.Text},{studentData[3]},{studentData[4]},{studentData[5]},{phone.Text},{studentData[6]},true";
-        //                File.WriteAllLines(users, readData);
-        //                //saved.Text = "saved!";
-        //            }
-        //        }
-        //    }
-        //}
 
         protected void edit_Click(object sender, EventArgs e) {
 
-        //    string filePath = Server.MapPath("users.txt");
-        //    if (File.Exists(filePath))
-        //    {
-        //        string[] content = File.ReadAllLines(filePath);
-        //        string fileLoged = Server.MapPath("loged.txt");
-        //        string studentID = File.ReadAllText(fileLoged);
+           string filePath = Server.MapPath("/Suhaib/users.txt");
+            if (File.Exists(filePath))
+            {
+               string[] content = File.ReadAllLines(filePath);
+               string fileLoged = Server.MapPath("~/loggedinuser.txt");
+               string userID = File.ReadAllText(fileLoged);
 
-        //        for (int i = 0; i < content.Length; i++)
-        //        {
-        //            string[] user = content[i].Split(',');
-        //            if (user[0] == studentID)
-        //            {
-        //                user[1] = name.Text;
-        //                user[2] = email.Text;
-        //                user[6] = phone.Text;
-        //                File.WriteAllText(fileLoged, email.Text);
-        //                content[i] = $"{user[0]},{user[1]},{user[2]},{user[3]},{user[4]},{user[5]},{user[6]},{user[7]}";
+                for (int i = 0; i < content.Length; i++)
+                {
+                    string[] user = content[i].Split(',');
+                    if (user[2] == userID)
+                    {
+                        user[0] = name.Text;
+                        user[3] = email.Text;
+                        user[1] = phone.Text;
+                        File.WriteAllText(fileLoged, email.Text);
+                        content[i] = $"{user[0]},{user[1]},{user[2]},{user[3]},{user[4]},{user[5]},{user[6]},{user[7]}";
 
-        //                Response.Write("<script>alert('information changed!');</script>");
+                        Response.Write("<script>alert('information changed!');</script>");
 
-        //                break;
-        //            }
-        //        }
-        //        File.WriteAllLines(filePath, content);
-        //    }
-        //    Response.Redirect("Profile.aspx");
-        //}
-        //private void load()
-        //{
-        //    string filePath = Server.MapPath("users.txt");
-        //    if (File.Exists(filePath))
-        //    {
-        //        string[] content = File.ReadAllLines(filePath);
-        //        string fileLoged = Server.MapPath("loged.txt");
-        //        string studentID = File.ReadAllText(fileLoged);
+                        break;
+                    }
+                }
+                File.WriteAllLines(filePath, content);
+            }
+            Response.Redirect("Profile.aspx");
+        }
+        private void load()
+        {
+            string filePath = Server.MapPath("/Suhaib/users.txt");
+            if (File.Exists(filePath))
+            {
+                string[] content = File.ReadAllLines(filePath);
+                string fileLoged = Server.MapPath("~/loggedinuser.txt");
+                string userID = File.ReadAllText(fileLoged);
 
-        //        foreach (string line in content)
-        //        {
-        //            string[] user = line.Split(',');
-        //            if (user[0] == studentID)
-        //            {
-        //                name.Text = user[1];
-        //                email.Text = user[2];
-        //                phone.Text = user[6];
+                foreach (string line in content)
+                {
+                    string[] user = line.Split(',');
+                    if (user[2] == userID)
+                    {
+                        studentID.Text = user[2];
+                        name.Text = user[0];
+                        email.Text = user[3];
+                        phone.Text = user[1];
 
-        //            }
-        //        }
-        //    }
-        //}
+                    }
+                }
+            }
+        }
 
 
 
@@ -139,19 +124,19 @@ namespace Group5
             //        }
             //    }
             //}
-        }
+        
 
-// Method to validate the full name (only letters and spaces allowed)
-        private bool IsValidName(string name)
-        {
-            return !string.IsNullOrWhiteSpace(name) && Regex.IsMatch(name, @"^[A-Za-z\s]+$");
-        }
+//// Method to validate the full name (only letters and spaces allowed)
+//        private bool IsValidName(string name)
+//        {
+//            return !string.IsNullOrWhiteSpace(name) && Regex.IsMatch(name, @"^[A-Za-z\s]+$");
+//        }
 
-        // Method to validate the email format
-        private bool IsValidEmail(string email)
-        {
-            return !string.IsNullOrWhiteSpace(email) && Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
-        }
+//        // Method to validate the email format
+//        private bool IsValidEmail(string email)
+//        {
+//            return !string.IsNullOrWhiteSpace(email) && Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+//        }
 
         
         protected void resetPassword_Click(object sender, EventArgs e)
