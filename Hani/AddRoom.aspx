@@ -6,6 +6,18 @@
 <head runat="server">
     <title>Add Room</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+            body{
+        background-color:#2C3E50;
+    }
+
+
+                .p-4 {
+    transition: 1.5s;
+    margin-top: 10rem;
+    padding: 1.5rem !important;
+}
+    </style>
 </head>
 <body class="container mt-4">
     <form id="form1" runat="server">
@@ -38,7 +50,11 @@
 
             <!-- Submit Button -->
             <div class="mb-3 text-center">
-                <asp:Button ID="btnAddRoom" runat="server" Text="Add Room" CssClass="btn btn-primary" OnClick="btnAddRoom_Click" />
+                <asp:Button ID="btnAddRoom" runat="server" Text="Add Room" CssClass="btn btn-primary"
+                    
+        Style="background-color: #F1C40F; border-color: #F1C40F; color: white;" 
+                    
+                    OnClick="btnAddRoom_Click" />
             </div>
 
             <!-- Success/Error Message -->

@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web.UI;
@@ -110,7 +109,15 @@ namespace Group5.Hani
             File.WriteAllLines(reservationsFilePath, updatedLines);
             LoadReservations();
         }
+
+        protected void TakeMeBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("\\Hani\\AdminRooms.aspx"); // Change "Dashboard.aspx" to your desired previous page
+        }
+
     }
+
+
 
     public class Reservation
     {
