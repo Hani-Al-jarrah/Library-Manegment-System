@@ -6,6 +6,24 @@
 <head runat="server">
     <title>Edit Room</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        body{
+            background-color:#2C3E50;
+
+        }
+
+
+
+        .p-4 {
+    transition: 1.5s;
+    margin-top: 10rem;
+    padding: 1.5rem !important;
+}
+/*        mb-3{background-color: #F4F1DE;
+
+        }*/
+    </style>
 </head>
 <body class="container mt-4">
     <form id="form1" runat="server">
@@ -39,9 +57,13 @@
             </div>
 
             <!-- Update Button -->
-            <div class="mb-3 text-center">
-                <asp:Button ID="btnUpdateRoom" runat="server" Text="Update Room" CssClass="btn btn-success" OnClick="btnUpdateRoom_Click" />
-            </div>
+      <div class="mb-3 text-center">
+    <asp:Button ID="btnUpdateRoom" runat="server" Text="Update Room" 
+        CssClass="btn btn-success" 
+        Style="background-color: #F1C40F; border-color: #F1C40F; color: white;" 
+        OnClick="btnUpdateRoom_Click" />
+</div>
+
 
             <!-- Success/Error Message -->
             <div class="mb-3 text-center">

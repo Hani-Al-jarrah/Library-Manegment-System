@@ -2,3 +2,4 @@ Full Name,Phone Number,University ID,Email,Password,Gender,College,Major
 Hani Aljarrah,0777205835,2002411000,hanijarrah20@gmail.com,Hani123@,Male,Information tecgnology,Computer science
 Hani Aljarrah,0777205835,1234567890,hanijarrah20@gmail.com,Hani123@,Male,Engineering,Civil Engneering
 Batool Aldilki,0777205835,1234567890,batool@gmail.com,Batool123!,Female,Engineering,Civil Engneering
+Moh Jarrah,0777205835,1234567890,hanijarrah20@gmail.com,Moh1234!,Male,Information tecgnology,Civil Engneering

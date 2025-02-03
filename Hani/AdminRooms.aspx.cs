@@ -295,5 +295,11 @@ namespace Group5.Hani
                 DeleteRoom(roomId);
             }
         }
+
+        protected void TakeMeBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("\\Habib\\Habib1.aspx"); // Change "Dashboard.aspx" to your desired previous page
+        }
+
     }
 }
