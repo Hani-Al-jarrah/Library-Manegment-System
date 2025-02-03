@@ -24,21 +24,21 @@ namespace Group5
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// showbooks control.
+        /// bookhistory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showbooks;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl bookhistory;
 
         /// <summary>
-        /// back control.
+        /// toBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button back;
+        protected global::System.Web.UI.WebControls.Button toBack;
     }
 }

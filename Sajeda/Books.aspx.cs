@@ -13,19 +13,22 @@ namespace Group5
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            string booksFile = Server.MapPath("books.txt");
+            string booksFile = Server.MapPath("~/Sajeda/books.txt");
             string[] book = File.ReadAllLines(booksFile);
             foreach (string line in book)
             {
                 string[] bookData = line.Split(',');
-
-                //string rowHtml = $"<span>{bookData[4]}</span><h5>{bookData[2]}</h5><p>{bookData[5]}</p><hr>";
-                string addBook = $"<h5>{bookData[2]}</h5><hr>";
-                showbooks.InnerHtml += addBook;
+                bookhistory.InnerHtml +=  $"<tr><td>{bookData[0]}</td><td>{bookData[1]}</td><td>{bookData[2]}</td><td>{bookData[3]}</td></tr>";
             }
         }
 
-        protected void back_Click(object sender, EventArgs e)
+
+        //protected void backbtn_Click1(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("editProfile.aspx");
+        //}
+
+        protected void toBack_Click(object sender, EventArgs e)
         {
             Response.Redirect("editProfile.aspx");
         }

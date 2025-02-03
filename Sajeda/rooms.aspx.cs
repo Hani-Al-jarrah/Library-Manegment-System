@@ -13,42 +13,24 @@ namespace Group5
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            string roomsFile = Server.MapPath("rooms.txt");
+
+            string roomsFile = Server.MapPath("/Sajeda/rooms.txt");
             string[] book = File.ReadAllLines(roomsFile);
             foreach (string line in book)
             {
                 string[] roomData = line.Split(',');
+                roomsHistory.InnerHtml += $"<tr><td>{roomData[0]}</td><td>{roomData[1]}</td><td>{roomData[2]}</td><td>{roomData[3]}</td></tr>";
 
-                //string rowHtml = $"<span>{bookData[4]}</span><h5>{bookData[2]}</h5><p>{bookData[5]}</p><hr>";
-                //string addRoom = $"<h5>{roomData[1]}</h5><hr>";
-                //showrooms.InnerHtml += addRoom;
 
-                string roomCard = $@"
-                        <div class='col-md-12 col-lg-4'>
-                            <div class='card'>
-                                <div class='card-body'>
-                                    <h4 class='card-title'>{roomData[1]}</h4>
-                                    <p class='card-text'>{roomData[2]}</p>
-                                </div>
-                            </div>
-                        </div>";
-
-                // Append the generated card to the StringBuilder
-                //showrooms.Append(roomCard);
             }
-        
-
-        // Set the generated HTML to the 'showrooms' div
-        showrooms.InnerHtml = showrooms.ToString();
-    }
-        
-
-
+        }
 
         protected void back_Click(object sender, EventArgs e)
         {
             Response.Redirect("editProfile.aspx");
         }
+
+    
     }
 
 }

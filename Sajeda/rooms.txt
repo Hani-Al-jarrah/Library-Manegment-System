@@ -1,1 +1,1 @@
-12356,room1,1stfloor
+12356,room1,50,1stfloor

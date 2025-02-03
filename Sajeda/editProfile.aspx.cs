@@ -38,44 +38,107 @@ namespace Group5
 
         protected void edit_Click(object sender, EventArgs e) {
 
-            string usersFilePath = Server.MapPath("users.txt");
-            if (File.Exists(usersFilePath))
-            {
-                string[] userRecords = File.ReadAllLines(usersFilePath);
+        //    string filePath = Server.MapPath("users.txt");
+        //    if (File.Exists(filePath))
+        //    {
+        //        string[] content = File.ReadAllLines(filePath);
+        //        string fileLoged = Server.MapPath("loged.txt");
+        //        string studentID = File.ReadAllText(fileLoged);
 
-                // Validate input before processing
-                if (!IsValidName(name.Text)) { 
-                //{
-                //    validationMessage.Text = "Invalid name. Only letters and spaces are allowed.";
-                //    validationMessage.ForeColor = System.Drawing.Color.Red;
-                //    validationMessage.Visible = true;
-                    return;
-                }
+        //        for (int i = 0; i < content.Length; i++)
+        //        {
+        //            string[] user = content[i].Split(',');
+        //            if (user[0] == studentID)
+        //            {
+        //                user[1] = name.Text;
+        //                user[2] = email.Text;
+        //                user[6] = phone.Text;
+        //                File.WriteAllText(fileLoged, email.Text);
+        //                content[i] = $"{user[0]},{user[1]},{user[2]},{user[3]},{user[4]},{user[5]},{user[6]},{user[7]}";
 
-                if (!IsValidEmail(email.Text))
-                {
-                    //validationMessage.Text = "Invalid email format.";
-                    //validationMessage.ForeColor = System.Drawing.Color.Red;
-                    //validationMessage.Visible = true;
-                    return;
-                }
+        //                Response.Write("<script>alert('information changed!');</script>");
 
-                for (int i = 0; i < userRecords.Length; i++)
-                {
-                    string[] userData = userRecords[i].Split(',');
+        //                break;
+        //            }
+        //        }
+        //        File.WriteAllLines(filePath, content);
+        //    }
+        //    Response.Redirect("Profile.aspx");
+        //}
+        //private void load()
+        //{
+        //    string filePath = Server.MapPath("users.txt");
+        //    if (File.Exists(filePath))
+        //    {
+        //        string[] content = File.ReadAllLines(filePath);
+        //        string fileLoged = Server.MapPath("loged.txt");
+        //        string studentID = File.ReadAllText(fileLoged);
 
-                    if (userData[7] == "true") // Checking if the user is active
-                    {
-                        userRecords[i] = $"{userData[0]},{name.Text},{email.Text},{userData[3]},{userData[4]},{userData[5]},{phone.Text},{userData[6]},true";
-                        File.WriteAllLines(usersFilePath, userRecords);
+        //        foreach (string line in content)
+        //        {
+        //            string[] user = line.Split(',');
+        //            if (user[0] == studentID)
+        //            {
+        //                name.Text = user[1];
+        //                email.Text = user[2];
+        //                phone.Text = user[6];
 
-                        //validationMessage.Text = "Saved successfully!";
-                        //validationMessage.ForeColor = System.Drawing.Color.Green;
-                        //validationMessage.Visible = true;
-                        return;
-                    }
-                }
-            }
+        //            }
+        //        }
+        //    }
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //string usersFilePath = Server.MapPath("users.txt");
+            //if (File.Exists(usersFilePath))
+            //{
+            //    string[] userRecords = File.ReadAllLines(usersFilePath);
+
+            //    // Validate input before processing
+            //    if (!IsValidName(name.Text)) { 
+            //    //{
+            //    //    validationMessage.Text = "Invalid name. Only letters and spaces are allowed.";
+            //    //    validationMessage.ForeColor = System.Drawing.Color.Red;
+            //    //    validationMessage.Visible = true;
+            //        return;
+            //    }
+
+            //    if (!IsValidEmail(email.Text))
+            //    {
+            //        //validationMessage.Text = "Invalid email format.";
+            //        //validationMessage.ForeColor = System.Drawing.Color.Red;
+            //        //validationMessage.Visible = true;
+            //        return;
+            //    }
+
+            //    for (int i = 0; i < userRecords.Length; i++)
+            //    {
+            //        string[] userData = userRecords[i].Split(',');
+
+            //        if (userData[7] == "true") // Checking if the user is active
+            //        {
+            //            userRecords[i] = $"{userData[0]},{name.Text},{email.Text},{userData[3]},{userData[4]},{userData[5]},{phone.Text},{userData[6]},true";
+            //            File.WriteAllLines(usersFilePath, userRecords);
+
+            //            //validationMessage.Text = "Saved successfully!";
+            //            //validationMessage.ForeColor = System.Drawing.Color.Green;
+            //            //validationMessage.Visible = true;
+            //            return;
+            //        }
+            //    }
+            //}
         }
 
 // Method to validate the full name (only letters and spaces allowed)
