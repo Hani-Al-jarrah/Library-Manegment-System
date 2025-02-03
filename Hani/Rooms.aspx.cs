@@ -21,6 +21,37 @@ namespace Group5.Hani
                 LoadRooms();
             }
         }
+        protected void btnApprove_Click(object sender, EventArgs e)
+{
+    Button btn = (Button)sender;
+    string roomId = btn.CommandArgument;
+
+    ApproveReservation(roomId);
+
+    Response.Write("<script>alert('Reservation approved successfully!');</script>");
+}
+
+        protected void ApproveReservation(string roomId)
+        {
+            if (!File.Exists(reservationsFilePath))
+                return;
+
+            string[] lines = File.ReadAllLines(reservationsFilePath);
+            List<string> updatedLines = new List<string>();
+
+            foreach (string line in lines)
+            {
+                string[] data = line.Split('|');
+                if (data.Length >= 4 && data[0] == roomId && data[3] == "Pending")
+                {
+                    data[3] = "Reserved"; // Change status to Reserved
+                }
+                updatedLines.Add(string.Join("|", data));
+            }
+
+            File.WriteAllLines(reservationsFilePath, updatedLines);
+            LoadRooms(); // Refresh the UI
+        }
 
         protected void btnReserve_Click(object sender, EventArgs e)
         {
@@ -28,20 +59,7 @@ namespace Group5.Hani
             RepeaterItem item = (RepeaterItem)btn.NamingContainer;
             Panel pnlTimePicker = (Panel)item.FindControl("pnlTimePicker");
 
-            pnlTimePicker.CssClass += " open"; // إضافة الكلاس "open" لإظهار اللوحة
-        }
-
-        protected void calDatePicker_SelectionChanged(object sender, EventArgs e)
-        {
-            Calendar cal = (Calendar)sender;
-            RepeaterItem item = (RepeaterItem)cal.NamingContainer;
-
-            // **هام:** منع PostBack
-            ScriptManager.RegisterStartupScript(this, GetType(), "PreventPostback", "javascript:void(0);", true);
-
-            DateTime selectedDate = cal.SelectedDate;
-
-            // يمكنك هنا إضافة أي منطق إضافي للتعامل مع التاريخ المحدد
+            pnlTimePicker.CssClass += " open"; // Show the panel by adding the "open" class
         }
 
         protected void rptRooms_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -51,28 +69,24 @@ namespace Group5.Hani
                 Button btnCancel = (Button)e.Item.FindControl("btnCancel");
                 Label lblStatus = (Label)e.Item.FindControl("lblStatus");
                 DropDownList ddlStartTime = (DropDownList)e.Item.FindControl("ddlStartTime");
-                Calendar calDatePicker = (Calendar)e.Item.FindControl("calDatePicker");
 
-                string roomId = btnCancel.CommandArgument;
+                Button reserveButton = (Button)e.Item.FindControl("btnReserve");
+                string roomId = reserveButton.CommandArgument;
                 string status = GetReservationStatus(roomId);
 
                 lblStatus.Text = $"Status: {status}";
+                lblStatus.CssClass = "status-label " + (status == "Available" ? "status-available" : status == "Pending" ? "status-pending" : "status-reserved");
+
                 btnCancel.Visible = (status == "Reserved" || status == "Cancel Pending");
                 btnCancel.Enabled = (status != "Cancel Pending");
 
-                // ملء قائمة الوقت
+                // Fill dropdown with time slots
                 if (ddlStartTime != null && ddlStartTime.Items.Count == 0)
                 {
                     for (int hour = 0; hour < 24; hour++)
                     {
                         ddlStartTime.Items.Add(new ListItem($"{hour}:00 - {(hour + 2) % 24}:00", hour.ToString()));
                     }
-                }
-
-                // ربط حدث SelectionChanged للتقويم
-                if (calDatePicker != null)
-                {
-                    calDatePicker.SelectionChanged += calDatePicker_SelectionChanged;
                 }
             }
         }
@@ -98,25 +112,54 @@ namespace Group5.Hani
         {
             Button btn = (Button)sender;
             RepeaterItem item = (RepeaterItem)btn.NamingContainer;
-            DropDownList ddlStartTime = (DropDownList)item.FindControl("ddlStartTime");
-            Calendar calDatePicker = (Calendar)item.FindControl("calDatePicker");
 
-            if (ddlStartTime == null || ddlStartTime.SelectedItem == null || calDatePicker == null)
+            DropDownList ddlStartTime = (DropDownList)item.FindControl("ddlStartTime");
+            TextBox txtDatePicker = (TextBox)item.FindControl("txtDatePicker");
+            Button reserveButton = (Button)item.FindControl("btnReserve");
+
+            if (ddlStartTime == null || ddlStartTime.SelectedItem == null || txtDatePicker == null || string.IsNullOrEmpty(txtDatePicker.Text))
+            {
+                Response.Write("<script>alert('Please select a date and time before confirming reservation.');</script>");
                 return;
+            }
 
             string selectedTime = ddlStartTime.SelectedValue;
-            string selectedDate = calDatePicker.SelectedDate.ToShortDateString();
-            Button reserveButton = (Button)item.FindControl("btnReserve");
-            string roomId = reserveButton.CommandArgument;
+            string selectedDate = txtDatePicker.Text;
+            string roomId = btn.CommandArgument;
 
-            string reservation = $"{roomId}|{selectedDate}|{selectedTime}|Pending";
-            File.AppendAllText(reservationsFilePath, reservation + Environment.NewLine);
+            List<string> reservations = new List<string>();
+            bool found = false;
 
-            btn.Text = "Pending";
-            btn.Enabled = false;
+            if (File.Exists(reservationsFilePath))
+            {
+                string[] lines = File.ReadAllLines(reservationsFilePath);
+                foreach (string line in lines)
+                {
+                    string[] data = line.Split('|');
+                    if (data.Length >= 4 && data[0] == roomId)
+                    {
+                        data[1] = selectedDate;
+                        data[2] = selectedTime;
+                        data[3] = "Pending"; // Set status to Pending
+                        found = true;
+                    }
+                    reservations.Add(string.Join("|", data));
+                }
+            }
 
-            LoadRooms();
+            if (!found)
+            {
+                string reservation = $"{roomId}|{selectedDate}|{selectedTime}|Pending";
+                reservations.Add(reservation);
+            }
+
+            File.WriteAllLines(reservationsFilePath, reservations);
+
+            Response.Write("<script>alert('Reservation successful. Status: Pending');</script>");
+
+            LoadRooms(); // Refresh UI
         }
+
 
         protected void btnCancelReservation_Click(object sender, EventArgs e)
         {
@@ -174,7 +217,6 @@ namespace Group5.Hani
             rptRooms.DataSource = rooms;
             rptRooms.DataBind();
         }
-
 
         public class Room
         {

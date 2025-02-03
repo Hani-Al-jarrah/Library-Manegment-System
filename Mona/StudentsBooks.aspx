@@ -331,11 +331,7 @@
                     <p>&copy; 2025 Horizon Library. All rights reserved. <a class="pfa" href="policy.aspx">Privacy Policy</a> | <a class="pfa" href="terms.aspx">Terms of Service</a></p>
                 </div>
             </div>
-            <!-- Policy & Copyright Section -->
-            <%--<div class="footer">
-    <p >&copy; 2025 Horizon Library. All rights reserved. <a href="policy.aspx">Privacy Policy</a> | <a href="terms.aspx">Terms of Service</a></p>
-</div>
-        </div>--%>
+
 
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>

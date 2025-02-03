@@ -728,7 +728,7 @@ body.dark {
 
 .content main {
 	width: 100%;
-	padding: 36px 24px;
+	padding: 36px 100px;
 	font-family: var(--poppins);
 	max-height: calc(100vh - 56px);
 	overflow-y: auto;
@@ -1436,6 +1436,78 @@ nav .profile-details i {
 span{
 	color:#F1C40F
 }
+/*style cards*/
+  .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      animation: fadeIn 0.5s ease-in-out;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top:71px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: #6a11cb;
+      margin-bottom: 15px;
+    }
+
+    .service-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .service-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .service-btn {
+      background-color: #6a11cb;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .service-btn:hover {
+      background-color: #2575fc;
+      transform: translateY(-2px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    p:ac
+/*style cards*/
  </style>
 <body>
     <form id="form1" runat="server">
@@ -1547,53 +1619,43 @@ span{
 
                         <!-- Books View -->
                         <asp:View ID="viewBooks" runat="server">
-    <div class="order">
-        <div class="head">
-            <h3>Books Management</h3>
-            <!-- Add New Book Button -->
-            <asp:Button ID="btnAddNewBook" runat="server" Text="More Book Action" CssClass="add-btn" Onclick="btnAddNewBook_Click" />
-        </div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Book ID</th>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>ISBN</th>
-                    <th>Category</th>
-                    <th>Publication Year</th>
-                    <th>Total Copies</th>
-                    <th>Available Copies</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Example Row 1 -->
-                <tr>
-                    <td>1</td>
-                    <td>The Great Gatsby</td>
-                    <td>F. Scott Fitzgerald</td>
-                    <td>9780743273565</td>
-                    <td>Fiction</td>
-                    <td>1925</td>
-                    <td>10</td>
-                    <td>7</td>
-                    <td><span class="status available">Available</span></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>To Kill a Mockingbird</td>
-                    <td>Harper Lee</td>
-                    <td>9780061120084</td>
-                    <td>Fiction</td>
-                    <td>1960</td>
-                    <td>15</td>
-                    <td>3</td>
-                    <td><span class="status low-stock">Low Stock</span></td>
-                </tr>
-            </tbody>
-        </table>
+      <div class="services-container">
+    <!-- Approve Borrow Request Card -->
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <div class="service-title">Approve Borrow Request</div>
+      <div class="service-description">
+        Review and approve pending borrow requests.
+      </div>
+      <button class="service-btn">Go to Requests</button>
     </div>
+
+    <!-- Add Book Card -->
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="fas fa-plus-circle"></i>
+      </div>
+      <div class="service-title">Add a New Book</div>
+      <div class="service-description">
+        Add a new book to the library collection.
+      </div>
+      <button class="service-btn">Add Book</button>
+    </div>
+
+    <!-- Delete Book Card -->
+    <div class="service-card">
+      <div class="service-icon">
+        <i class="fas fa-trash-alt"></i>
+      </div>
+      <div class="service-title">Delete a Book</div>
+      <div class="service-description">
+        Remove a book from the library collection.
+      </div>
+      <button class="service-btn">Delete Book</button>
+    </div>
+  </div>
 </asp:View>
 
                         <!-- Rooms View -->

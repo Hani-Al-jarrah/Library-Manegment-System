@@ -73,20 +73,58 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Habib\AboutPage.aspx" />
     <Content Include="Habib\animates.css" />
     <Content Include="Habib\bootstrap.css" />
     <Content Include="Habib\Contact.aspx" />
+    <Content Include="Habib\css\animate.min.css" />
+    <Content Include="Habib\css\bootstrap.min.css" />
+    <Content Include="Habib\css\bxslider.css" />
+    <Content Include="Habib\css\et-line-font.css" />
+    <Content Include="Habib\css\font-awesome.min.css" />
+    <Content Include="Habib\css\nivo-lightbox.css" />
+    <Content Include="Habib\css\nivo_themes\default\close%402x.png" />
+    <Content Include="Habib\css\nivo_themes\default\close.png" />
+    <Content Include="Habib\css\nivo_themes\default\default.css" />
+    <Content Include="Habib\css\nivo_themes\default\loading%402x.gif" />
+    <Content Include="Habib\css\nivo_themes\default\loading.gif" />
+    <Content Include="Habib\css\nivo_themes\default\next%402x.png" />
+    <Content Include="Habib\css\nivo_themes\default\next.png" />
+    <Content Include="Habib\css\nivo_themes\default\prev%402x.png" />
+    <Content Include="Habib\css\nivo_themes\default\prev.png" />
+    <Content Include="Habib\css\owl.carousel.css" />
+    <Content Include="Habib\css\owl.theme.css" />
+    <Content Include="Habib\css\style.css" />
     <Content Include="Habib\esting.js" />
+    <Content Include="Habib\fonts\et-line.svg" />
+    <Content Include="Habib\fonts\fontawesome-webfont.svg" />
     <Content Include="Habib\Habib1.aspx" />
     <Content Include="Habib\Home.aspx" />
+    <Content Include="Habib\Images\book-1052014_640.jpg" />
+    <Content Include="Habib\Images\book-6957870_640.jpg" />
+    <Content Include="Habib\Images\books-3946080_640 %282%29.jpg" />
+    <Content Include="Habib\Images\open-book-1428428_640.jpg" />
     <Content Include="Habib\Images\Screenshot 2025-02-01 170355.png" />
     <Content Include="Habib\Images\Screenshot_2025-01-31_020111-removebg-preview.png" />
+    <Content Include="Habib\Images\Screenshot_2025-01-31_020111.png" />
+    <Content Include="Habib\Images\teacup-7526022_1280.jpg" />
     <Content Include="Habib\Images\woman %283%29.png" />
+    <Content Include="Habib\Images\_Some books are so familiar that reading them is like returning home again__ Jo March, Little Women.jpg" />
     <Content Include="Habib\img\testimonial-1.jpg" />
     <Content Include="Habib\img\testimonial-2.jpg" />
     <Content Include="Habib\img\testimonial-3.jpg" />
     <Content Include="Habib\img\testimonial-4.jpg" />
     <Content Include="Habib\jojo.js" />
+    <Content Include="Habib\js\bootstrap.min.js" />
+    <Content Include="Habib\js\custom.js" />
+    <Content Include="Habib\js\jquery.easing-1.3.js" />
+    <Content Include="Habib\js\jquery.js" />
+    <Content Include="Habib\js\jquery.parallax.js" />
+    <Content Include="Habib\js\nivo-lightbox.min.js" />
+    <Content Include="Habib\js\owl.carousel.min.js" />
+    <Content Include="Habib\js\plugins.js" />
+    <Content Include="Habib\js\smoothscroll.js" />
+    <Content Include="Habib\js\wow.min.js" />
     <Content Include="Habib\owl.carousel.min.css" />
     <Content Include="Habib\owl.carousel.min.js" />
     <Content Include="Habib\Rooms.txt" />
@@ -117,6 +155,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Habib\AboutPage.aspx.cs">
+      <DependentUpon>AboutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Habib\AboutPage.aspx.designer.cs">
+      <DependentUpon>AboutPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Habib\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -260,6 +305,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Habib\fonts\.DS_Store" />
+    <Content Include="Habib\fonts\et-line.eot" />
+    <Content Include="Habib\fonts\et-line.ttf" />
+    <Content Include="Habib\fonts\et-line.woff" />
+    <Content Include="Habib\fonts\fontawesome-webfont.eot" />
+    <Content Include="Habib\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Habib\fonts\fontawesome-webfont.woff" />
+    <Content Include="Habib\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Habib\fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -269,6 +323,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Hani\RoomsImages\" />
     <Folder Include="Mona\img\" />
   </ItemGroup>
   <PropertyGroup>

@@ -42,6 +42,15 @@ namespace Group5.Hani
         protected global::System.Web.UI.WebControls.Button btnAddRoom;
 
         /// <summary>
+        /// btnExportRooms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExportRooms;
+
+        /// <summary>
         /// RoomContainer control.
         /// </summary>
         /// <remarks>

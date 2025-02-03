@@ -225,6 +225,47 @@ namespace Group5.Hani
             }
         }
 
+
+
+
+        protected void ExportRooms_Click(object sender, EventArgs e)
+        {
+            if (!File.Exists(roomsFilePath))
+            {
+                return;
+            }
+
+            // Prepare CSV content
+            List<string> csvLines = new List<string>();
+            csvLines.Add("Room ID,Room Name,Capacity,Description,Status"); // CSV Headers
+
+            string[] lines = File.ReadAllLines(roomsFilePath);
+            foreach (string line in lines)
+            {
+                string[] data = line.Split('|');
+                if (data.Length >= 6)
+                {
+                    string csvLine = $"{data[0]},{data[1]},{data[2]},{data[3]},{data[5]}";
+                    csvLines.Add(csvLine);
+                }
+            }
+
+            // Send CSV file as a response
+            string csvContent = string.Join(Environment.NewLine, csvLines);
+            string fileName = "RoomsExport.csv";
+
+            Response.Clear();
+            Response.ContentType = "text/csv";
+            Response.AddHeader("Content-Disposition", $"attachment;filename={fileName}");
+            Response.Write(csvContent);
+            Response.End();
+        }
+
+
+
+
+
+
         protected void DeleteRoom(string roomId)
         {
             if (!File.Exists(roomsFilePath))
