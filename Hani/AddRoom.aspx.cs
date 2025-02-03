@@ -28,6 +28,8 @@ namespace Group5.Hani
             {
                 lblmsg.Text = "All fields are required, including an image.";
                 lblmsg.Visible = true;
+                lblmsg.Style["color"] = "red"; // Set text color to red
+                lblmsg.Style["font-weight"] = "bold"; // Optional: Make the text bold
                 return;
             }
 

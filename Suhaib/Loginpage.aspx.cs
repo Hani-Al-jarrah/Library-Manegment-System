@@ -43,7 +43,7 @@ namespace Group5.Suhaib
                 if (userDetails.Length >= 5 && userDetails[2] == universityId && userDetails[4] == password)
                 {
                     isUserValid = true;
-                    userData = users[i];
+                    userData = userDetails[2];
                     break;
                 }
             }
@@ -51,7 +51,7 @@ namespace Group5.Suhaib
             if (isUserValid)
             {
                 // Create a file for the logged-in user
-                string userFilePath = Server.MapPath($"loggedinuser.txt");
+                string userFilePath = Server.MapPath("~/loggedinuser.txt");
 
                 if (File.Exists(userFilePath))
                 {

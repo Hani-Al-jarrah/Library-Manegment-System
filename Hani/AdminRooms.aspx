@@ -54,7 +54,12 @@
 <head runat="server">
     <title>Admin - Manage Rooms</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    
+    <style>
+                .bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: #2C3E50 !important;
+}
+    </style>
     <script type="text/javascript">
         function confirmDelete(roomId) {
             if (confirm("Are you sure you want to delete this room?")) {
@@ -68,14 +73,14 @@
 <body>
     <form id="form1" runat="server">
         <div class="container mt-4">
-            
+
             <!-- Top Buttons -->
             <div class="d-flex justify-content-between mb-3">
                 <h2>Manage Rooms</h2>
                 <div>
+                    <asp:Button ID="btnTakeMeBack" runat="server" CssClass="btn btn-warning" Text="Dashboard" OnClick="TakeMeBack_Click" />
                     <asp:Button ID="btnRequests" runat="server" CssClass="btn btn-secondary me-2" Text="Requests" PostBackUrl="Requests.aspx" />
                     <asp:Button ID="btnAddRoom" runat="server" CssClass="btn btn-success" Text="Add Room" PostBackUrl="AddRoom.aspx" />
-
                     <asp:Button ID="btnExportRooms" runat="server" CssClass="btn btn-info me-2" Text="Export Rooms" OnClick="ExportRooms_Click" />
 
                 </div>
@@ -89,6 +94,8 @@
 
             <!-- Button to Trigger Server-side Deletion -->
             <asp:Button ID="btnConfirmDelete" runat="server" CssClass="d-none" OnClick="ConfirmDelete_Click" />
+
+
         </div>
     </form>
 </body>
