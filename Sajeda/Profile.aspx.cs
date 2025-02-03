@@ -12,6 +12,12 @@ namespace Group5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+
+                LoadProfileImageOnOtherPage();
+            }
+
             string usersFile = Server.MapPath("/Suhaib/users.txt");
             string[] user = File.ReadAllLines(usersFile);
             foreach (string line in user)
@@ -34,6 +40,19 @@ namespace Group5
         protected void edit_Click(object sender, EventArgs e)
         {
             Response.Redirect("editProfile.aspx");
+        }
+
+
+        private void LoadProfileImageOnOtherPage()
+        {
+            if (Session["UserImagePath"] != null)
+            {
+                imgProfileOtherPage.ImageUrl = Session["UserImagePath"].ToString();
+            }
+            else
+            {
+                imgProfileOtherPage.ImageUrl = "https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"; // Default image
+            }
         }
 
     }
