@@ -132,6 +132,15 @@ namespace Group5.Mona
         protected global::System.Web.UI.WebControls.HiddenField hiddenOriginalBookName;
 
         /// <summary>
+        /// btnDownloadBooksPDF control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnDownloadBooksPDF;
+
+        /// <summary>
         /// gvBooks control.
         /// </summary>
         /// <remarks>
@@ -139,6 +148,15 @@ namespace Group5.Mona
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvBooks;
+
+        /// <summary>
+        /// btnDownloadRequestsPDF control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnDownloadRequestsPDF;
 
         /// <summary>
         /// gvRequestedBooks control.

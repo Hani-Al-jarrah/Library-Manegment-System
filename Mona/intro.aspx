@@ -22,6 +22,7 @@
             justify-content: center;
             position: relative;
             animation: fadeIn 1.5s ease-in-out; 
+/*            font-family:Garamond;*/
         }
 
         body::before {

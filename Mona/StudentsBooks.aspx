@@ -8,13 +8,11 @@
     <title>Student - Book List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
-
     <style>
         body {
             background-color: #2C3E50;
             color: #F4F1DE;
+/*            font-family: Garamond;*/
         }
 
         .container {
@@ -223,43 +221,45 @@
             color: #F1C40F;
             text-decoration: none;
         }
-        #Image1{
+
+        #Image1 {
             Width: 11vw;
             Height: 5vw;
         }
-        .foot{
-            box-shadow:0.4vw 0.4vw 0.9vw black;
+
+        .foot {
+            box-shadow: 0.4vw 0.4vw 0.9vw black;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <!-- Navbar Start -->
- <nav class="navbar navbar-expand-lg  navbar-light shadow sticky-top p-0">
-     <a href="index.html" class="navbar-brand d-flex align-items-center">
-           <asp:Image ID="Image2" runat="server" ImageUrl="Images/Screenshot_2025-01-31_020111-removebg-preview.png" AlternateText="My Image" Width="300px" />
-     </a>
-     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-         <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarCollapse">
-         <div class="navbar-nav ms-auto p-4 p-lg-0">
-             <a href="/Habib/Home.aspx" class="nav-item nav-link active">Home</a>
-             <a href="aboutus.aspx" class="nav-item nav-link">About Us</a>
-             <a href="/Hani/Rooms.aspx" class="nav-item nav-link">Rooms</a>
-             <a href="/Mona/StudentsBooks.aspx" class="nav-item nav-link">Books</a>
-             <a href="/Habib/Contact.aspx" class="nav-item nav-link">Contact Us</a>
-             <a href="/Suhaib/Loginpage.aspx" class="nav-item nav-link">LogOut</a>
-         </div>
-         <a href="/Sajeda/Profile.aspx" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
-     </div>
- </nav>
- <!-- Navbar End -->
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg  navbar-light shadow sticky-top p-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <asp:Image ID="Image2" runat="server" ImageUrl="img/logo1.png" AlternateText="My Image" Width="300px" />
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="/Habib/Home.aspx" class="nav-item nav-link active">Home</a>
+                    <a href="aboutus.aspx" class="nav-item nav-link">About Us</a>
+                    <a href="/Hani/Rooms.aspx" class="nav-item nav-link">Rooms</a>
+                    <a href="/Mona/StudentsBooks.aspx" class="nav-item nav-link">Books</a>
+                    <a href="/Habib/Contact.aspx" class="nav-item nav-link">Contact Us</a>
+                    <a href="/Suhaib/Loginpage.aspx" class="nav-item nav-link">LogOut</a>
+                </div>
+                <a href="/Sajeda/Profile.aspx" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
         <div class="container">
-            <h2 class="text-center">Student Book List</h2>
+            <%--<h2 class="text-center">Student Book List</h2>--%>
 
             <div class="mb-3">
-                <label for="txtSearch" class="form-label">Search by Book ID or Name</label>
+                <label for="txtSearch" class="form-label">Search by Book Name</label>
                 <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-custom mt-2" OnClick="btnSearch_Click" />
             </div>
@@ -317,7 +317,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4>Quick Links</h4>
- 
+
                         <a class="btn btn-link" href="/Habib/Home.aspx">Home</a>
                         <a class="btn btn-link" href="/Habib/Contact.aspx">Contact Us</a>
                         <a class="btn btn-link" href="/Mona/StudentsBooks.aspx">Books</a>

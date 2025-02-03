@@ -5,9 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Reset Password</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <style>
         body {
             background-color: #2C3E50;
@@ -354,50 +354,3 @@ small{
 </body>
 </html>
 
-
-<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="resetPassword.aspx.cs" Inherits="LibraryProject.resetPassword" %>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Reset Password</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
-    <style>
-        body { background-color: #f8f9fa; }
-        .container { max-width: 600px; margin-top: 50px; }
-        .card { border-radius: 15px; }
-        .profile-button { background-color: #2C3E50; color: white; }
-        .profile-button:hover { background-color: #F1C40F; color: black; }
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Library System</a>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="card shadow p-4">
-            <h4 class="text-center">Reset Password</h4>
-            <form id="form1" runat="server">
-                <div class="mb-3">
-                    <label class="form-label">Current Password</label>
-                    <asp:TextBox ID="current" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">New Password</label>
-                    <asp:TextBox ID="newpassword" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Confirm Password</label>
-                    <asp:TextBox ID="confirm" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
-                </div>
-                <asp:Label ID="checkPassword" runat="server" CssClass="text-danger d-block" Visible="false"></asp:Label>
-                <div class="d-grid gap-2 mt-3">
-                    <asp:Button ID="edit" runat="server" OnClick="edit_Click" Text="Save" CssClass="btn profile-button" />
-                    <asp:Button ID="cancel" runat="server" OnClick="cancel_Click" Text="Cancel" CssClass="btn btn-secondary" />
-                </div>
-            </form>
-        </div>
-    </div>
-</body>
-</html>--%>

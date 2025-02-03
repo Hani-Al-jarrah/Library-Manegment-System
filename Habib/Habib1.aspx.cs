@@ -31,10 +31,11 @@ namespace Group5.Habib
 					multiView.ActiveViewIndex = 0;
 					break;
 				case "Books":
-					multiView.ActiveViewIndex = 1;
+					 Response.Redirect("\\Mona\\AdminBooks.aspx");
+
 					break;
 				case "Rooms":
-					multiView.ActiveViewIndex = 2;
+					Response.Redirect("\\Hani\\AdminRooms.aspx");
 					break;
 				// Ignore "Feedback," "Team," and "Logout" cases
 				case "Feedback":
@@ -85,7 +86,7 @@ namespace Group5.Habib
 
 		protected void lnkLogout_Click(object sender, EventArgs e)
 		{
-			Response.Redirect("Home.aspx");
+			Response.Redirect("\\Suhaib\\Loginpage.aspx");
 		}
 	}
 }
