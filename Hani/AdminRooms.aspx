@@ -75,6 +75,9 @@
                 <div>
                     <asp:Button ID="btnRequests" runat="server" CssClass="btn btn-secondary me-2" Text="Requests" PostBackUrl="Requests.aspx" />
                     <asp:Button ID="btnAddRoom" runat="server" CssClass="btn btn-success" Text="Add Room" PostBackUrl="AddRoom.aspx" />
+
+                    <asp:Button ID="btnExportRooms" runat="server" CssClass="btn btn-info me-2" Text="Export Rooms" OnClick="ExportRooms_Click" />
+
                 </div>
             </div>
 
