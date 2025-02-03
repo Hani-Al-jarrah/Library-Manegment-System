@@ -56,14 +56,14 @@ namespace Group5
 
         protected void edit_Click(object sender, EventArgs e)
         {
-            string usersFile = Server.MapPath("users.txt");
+            string usersFile = Server.MapPath("/Suhaib/users.txt");
             string[] readData = File.ReadAllLines(usersFile);
 
             for (int i = 0; i < readData.Length; i++)
             {
                 string[] splitFile = readData[i].Split(',');
 
-                if (splitFile[5] == current.Text) // Check if current password matches
+                if (splitFile[4] == current.Text) // Check if current password matches
                 {
                     if (newpassword.Text != confirm.Text) // Check if new passwords match
                     {
@@ -82,12 +82,15 @@ namespace Group5
                     }
 
                     // Update password
-                    readData[i] = $"{splitFile[0]},{splitFile[1]},{splitFile[2]},{splitFile[3]},{splitFile[4]},{newpassword.Text},{splitFile[6]},{splitFile[7]}";
+                    readData[i] = $"{splitFile[0]},{splitFile[1]},{splitFile[2]},{splitFile[3]},{newpassword.Text},{splitFile[5]},{splitFile[6]},{splitFile[7]}";
                     File.WriteAllLines(usersFile, readData);
 
                     checkPassword.Text = "Password changed successfully!";
                     checkPassword.ForeColor = System.Drawing.Color.Green; // Success message in green
                     checkPassword.Visible = true;
+                    //checkPassword.Style["color"] = "green";
+                    //checkPassword.Style.Color = "green";
+                    //checkPassword.Style["color"] = "green";
                     return;
                 }
             }
