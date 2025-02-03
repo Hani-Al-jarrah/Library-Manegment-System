@@ -87,15 +87,6 @@ namespace Group5.Habib
 		protected global::System.Web.UI.WebControls.View viewBooks;
 
 		/// <summary>
-		/// btnAddNewBook control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button btnAddNewBook;
-
-		/// <summary>
 		/// viewEditRoom control.
 		/// </summary>
 		/// <remarks>
