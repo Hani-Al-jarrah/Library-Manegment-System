@@ -43,6 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -124,7 +130,9 @@
     <Content Include="Habib\Rooms.txt" />
     <Content Include="Habib\why.js" />
     <Content Include="Habib\wow.js" />
+    <Content Include="loggedinuser.txt" />
     <Content Include="Mona\AdminBooks.aspx" />
+    <Content Include="Mona\intro.aspx" />
     <Content Include="Mona\StudentsBooks.aspx" />
     <Content Include="Hani\AddRoom.aspx" />
     <Content Include="Hani\AdminRooms.aspx" />
@@ -134,18 +142,16 @@
     <Content Include="Hani\Rooms.aspx" />
     <Content Include="Mona\Mona1.aspx" />
     <Content Include="Sajeda\Books.aspx" />
-    <Content Include="Sajeda\books.txt" />
     <Content Include="Sajeda\editProfile.aspx" />
-    <Content Include="Sajeda\img.txt" />
     <Content Include="Sajeda\img\img1.png" />
     <Content Include="Sajeda\img\img2.png" />
     <Content Include="Sajeda\Profile.aspx" />
     <Content Include="Sajeda\resetPassword.aspx" />
     <Content Include="Sajeda\rooms.aspx" />
-    <Content Include="Sajeda\rooms.txt" />
     <Content Include="Sajeda\sajeda1.aspx" />
     <Content Include="Sajeda\updateImg.aspx" />
-    <Content Include="Sajeda\users.txt" />
+    <Content Include="Suhaib\Loginpage.aspx" />
+    <Content Include="Suhaib\registration.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -219,6 +225,13 @@
     <Compile Include="Mona\AdminBooks.aspx.designer.cs">
       <DependentUpon>AdminBooks.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mona\intro.aspx.cs">
+      <DependentUpon>intro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mona\intro.aspx.designer.cs">
+      <DependentUpon>intro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mona\StudentsBooks.aspx.cs">
       <DependentUpon>StudentsBooks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -276,7 +289,18 @@
     <Compile Include="Sajeda\updateImg.aspx.designer.cs">
       <DependentUpon>updateImg.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Suhaib\Suhaib\registration.aspx.designer.cs">
+    <Compile Include="Suhaib\Loginpage.aspx.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suhaib\Loginpage.aspx.designer.cs">
+      <DependentUpon>Loginpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suhaib\registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suhaib\registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

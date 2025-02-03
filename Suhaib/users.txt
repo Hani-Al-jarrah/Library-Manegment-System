@@ -1,0 +1,3 @@
+Full Name,Phone Number,University ID,Email,Password,Gender,College,Major
+Hani Aljarrah,0777205835,2002411000,hanijarrah20@gmail.com,Hani123@,Male,Information tecgnology,Computer science
+Hani AlJarrah,0777205836,1234567890,hanijarrah20@gmail.com,Hani123@,Male,Engineering,Civil Engneering

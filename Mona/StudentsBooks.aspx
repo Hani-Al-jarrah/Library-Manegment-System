@@ -7,15 +7,12 @@
 <head runat="server">
     <title>Student - Book List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha384-o1AYg2zAaytI5Hq8mCR1fWRoA8R+rWy8fMyG1wob/LyUqCn7L+UXnAG1T4tWmqkY" crossorigin="anonymous">
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body {
             background-color: #2C3E50;
             color: #F4F1DE;
+/*            font-family: Garamond;*/
         }
 
         .container {
@@ -224,12 +221,14 @@
             color: #F1C40F;
             text-decoration: none;
         }
-        #Image1{
+
+        #Image1 {
             Width: 11vw;
             Height: 5vw;
         }
-        .foot{
-            box-shadow:0.4vw 0.4vw 0.9vw black;
+
+        .foot {
+            box-shadow: 0.4vw 0.4vw 0.9vw black;
         }
     </style>
 </head>
@@ -245,22 +244,22 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="courses.html" class="nav-item nav-link">Rooms</a>
-                    <a href="courses.html" class="nav-item nav-link">Books</a>
-                    <a href="courses.html" class="nav-item nav-link">Contact</a>
-                    <a href="courses.html" class="nav-item nav-link">LogOut</a>
+                    <a href="/Habib/Home.aspx" class="nav-item nav-link active">Home</a>
+                    <a href="aboutus.aspx" class="nav-item nav-link">About Us</a>
+                    <a href="/Hani/Rooms.aspx" class="nav-item nav-link">Rooms</a>
+                    <a href="/Mona/StudentsBooks.aspx" class="nav-item nav-link">Books</a>
+                    <a href="/Habib/Contact.aspx" class="nav-item nav-link">Contact Us</a>
+                    <a href="/Suhaib/Loginpage.aspx" class="nav-item nav-link">LogOut</a>
                 </div>
-                <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
+                <a href="/Sajeda/Profile.aspx" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
             </div>
         </nav>
         <!-- Navbar End -->
         <div class="container">
-            <h2 class="text-center">Student Book List</h2>
+            <%--<h2 class="text-center">Student Book List</h2>--%>
 
             <div class="mb-3">
-                <label for="txtSearch" class="form-label">Search by Book ID or Name</label>
+                <label for="txtSearch" class="form-label">Search by Book Name</label>
                 <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-custom mt-2" OnClick="btnSearch_Click" />
             </div>
@@ -318,11 +317,12 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4>Quick Links</h4>
-                        <a class="btn btn-link" href="">Home</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Books</a>
-                        <a class="btn btn-link" href="">Rooms</a>
-                        <a class="btn btn-link" href="">About Us</a>
+
+                        <a class="btn btn-link" href="/Habib/Home.aspx">Home</a>
+                        <a class="btn btn-link" href="/Habib/Contact.aspx">Contact Us</a>
+                        <a class="btn btn-link" href="/Mona/StudentsBooks.aspx">Books</a>
+                        <a class="btn btn-link" href="/Hani/Rooms.aspx">Rooms</a>
+                        <a class="btn btn-link" href="aboutus.aspx">About Us</a>
                     </div>
                 </div>
             </div>
@@ -338,7 +338,7 @@
         </div>--%>
 
 
-
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
             <script>
                 function openBorrowModal(bookID) {

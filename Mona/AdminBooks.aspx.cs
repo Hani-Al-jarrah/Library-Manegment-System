@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Group5.Mona
 {
@@ -13,6 +17,7 @@ namespace Group5.Mona
         private string filePath;
         private string imageFolderPath;
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
             filePath = Server.MapPath("~/books.txt");
@@ -20,34 +25,8 @@ namespace Group5.Mona
             EnsureFileExists();
             EnsureImageFolderExists();
 
-            if (!IsPostBack)
-            {
-                LoadBooks();
-            }
-        }
-        private void LoadRequestedBooks()
-        {
-            string borrowFilePath = Server.MapPath("~/borrowDetails.txt");
-            if (File.Exists(borrowFilePath))
-            {
-                List<BorrowDetails> requestedBooks = File.ReadAllLines(borrowFilePath)
-                    .Select(line => line.Split(','))
-                    .Where(parts => parts.Length >= 6)
-                    .Select(parts => new BorrowDetails
-                    {
-                        BookID = parts[0],
-                        BookName = parts[1],
-                        Author = parts[2],
-                        BorrowDate = parts[3],  // ✅ Correctly load Borrow Date
-                        ReturnDate = parts[4],  // ✅ Correctly load Return Date
-                        Status = parts[5].Trim(), // ✅ Trim to prevent extra spaces
-                        ShowActionButtons = parts[5].Trim() == "Pending" // ✅ Show buttons only if status is "Pending"
-                    })
-                    .ToList();
-
-                gvRequestedBooks.DataSource = requestedBooks;
-                gvRequestedBooks.DataBind();
-            }
+            // Load books on every postback to keep GridView data
+            LoadBooks();
         }
 
 
@@ -84,26 +63,18 @@ namespace Group5.Mona
                 imagePath = "img/" + fileName;
             }
 
-            if (IsBookIdExists(bookId))
+            if (IsBookIdExists(bookId) || IsBookNameExists(bookName))
             {
-                lblError.Text = "Book ID already exists!";
-                lblError.Visible = true;
-                return;
-            }
-            if (IsBookNameExists(bookName))
-            {
-                lblError.Text = "Book Name already exists!";
+                lblError.Text = "Book ID or Book Name already exists!";
                 lblError.Visible = true;
                 return;
             }
 
-            if (!string.IsNullOrEmpty(bookId) && !string.IsNullOrEmpty(bookName) && !string.IsNullOrEmpty(author))
-            {
-                string newBook = $"{bookId},{bookName},{author},{description},Available,{imagePath}";
-                File.AppendAllLines(filePath, new[] { newBook });
-                LoadBooks();
-                lblError.Visible = false;
-            }
+            string newBook = $"{bookId},{bookName},{author},{description},Available,{imagePath}";
+            File.AppendAllLines(filePath, new[] { newBook });
+
+            LoadBooks();
+            lblError.Visible = false;
         }
 
         private bool IsBookIdExists(string bookId)
@@ -114,13 +85,57 @@ namespace Group5.Mona
         private bool IsBookNameExists(string bookName)
         {
             return File.ReadAllLines(filePath)
-                       .Any(line =>
-                       {
-                           var parts = line.Split(',');
-                           return parts.Length > 1 && parts[1].Equals(bookName, StringComparison.OrdinalIgnoreCase);
-                       });
+                       .Any(line => line.Split(',')[1].Equals(bookName, StringComparison.OrdinalIgnoreCase));
         }
 
+        private void LoadBooks()
+        {
+            if (File.Exists(filePath))
+            {
+                List<Book> books = File.ReadAllLines(filePath)
+                    .Select(line => line.Split(','))
+                    .Where(parts => parts.Length >= 6)
+                    .Select(parts => new Book
+                    {
+                        BookID = parts[0],
+                        BookName = parts[1],
+                        Author = parts[2],
+                        Description = parts[3],
+                        Status = parts[4],
+                        ImagePath = parts[5]
+                    })
+                    .ToList();
+
+                gvBooks.DataSource = books;
+                gvBooks.DataBind();
+            }
+            LoadRequestedBooks();
+        }
+
+        private void LoadRequestedBooks()
+        {
+            string borrowFilePath = Server.MapPath("~/borrowDetails.txt");
+            if (File.Exists(borrowFilePath))
+            {
+                List<BorrowDetails> requestedBooks = File.ReadAllLines(borrowFilePath)
+                    .Select(line => line.Split(','))
+                    .Where(parts => parts.Length >= 6)
+                    .Select(parts => new BorrowDetails
+                    {
+                        BookID = parts[0],
+                        BookName = parts[1],
+                        Author = parts[2],
+                        BorrowDate = parts[3],
+                        ReturnDate = parts[4],
+                        Status = parts[5].Trim(),
+                        ShowActionButtons = parts[5].Trim() == "Pending"
+                    })
+                    .ToList();
+
+                gvRequestedBooks.DataSource = requestedBooks;
+                gvRequestedBooks.DataBind();
+            }
+        }
         protected void btnEdit_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -159,6 +174,34 @@ namespace Group5.Mona
                 //{
                 //    imgPreview.Visible = false; // Hide if no image is available
                 //}
+            }
+        }
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            string bookIdToDelete = btn.CommandArgument;
+
+            List<string> lines = File.ReadAllLines(filePath).ToList();
+            string bookToDelete = lines.FirstOrDefault(line => line.StartsWith(bookIdToDelete + ","));
+
+            if (bookToDelete != null)
+            {
+                string[] parts = bookToDelete.Split(',');
+                if (parts.Length > 5 && !string.IsNullOrEmpty(parts[5]))  // Ensure image exists
+                {
+                    string imagePath = parts[5];
+                    string imageFullPath = Server.MapPath("~/" + imagePath);
+                    if (File.Exists(imageFullPath))  // Delete the image if exists
+                    {
+                        File.Delete(imageFullPath);
+                    }
+                }
+
+                // Remove the book from the file
+                lines.RemoveAll(line => line.StartsWith(bookIdToDelete + ","));
+                File.WriteAllLines(filePath, lines);
+
+                LoadBooks(); // Refresh the book list
             }
         }
 
@@ -239,117 +282,19 @@ namespace Group5.Mona
             btnUpdate.Visible = false;
             btnAdd.Visible = true;
         }
-        protected void btnDelete_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            string bookIdToDelete = btn.CommandArgument;
 
-            List<string> lines = File.ReadAllLines(filePath).ToList();
-            string bookToDelete = lines.FirstOrDefault(line => line.StartsWith(bookIdToDelete + ","));
-
-            if (bookToDelete != null)
-            {
-                string[] parts = bookToDelete.Split(',');
-                if (parts.Length > 5 && !string.IsNullOrEmpty(parts[5]))  // Ensure image exists
-                {
-                    string imagePath = parts[5];
-                    string imageFullPath = Server.MapPath("~/" + imagePath);
-                    if (File.Exists(imageFullPath))  // Delete the image if exists
-                    {
-                        File.Delete(imageFullPath);
-                    }
-                }
-
-                // Remove the book from the file
-                lines.RemoveAll(line => line.StartsWith(bookIdToDelete + ","));
-                File.WriteAllLines(filePath, lines);
-
-                LoadBooks(); // Refresh the book list
-            }
-        }
-
-
-
-        private void LoadBooks()
-        {
-            if (File.Exists(filePath))
-            {
-                List<Book> books = File.ReadAllLines(filePath)
-                    .Select(line => line.Split(','))
-                    .Where(parts => parts.Length >= 6)
-                    .Select(parts => new Book
-                    {
-                        BookID = parts[0],
-                        BookName = parts[1],
-                        Author = parts[2],
-                        Description = parts[3],
-                        Status = parts[4],
-                        ImagePath = parts[5]
-                    })
-                    .OrderBy(book => int.TryParse(book.BookID, out int id) ? id : int.MaxValue)
-                    .ToList();
-
-                gvBooks.DataSource = books;
-                gvBooks.DataBind();
-            }
-            LoadRequestedBooks();
-        }
-
-        //protected void btnConfirmBorrow_Click(object sender, EventArgs e)
-        //{
-        //    Button btn = (Button)sender;
-        //    string bookIdToConfirm = btn.CommandArgument;
-        //    List<string> lines = File.ReadAllLines(filePath).ToList();
-
-        //    for (int i = 0; i < lines.Count; i++)
-        //    {
-        //        if (lines[i].StartsWith(bookIdToConfirm + ","))
-        //        {
-        //            string[] parts = lines[i].Split(',');
-
-        //            // Ensure the image path is retained
-        //            string imagePath = parts.Length > 5 ? parts[5] : ""; // Use the existing image if available
-
-        //            lines[i] = $"{parts[0]},{parts[1]},{parts[2]},{parts[3]},Borrowed,{imagePath}"; // Update Status to Borrowed and keep the image path
-        //            break;
-        //        }
-        //    }
-
-        //    File.WriteAllLines(filePath, lines);
-        //    LoadBooks();
-        //}
         protected void btnApprove_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            string bookIdToApprove = btn.CommandArgument;
-
-            string borrowDetailsFilePath = Server.MapPath("~/borrowDetails.txt");
-            List<string> lines = File.ReadAllLines(borrowDetailsFilePath).ToList();
-
-            for (int i = 0; i < lines.Count; i++)
-            {
-                string[] parts = lines[i].Split(',');
-
-                if (parts.Length >= 6 && parts[0] == bookIdToApprove && parts[5].Trim() == "Pending")
-                {
-                    parts[5] = "Request Approved"; // ✅ Update status
-                    lines[i] = string.Join(",", parts);
-                    break;
-                }
-            }
-
-            File.WriteAllLines(borrowDetailsFilePath, lines); // ✅ Save changes
-            LoadRequestedBooks(); // ✅ Refresh table
+            UpdateRequestStatus(((Button)sender).CommandArgument, "Request Approved");
         }
-
-
-
 
         protected void btnReject_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            string bookIdToReject = btn.CommandArgument;
+            UpdateRequestStatus(((Button)sender).CommandArgument, "Request Rejected");
+        }
 
+        private void UpdateRequestStatus(string bookId, string newStatus)
+        {
             string borrowDetailsFilePath = Server.MapPath("~/borrowDetails.txt");
             List<string> lines = File.ReadAllLines(borrowDetailsFilePath).ToList();
 
@@ -357,46 +302,76 @@ namespace Group5.Mona
             {
                 string[] parts = lines[i].Split(',');
 
-                if (parts.Length >= 6 && parts[0] == bookIdToReject && parts[5].Trim() == "Pending")
+                if (parts.Length >= 6 && parts[0] == bookId && parts[5].Trim() == "Pending")
                 {
-                    parts[5] = "Request Rejected"; // ✅ Update status
+                    parts[5] = newStatus;
                     lines[i] = string.Join(",", parts);
                     break;
                 }
             }
 
-            File.WriteAllLines(borrowDetailsFilePath, lines); // ✅ Save changes
-            LoadRequestedBooks(); // ✅ Refresh table
+            File.WriteAllLines(borrowDetailsFilePath, lines);
+            LoadRequestedBooks();
         }
 
+        protected void btnDownloadBooksPDF_Click(object sender, EventArgs e)
+        {
+            ExportGridToPDF(gvBooks, "BookList.pdf");
+        }
 
+        protected void btnDownloadRequestsPDF_Click(object sender, EventArgs e)
+        {
+            ExportGridToPDF(gvRequestedBooks, "BorrowRequests.pdf");
+        }
 
-        //private void LoadBorrowedBooks()
-        //{
-        //    string borrowDetailsFilePath = Server.MapPath("~/borrowDetails.txt");
+        private void ExportGridToPDF(GridView gridView, string fileName)
+        {
+            Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 20f, 10f);
+            PdfPTable pdfTable = new PdfPTable(gridView.Columns.Count);
+            pdfTable.WidthPercentage = 100;
 
-        //    if (File.Exists(borrowDetailsFilePath))
-        //    {
-        //        List<BorrowDetails> borrowDetails = File.ReadAllLines(borrowDetailsFilePath)
-        //            .Select(line => line.Split(','))
-        //            .Where(parts => parts.Length >= 4)
-        //            .Select(parts => new BorrowDetails
-        //            {
-        //                BookID = parts[0],
-        //                BookName = parts[1],
-        //                Author = parts[2],
-        //                Status = parts[3]
-        //            })
-        //            .ToList();
+            foreach (DataControlField column in gridView.Columns)
+            {
+                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, FontFactory.GetFont("Arial", 12, iTextSharp.text.Font.BOLD)
+));
+                cell.BackgroundColor = new BaseColor(241, 196, 15);
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                pdfTable.AddCell(cell);
+            }
 
-        //        gvRequestedBooks.DataSource = borrowDetails;
-        //        gvRequestedBooks.DataBind();
-        //    }
-        //}
+            foreach (GridViewRow row in gridView.Rows)
+            {
+                foreach (TableCell tableCell in row.Cells)
+                {
+                    PdfPCell cell = new PdfPCell(new Phrase(tableCell.Text, FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.NORMAL)
+));
+                    cell.BackgroundColor = new BaseColor(236, 240, 241);
+                    cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                    pdfTable.AddCell(cell);
+                }
+            }
 
+            using (MemoryStream memoryStream = new MemoryStream())
+            {
+                PdfWriter.GetInstance(pdfDoc, memoryStream);
+                pdfDoc.Open();
+                pdfDoc.Add(pdfTable);
+                pdfDoc.Close();
 
+                byte[] bytes = memoryStream.ToArray();
+                memoryStream.Close();
 
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-disposition", "attachment;filename=" + fileName);
+                Response.Buffer = true;
+                Response.Clear();
+                Response.OutputStream.Write(bytes, 0, bytes.Length);
+                Response.OutputStream.Flush();
+                Response.End();
+            }
+        }
     }
+
     public class BorrowDetails
     {
         public string BookID { get; set; }
@@ -405,9 +380,8 @@ namespace Group5.Mona
         public string BorrowDate { get; set; }
         public string ReturnDate { get; set; }
         public string Status { get; set; }
-        public bool ShowActionButtons { get; set; } // ✅ Added to control button visibility
+        public bool ShowActionButtons { get; set; }
     }
-
 
     public class Book
     {

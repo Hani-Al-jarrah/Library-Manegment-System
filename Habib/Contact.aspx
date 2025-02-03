@@ -27,47 +27,51 @@
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
+
         .btn {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-    transition: .5s;
-    color: white;
-    background-color: #2C3E50;
-    border: none;
-    border-left: 20px;
-}
-.btn:hover{
-    background-color: #F1C40F;
-    color: black;
-}
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            transition: .5s;
+            color: white;
+            background-color: #2C3E50;
+            border: none;
+            border-left: 20px;
+        }
 
-.btn-square {
-    width: 38px;
-    height: 38px;
-}
+            .btn:hover {
+                background-color: #F1C40F;
+                color: black;
+            }
 
-.btn-sm-square {
-    width: 32px;
-    height: 32px;
-}
-small{
-    color: #F1C40F;
-}
-.btn-lg-square {
-    width: 48px;
-    height: 48px;
-}
+        .btn-square {
+            width: 38px;
+            height: 38px;
+        }
 
-.btn-square,
-.btn-sm-square,
-.btn-lg-square {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: normal;
-    border-radius: 0px;
-}
+        .btn-sm-square {
+            width: 32px;
+            height: 32px;
+        }
+
+        small {
+            color: #F1C40F;
+        }
+
+        .btn-lg-square {
+            width: 48px;
+            height: 48px;
+        }
+
+        .btn-square,
+        .btn-sm-square,
+        .btn-lg-square {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: normal;
+            border-radius: 0px;
+        }
 
 
         body {
@@ -76,7 +80,7 @@ small{
             display: flex;
             flex-direction: column;
             justify-content: center;
-/*            align-items: center;*/
+            /*            align-items: center;*/
             background-color: #2C3E50;
             /* Deep Blue */
             background-image: url(https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
@@ -85,91 +89,91 @@ small{
             position: relative;
         }
         /*** Navbar ***/
-.navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
-}
+        .navbar .dropdown-toggle::after {
+            border: none;
+            content: "\f107";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
 
-.navbar-light .navbar-nav .nav-link {
-    margin-right: 30px;
-    padding: 25px 0;
-    color: #FFFFFF;
-    font-size: 15px;
-    text-transform: uppercase;
-    outline: none;
-}
+        .navbar-light .navbar-nav .nav-link {
+            margin-right: 30px;
+            padding: 25px 0;
+            color: #FFFFFF;
+            font-size: 15px;
+            text-transform: uppercase;
+            outline: none;
+        }
 
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-    color:#F1C40F;
-}
-
-@media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
-        margin-right: 0;
-        padding: 10px 0;
-    }
-
-    .navbar-light .navbar-nav {
-        border-top: 1px solid #EEEEEE;
-    }
-}
-
-.navbar-light .navbar-brand,
-.navbar-light a.btn {
-    height: 75px;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: var(--dark);
-    font-weight: 500;
-}
-
-.navbar-light.sticky-top {
-    top: -100px;
-    transition: .5s;
-}
-
-@media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        margin-top: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition: .5s;
-    }
-
-    .navbar .dropdown-menu.fade-down {
-        top: 100%;
-        transform: rotateX(-75deg);
-        transform-origin: 0% 0%;
-    }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        top: 100%;
-        transform: rotateX(0deg);
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
-    }
-}
-
-
-
-            body::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                background-color: rgba(44, 62, 80, 0.9);
-                /* Deep Blue with opacity */
+            .navbar-light .navbar-nav .nav-link:hover,
+            .navbar-light .navbar-nav .nav-link.active {
+                color: #F1C40F;
             }
+
+        @media (max-width: 991.98px) {
+            .navbar-light .navbar-nav .nav-link {
+                margin-right: 0;
+                padding: 10px 0;
+            }
+
+            .navbar-light .navbar-nav {
+                border-top: 1px solid #EEEEEE;
+            }
+        }
+
+        .navbar-light .navbar-brand,
+        .navbar-light a.btn {
+            height: 75px;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .navbar-light.sticky-top {
+            top: -100px;
+            transition: .5s;
+        }
+
+        @media (min-width: 992px) {
+            .navbar .nav-item .dropdown-menu {
+                display: block;
+                margin-top: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: .5s;
+            }
+
+            .navbar .dropdown-menu.fade-down {
+                top: 100%;
+                transform: rotateX(-75deg);
+                transform-origin: 0% 0%;
+            }
+
+            .navbar .nav-item:hover .dropdown-menu {
+                top: 100%;
+                transform: rotateX(0deg);
+                visibility: visible;
+                transition: .5s;
+                opacity: 1;
+            }
+        }
+
+
+
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(44, 62, 80, 0.9);
+            /* Deep Blue with opacity */
+        }
 
         /* Navigation Bar */
         nav {
@@ -427,12 +431,12 @@ small{
                     transition: 0.5s;
                 }
 
-                    .contact-form .input-box #btnSubmit {
-                        background: #F1C40F;
-                        /* Warm Gold */
-                        color: #2C3E50;
-                        /* Deep Blue */
-                    }
+                .contact-form .input-box #btnSubmit {
+                    background: #F1C40F;
+                    /* Warm Gold */
+                    color: #2C3E50;
+                    /* Deep Blue */
+                }
 
         /* Responsive Design */
         @media (max-width: 991px) {
@@ -601,14 +605,14 @@ small{
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">AboutUS</a>
-                <a href="courses.html" class="nav-item nav-link">Rooms</a>
-                <a href="courses.html" class="nav-item nav-link">Books</a>
-                <a href="courses.html" class="nav-item nav-link">Contactus</a>
-                <a href="courses.html" class="nav-item nav-link">LogOut</a>
+                <a href="Home.aspx" class="nav-item nav-link active">Home</a>
+       <a href="aboutus.aspx" class="nav-item nav-link">About Us</a>
+       <a href="/Hani/Rooms.aspx" class="nav-item nav-link">Rooms</a>
+       <a href="/Mona/StudentsBooks.aspx" class="nav-item nav-link">Books</a>
+       <a href="Contact.aspx" class="nav-item nav-link">Contact Us</a>
+       <a href="/Suhaib/Loginpage.aspx" class="nav-item nav-link">LogOut</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
+            <a href="/Sajeda/Profile.aspx" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
         </div>
     </nav>
 
@@ -630,9 +634,11 @@ small{
                             </div>
                             <div class="contact-info-content">
                                 <h4>Address</h4>
-                                <p>123 Library Lane,<br />
-                                    Knowledge City,<br />
-                                    45678</p>
+<p>Harvard Library<br />
+    1 Harvard Yard,<br />
+    Cambridge, MA 02138,<br />
+    USA</p>
+
                             </div>
                         </div>
 
@@ -642,7 +648,7 @@ small{
                             </div>
                             <div class="contact-info-content">
                                 <h4>Phone</h4>
-                                <p>+1 234 567 890</p>
+                                <p>+962 777 999 1234</p>
                             </div>
                         </div>
 
@@ -741,7 +747,7 @@ small{
         navUl.classList.toggle('active');
     });
     (function () {
-        emailjs.init("ak8XwcvPwPsxFSSIU"); 
+        emailjs.init("ak8XwcvPwPsxFSSIU");
     })();
     function sendEmail() {
         // Hardcoded values for testing
