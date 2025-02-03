@@ -14,8 +14,13 @@ namespace Group5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+               
+                LoadProfileImageOnOtherPage();
+            }
         }
+
 
         //protected void edit_Click(object sender, EventArgs e)
         //{
@@ -135,5 +140,30 @@ namespace Group5
         {
             Response.Redirect("updateImg.aspx");
         }
+
+
+
+
+
+
+        private void LoadProfileImageOnOtherPage()
+        {
+            if (Session["UserImagePath"] != null)
+            {
+                imgProfileOtherPage.ImageUrl = Session["UserImagePath"].ToString();
+            }
+            else
+            {
+                imgProfileOtherPage.ImageUrl = "https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"; // Default image
+            }
+        }
+
+
+
+
     }
+
+
+
 }
+

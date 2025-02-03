@@ -241,7 +241,7 @@ small{
         <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg  navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-              <asp:Image ID="Image2" runat="server" ImageUrl="Images/Screenshot_2025-01-31_020111-removebg-preview.png" AlternateText="My Image" Width="300px" />
+              <asp:Image ID="Image2" runat="server" ImageUrl="/Mona/img/logo1.png" AlternateText="My Image" Width="300px" />
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -296,7 +296,7 @@ small{
         <div class="row g-5 justify-content-between">
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="Img/logo11.png" AlternateText="My Image" />
+                    <asp:Image ID="Image1" runat="server" ImageUrl="/Mona/Img/logo11.png" AlternateText="My Image" />
                 </h4>
                 <p>The Library Management System streamlines book borrowing, room reservations, and feedback management for students and administrators in a university library.</p>
             </div>
