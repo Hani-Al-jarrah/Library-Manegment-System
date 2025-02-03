@@ -370,6 +370,11 @@ namespace Group5.Mona
                 Response.End();
             }
         }
+
+        protected void btnBackToDashboard_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Habib1.aspx");
+        }
     }
 
     public class BorrowDetails
