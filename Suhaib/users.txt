@@ -3,3 +3,5 @@ Hani Aljarrah,0777205835,2002411000,hanijarrah20@gmail.com,Hani123@,Male,Informa
 Hani Aljarrah,0777205835,1234567890,hanijarrah20@gmail.com,Hani123@,Male,Engineering,Civil Engneering
 Batool Aldilki,0777205835,1234567890,batool@gmail.com,Batool123!,Female,Engineering,Civil Engneering
 Moh Jarrah,0777205835,1234567890,hanijarrah20@gmail.com,Moh1234!,Male,Information tecgnology,Civil Engneering
+Ayman Jarada,0799955543,2017801010,ayman@gmail.com,Ayman123@,Male,Engineering,Civil Engneering
+Mona Tammmm,0799906666,2017808080,mona@gmail.com,Mona123@,Female,Engineering,Civil Engneering

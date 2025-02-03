@@ -56,7 +56,7 @@ namespace Group5
 
         protected void edit_Click(object sender, EventArgs e)
         {
-            string usersFile = Server.MapPath("users.txt");
+            string usersFile = Server.MapPath("~/Suhaib/users.txt");
             string[] readData = File.ReadAllLines(usersFile);
 
             for (int i = 0; i < readData.Length; i++)
