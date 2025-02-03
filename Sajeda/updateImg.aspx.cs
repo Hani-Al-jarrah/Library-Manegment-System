@@ -184,6 +184,7 @@ namespace Group5
                 Editmessage.ForeColor = System.Drawing.Color.Red;
                 Editmessage.Visible = true;
             }
+            Response.Redirect("editProfile.aspx");
         }
 
         protected void cancel_Click(object sender, EventArgs e)

@@ -33,6 +33,15 @@ namespace Group5
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// imgProfileOtherPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgProfileOtherPage;
+
+        /// <summary>
         /// Button5 control.
         /// </summary>
         /// <remarks>
@@ -78,13 +87,13 @@ namespace Group5
         protected global::System.Web.UI.WebControls.Button showRooms;
 
         /// <summary>
-        /// studentID control.
+        /// studentnum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label studentID;
+        protected global::System.Web.UI.WebControls.Button studentnum;
 
         /// <summary>
         /// name control.

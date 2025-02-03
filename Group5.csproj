@@ -132,6 +132,7 @@
     <Content Include="Habib\wow.js" />
     <Content Include="loggedinuser.txt" />
     <Content Include="Mona\AdminBooks.aspx" />
+    <Content Include="Mona\img\logo1.png" />
     <Content Include="Mona\intro.aspx" />
     <Content Include="Mona\StudentsBooks.aspx" />
     <Content Include="Hani\AddRoom.aspx" />
@@ -324,7 +325,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Hani\RoomsImages\" />
-    <Folder Include="Mona\img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

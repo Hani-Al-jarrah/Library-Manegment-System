@@ -242,7 +242,7 @@ small{
         <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg  navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-              <asp:Image ID="Image2" runat="server" ImageUrl="Images/Screenshot_2025-01-31_020111-removebg-preview.png" AlternateText="My Image" Width="300px" />
+              <asp:Image ID="Image2" runat="server" ImageUrl="/Mona/img/logo1.png" AlternateText="My Image" Width="300px" />
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -265,10 +265,10 @@ small{
         <div class="container mt-5">
             <div class="row">
                 <!-- Profile Image Section -->
-                <div class="col-md-3 border-end text-center">
+             <%--   <div class="col-md-3 border-end text-center">
                     <div class="profile-section p-3">
                         <img class="rounded-circle mt-3" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
-                        <h5 class="mt-3 text-dark">Edogaru</h5>
+                        <h5 class="mt-3 text-dark"></h5>
                         <div class="d-grid gap-2 mt-3">
                             <asp:Button ID="editprofile" runat="server" Text="Edit Information" class="btn profile-button" OnClick="editprofile_Click"/>
                             <asp:Button ID="resetPassword1" runat="server" Text="Reset Password" class="btn profile-button" OnClick="resetPassword_Click1"/>
@@ -277,7 +277,23 @@ small{
                             <asp:Button ID="showRooms" runat="server" Text="View Rooms" class="btn profile-button" OnClick="showRooms_Click"/>
                         </div>
                     </div>
-                </div>
+                </div>--%>
+
+                <div class="col-md-3 border-end text-center">
+    <div class="profile-section p-3">
+        <!-- Profile Image - Dynamically updated from Session -->
+        <asp:Image ID="imgProfileOtherPage" runat="server" CssClass="rounded-circle mt-3" Width="150px" />
+
+        <h5 class="mt-3 text-dark"></h5>
+        <div class="d-grid gap-2 mt-3">
+            <asp:Button ID="Button5" runat="server" Text="Edit Information" class="btn profile-button"/>
+            <asp:Button ID="resetPassword" runat="server" Text="Reset Password" class="btn profile-button" OnClick="resetPassword_Click1"/>
+            <asp:Button ID="editimg" runat="server" Text="Update Image" class="btn profile-button" OnClick="editimg_Click"/>
+            <asp:Button ID="showBooks" runat="server" Text="View Books" class="btn profile-button" OnClick="showBooks_Click"/>
+            <asp:Button ID="showRooms" runat="server" Text="View Rooms" class="btn profile-button" OnClick="showRooms_Click"/>
+        </div>
+    </div>
+</div>
 
                 <!-- Reset Password Form Section -->
                 <div class="col-md-5">
@@ -319,7 +335,7 @@ small{
         <div class="row g-5 justify-content-between">
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="Img/logo11.png" AlternateText="My Image" />
+                    <asp:Image ID="Image1" runat="server" ImageUrl="/Mona/Img/logo11.png" AlternateText="My Image" />
                 </h4>
                 <p>The Library Management System streamlines book borrowing, room reservations, and feedback management for students and administrators in a university library.</p>
             </div>

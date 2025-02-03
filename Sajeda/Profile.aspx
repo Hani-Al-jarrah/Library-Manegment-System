@@ -1,51 +1,51 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="Group5.Profile" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    
+    <!-- Bootstrap & FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    
     <style>
         body {
             background-color: #2C3E50;
             color: #F1C40F;
         }
-      form  .container {
+        .container2 {
             background-color: #F4F1DE;
             border-radius: 15px;
             padding: 30px;
+            margin: 50px;
         }
         .profile-section {
             text-align: center;
         }
         .profile-section img {
             border: 3px solid #F1C40F;
+            border-radius: 50%;
         }
-        h4 {
-            color: #F1C40F;
-            font-weight: bold;
-        }
-        label {
+        label, h4 {
             color: #2C3E50;
             font-weight: bold;
         }
         .profile-button {
             background-color: #2C3E50;
             color: white;
-            border: none;
             transition: 0.3s ease-in-out;
         }
         .profile-button:hover {
             background-color: #F1C40F;
             color: #2C3E50;
         }
-        .btn-secondary {
-            background-color: #F1C40F !important;
-            color: #2C3E50 !important;
-        }
+  
 
-        /*NAvbar*/ 
+
+  /*NAvbar*/ 
 
 
 .navbar .dropdown-toggle::after {
@@ -165,9 +165,6 @@ small{
 }
 
 
-
-
-
 /**footer style *****/
 .footer {
      background-color: #2C3E50 !important; /*Same as navbar */
@@ -186,7 +183,6 @@ small{
          text-decoration: none;
          transition: color 0.3s ease-in-out;
      }
-
          .footer a:hover {
              color: #F1C40F !important;
          }
@@ -233,130 +229,85 @@ small{
  .foot {
      box-shadow: 0.4vw 0.4vw 0.9vw black;
  }
+
     </style>
 </head>
 <body>
 
-        <!-- Navbar Start -->
+            <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg  navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-              <asp:Image ID="Image2" runat="server" ImageUrl="Images/Screenshot_2025-01-31_020111-removebg-preview.png" AlternateText="My Image" Width="300px" />
+              <asp:Image ID="Image2" runat="server" ImageUrl="/Mona/img/logo1.png" AlternateText="My Image" Width="300px" />
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
        <div class="collapse navbar-collapse" id="navbarCollapse">
-    <div class="navbar-nav ms-auto p-4 p-lg-0">
-        <a href="/Habib/Home.aspx" class="nav-item nav-link active">Home</a>
-        <a href="aboutus.aspx" class="nav-item nav-link">About Us</a>
-        <a href="/Hani/Rooms.aspx" class="nav-item nav-link">Rooms</a>
-        <a href="/Mona/StudentsBooks.aspx" class="nav-item nav-link">Books</a>
-        <a href="/Habib/Contact.aspx" class="nav-item nav-link">Contact Us</a>
-        <a href="/Suhaib/Loginpage.aspx" class="nav-item nav-link">LogOut</a>
-    </div>
+       <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="/Habib/Home.aspx" class="nav-item nav-link active">Home</a>
+            <a href="aboutus.aspx" class="nav-item nav-link">About Us</a>
+            <a href="/Hani/Rooms.aspx" class="nav-item nav-link">Rooms</a>
+            <a href="/Mona/StudentsBooks.aspx" class="nav-item nav-link">Books</a>
+            <a href="/Habib/Contact.aspx" class="nav-item nav-link">Contact Us</a>
+            <a href="/Suhaib/Loginpage.aspx" class="nav-item nav-link">LogOut</a>
+       </div>
     <a href="/Sajeda/Profile.aspx" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
 </div>
     </nav>
     <!-- Navbar End -->
 
-
-    <form id="form1" runat="server">
-        <div>
-        <section class="vh-100" style="background-color: #eee;" >
-            <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-              <div class="col-lg-12 col-xl-11">
-                <div class="card text-black" style="border-radius: 25px;">
-                  <div class="card-body p-md-5">
-                    <div class="row justify-content-center">
-                      <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-
-
-                          <div class="d-flex flex-row align-items-center mb-4">
-                           
-                            <div class = "data-mdb-input-init form-outline flex-fill mb-0">
-                                <h6><label class="form-label" for="form3Example3c">Student No.</label></h6>
-                                <asp:Label ID="studentNo" runat="server" Text=""></asp:Label>
-                            </div>
-                          </div>
-
-
-                          <div class="d-flex flex-row align-items-center mb-4">
-                            <div class=" data-mdb-input-init form-outline flex-fill mb-0">
-                                 <h6><label class="form-label" for="form3Example3c">Name</label></h6>
-                                <asp:Label ID="Name" runat="server" Text=""></asp:Label>
-                            </div>
-                          </div>
-
-                          <div class="d-flex flex-row align-items-center mb-4">
-                
-                            <div class=" data-mdb-input-init form-outline flex-fill mb-0">
-                                     <h6><label class="form-label" for="form3Example3c">Email</label></h6>
-                                    <asp:Label ID="Email" runat="server" Text=""></asp:Label>
-                            </div>
-                          </div>
-
-                         <div class="d-flex flex-row align-items-center mb-4">
-                          
-                           <div class=" data-mdb-input-init form-outline flex-fill mb-0">
-                                    <h6><label class="form-label" for="form3Example3c">Facutly</label></h6>
-                                   <asp:Label ID="Facutly" runat="server" Text=""></asp:Label>
-                           </div>
-                         </div>
-
-                          <div class="d-flex flex-row align-items-center mb-4">
-                        
-                           <div class=" data-mdb-input-init form-outline flex-fill mb-0">
-                                   <h6><label class="form-label" for="form3Example3c">Department</label></h6>
-                                  <asp:Label ID="department" runat="server" Text=""></asp:Label>
-                            </div>
-                          </div>
-
-
-                          <div class="d-flex flex-row align-items-center mb-4">
-                          
-                           <div class=" data-mdb-input-init form-outline flex-fill mb-0">
-                                   <h6><label class="form-label" for="form3Example3c">Mobile Number</label></h6>
-                                  <asp:Label ID="phone" runat="server" Text=""></asp:Label>
-                            </div>
-                          </div>
-
-                          
-                          <div class="d-flex flex-row align-items-center mb-4">
-                          
-                           <div class=" data-mdb-input-init form-outline flex-fill mb-0">
-                                   <h6><label class="form-label" for="form3Example3c">Gender</label></h6>
-                                  <asp:Label ID="Gender" runat="server" Text=""></asp:Label>
-                            </div>
-                          </div>
-
-                          
-                          <div class="mt-5 text-center">
-                            <asp:Button ID="edit" runat="server" OnClick="edit_Click" Text="Edit your Information" class="btn btn-primary profile-button"/>
-                          </div>
-
-
-
-        </div>
-       </div>
-  </div>
-</div>
-       </div>
-  </div>
+        
+    
+    <div class="container2">
+        <form id="form1" runat="server">
+            <div class="profile-section text-center mb-4">
+                <asp:Image ID="imgProfileOtherPage" runat="server" CssClass="rounded-circle mt-3" Width="150px" />
+                <h2>Student Profile</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Student No:</label>
+                    <asp:Label ID="studentNo" runat="server" CssClass="form-control" />
                 </div>
-                </section>
-        </div>
-    </form>
-
-
-
+                <div class="col-md-6">
+                    <label>Name:</label>
+                    <asp:Label ID="Name" runat="server" CssClass="form-control" />
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label>Email:</label>
+                    <asp:Label ID="Email" runat="server" CssClass="form-control" />
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label>Faculty:</label>
+                    <asp:Label ID="Facutly" runat="server" CssClass="form-control" />
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label>Department:</label>
+                    <asp:Label ID="department" runat="server" CssClass="form-control" />
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label>Mobile Number:</label>
+                    <asp:Label ID="phone" runat="server" CssClass="form-control" />
+                </div>
+                <div class="col-md-6 mt-3">
+                    <label>Gender:</label>
+                    <asp:Label ID="Gender" runat="server" CssClass="form-control" />
+                </div>
+                <div class="text-center mt-4">
+                    <asp:Button ID="edit" runat="server" OnClick="edit_Click" Text="Edit Profile" CssClass="btn btn-primary profile-button" />
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    
         <!-- Footer Start -->
 <div class="foot container-fluid footer text-light pt-5 mt-5">
     <div class="container py-1">
         <div class="row g-5 justify-content-between">
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="Img/logo11.png" AlternateText="My Image" />
+                    <asp:Image ID="Image1" runat="server" ImageUrl="/Mona/Img/logo11.png" AlternateText="My Image" />
                 </h4>
                 <p>The Library Management System streamlines book borrowing, room reservations, and feedback management for students and administrators in a university library.</p>
             </div>
@@ -388,131 +339,7 @@ small{
         </div>
     </div>
 
-
-
-
-
-</body>
-</html>
-
-<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="LibraryProject.Profile" %>
-
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    <title>Profile</title>
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .profile-container {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .profile-label {
-            font-weight: bold;
-            color: #2C3E50;
-        }
-        .btn-custom {
-            background-color: #2C3E50;
-            color: white;
-            transition: 0.3s;
-        }
-        .btn-custom:hover {
-            background-color: #F1C40F;
-            color: black;
-        }
-        .footer {
-            background-color: #2C3E50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <asp:Image ID="Image2" runat="server" ImageUrl="Images/logo.png" Width="180px" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
-                    <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link text-danger" href="logout.html">Logout</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <form id="form1" runat="server">
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 profile-container">
-                    <h3 class="text-center mb-4">User Profile</h3>
-                    
-                    <div class="mb-3">
-                        <label class="profile-label">Student No:</label>
-                        <asp:Label ID="studentNo" runat="server" CssClass="form-control border-0 bg-light" />
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label class="profile-label">Name:</label>
-                        <asp:Label ID="Name" runat="server" CssClass="form-control border-0 bg-light" />
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label class="profile-label">Email:</label>
-                        <asp:Label ID="Email" runat="server" CssClass="form-control border-0 bg-light" />
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label class="profile-label">Faculty:</label>
-                        <asp:Label ID="Facutly" runat="server" CssClass="form-control border-0 bg-light" />
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label class="profile-label">Department:</label>
-                        <asp:Label ID="department" runat="server" CssClass="form-control border-0 bg-light" />
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label class="profile-label">Mobile Number:</label>
-                        <asp:Label ID="phone" runat="server" CssClass="form-control border-0 bg-light" />
-                    </div>
-                    
-                    <div class="mb-4">
-                        <label class="profile-label">Gender:</label>
-                        <asp:Label ID="Gender" runat="server" CssClass="form-control border-0 bg-light" />
-                    </div>
-                    
-                    <div class="text-center">
-                        <asp:Button ID="edit" runat="server" OnClick="edit_Click" Text="Edit Information" CssClass="btn btn-custom" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-
-    <!-- Footer Start -->
-    <div class="footer mt-5">
-        <p>&copy; 2025 Horizon Library. All Rights Reserved.</p>
     </div>
-    <!-- Footer End -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>--%>
+</html>

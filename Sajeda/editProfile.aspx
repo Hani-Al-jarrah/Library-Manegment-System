@@ -1,18 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="editProfile.aspx.cs" Inherits="Group5.editProfile" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Edit Profile</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <title>Books Information</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <style>
-        body {
+      body {
             background-color: #2C3E50;
             color: white;
         }
-        .container {
+      form  .container {
             background-color: #F4F1DE;
             border-radius: 15px;
             padding: 30px;
@@ -166,6 +164,9 @@ small{
 }
 
 
+
+
+
 /**footer style *****/
 .footer {
      background-color: #2C3E50 !important; /*Same as navbar */
@@ -234,15 +235,16 @@ small{
     </style>
 </head>
 <body>
+
         <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg  navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-              <asp:Image ID="Image2" runat="server" ImageUrl="Images/Screenshot_2025-01-31_020111-removebg-preview.png" AlternateText="My Image" Width="300px" />
+              <asp:Image ID="Image2" runat="server" ImageUrl="/Mona/img/logo1.png" AlternateText="My Image" Width="300px" />
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-              <div class="collapse navbar-collapse" id="navbarCollapse">
+       <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
         <a href="/Habib/Home.aspx" class="nav-item nav-link active">Home</a>
         <a href="aboutus.aspx" class="nav-item nav-link">About Us</a>
@@ -256,18 +258,14 @@ small{
     </nav>
     <!-- Navbar End -->
 
-
-
-
-
     <form id="form1" runat="server">
         <div class="container mt-5">
             <div class="row">
                 <!-- Profile Image Section -->
-                <div class="col-md-3 border-end text-center">
+             <%--   <div class="col-md-3 border-end text-center">
                     <div class="profile-section p-3">
                         <img class="rounded-circle mt-3" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
-                        <h5 class="mt-3 text-dark">Edogaru</h5>
+                        <h5 class="mt-3 text-dark"></h5>
                         <div class="d-grid gap-2 mt-3">
                             <asp:Button ID="Button5" runat="server" Text="Edit Information" class="btn profile-button"/>
                             <asp:Button ID="resetPassword" runat="server" Text="Reset Password" class="btn profile-button" OnClick="resetPassword_Click"/>
@@ -276,17 +274,35 @@ small{
                             <asp:Button ID="showRooms" runat="server" Text="View Rooms" class="btn profile-button" OnClick="showRooms_Click"/>
                         </div>
                     </div>
-                </div>
+                </div>--%>
+
+
+                
+<div class="col-md-3 border-end text-center">
+    <div class="profile-section p-3">
+        <!-- Profile Image - Dynamically updated from Session -->
+        <asp:Image ID="imgProfileOtherPage" runat="server" CssClass="rounded-circle mt-3" Width="150px" />
+
+        <h5 class="mt-3 text-dark"></h5>
+        <div class="d-grid gap-2 mt-3">
+            <asp:Button ID="Button5" runat="server" Text="Edit Information" class="btn profile-button"/>
+            <asp:Button ID="resetPassword" runat="server" Text="Reset Password" class="btn profile-button" OnClick="resetPassword_Click"/>
+            <asp:Button ID="editimg" runat="server" Text="Update Image" class="btn profile-button" OnClick="editimg_Click"/>
+            <asp:Button ID="showBooks" runat="server" Text="View Books" class="btn profile-button" OnClick="showBooks_Click"/>
+            <asp:Button ID="showRooms" runat="server" Text="View Rooms" class="btn profile-button" OnClick="showRooms_Click"/>
+        </div>
+    </div>
+</div>
+
 
                 <!-- Profile Form Section -->
                 <div class="col-md-5">
                     <div class="p-3">
                         <h4 class="text-center">Profile</h4>
                         <div class="row mt-3">
-
                             <div class="col-md-12 mt-2">
                                 <label class="labels">Student NO.</label>
-                                <asp:Label ID="studentID" runat="server" class="form-control"></asp:Label>
+                                <asp:Button  ID="studentnum" runat="server" Text="1234566" Enabled="false"/>
                             </div>
 
                             <div class="col-md-12">
@@ -319,17 +335,15 @@ small{
     </form>
 
 
-
-
     
-  
-        <!-- Footer Start -->
+    
+    <!-- Footer Start -->
 <div class="foot container-fluid footer text-light pt-5 mt-5">
     <div class="container py-1">
         <div class="row g-5 justify-content-between">
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-3">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="Img/logo11.png" AlternateText="My Image" />
+                    <asp:Image ID="Image1" runat="server" ImageUrl="/Mona/Img/logo11.png" AlternateText="My Image" />
                 </h4>
                 <p>The Library Management System streamlines book borrowing, room reservations, and feedback management for students and administrators in a university library.</p>
             </div>
@@ -361,6 +375,6 @@ small{
         </div>
     </div>
 
+
 </body>
 </html>
-
