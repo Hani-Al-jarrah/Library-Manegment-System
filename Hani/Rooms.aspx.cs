@@ -21,15 +21,15 @@ namespace Group5.Hani
                 LoadRooms();
             }
         }
-        protected void btnApprove_Click(object sender, EventArgs e)
-{
-    Button btn = (Button)sender;
-    string roomId = btn.CommandArgument;
+//        protected void btnApprove_Click(object sender, EventArgs e)
+//{
+//    Button btn = (Button)sender;
+//    string roomId = btn.CommandArgument;
 
-    ApproveReservation(roomId);
+//    ApproveReservation(roomId);
 
-    Response.Write("<script>alert('Reservation approved successfully!');</script>");
-}
+//    Response.Write("<script>alert('Reservation approved successfully!');</script>");
+//}
 
         protected void ApproveReservation(string roomId)
         {
@@ -155,7 +155,7 @@ namespace Group5.Hani
 
             File.WriteAllLines(reservationsFilePath, reservations);
 
-            Response.Write("<script>alert('Reservation successful. Status: Pending');</script>");
+            Response.Write("<script>alert('Reservation successful. Status: Pending until the Admin Approve');</script>");
 
             LoadRooms(); // Refresh UI
         }
