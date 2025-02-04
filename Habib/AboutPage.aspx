@@ -321,7 +321,7 @@
 				<li><a href="/Hani/Rooms.aspx" class="smoothScroll">Rooms</a></li>
 				<li><a href="AboutPage.aspx" class="smoothScroll">About</a></li>
 				<li><a href="/Habib/Contact.aspx" class="smoothScroll">Contact</a></li>
-				<li><a href="/Suhaib/Loginpage.aspx" class="smoothScroll">Login</a></li>
+				<li><a href="/Suhaib/Loginpage.aspx" class="smoothScroll">Logout</a></li>
             <a href="/Sajeda/Profile.aspx" class="btn py-4  d-none d-lg-block"><i class="fa fa-user" style="font-size:30px;color:white"></i></a>
 			</ul>
 		</div>
