@@ -260,6 +260,10 @@ small{
 </div>
     </nav>
     <!-- Navbar End -->
+
+
+
+
     <form id="form1" runat="server">
         <div class="container">
             <h2 class="text-center">Update Profile Image</h2>
@@ -280,11 +284,11 @@ small{
 
             <!-- Upload Button -->
             <div class="text-center">
-                <asp:Button ID="editimg" runat="server" Text="Upload Image" CssClass="btn btn-upload" 
+                <asp:Button ID="editimg" runat="server" Text="Upload Image" CssClass="btn profile-button" 
                     OnClick="Editimg_Click" />
 
                 <!-- Cancel Button -->
-                <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-cancel"
+                <asp:Button ID="cancel" runat="server" Text="Cancel" CssClass="btn btn-secondary"
                     OnClick="cancel_Click" />
             </div>
 
