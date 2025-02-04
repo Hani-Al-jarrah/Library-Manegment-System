@@ -1939,9 +1939,9 @@
          });
      }
 
-     createPieChart("pieChart1", [10, 20, 30], ["red", "blue", "green"], ["A", "B", "C"]);
-     createPieChart("pieChart2", [15, 25, 35], ["yellow", "purple", "cyan"], ["X", "Y", "Z"]);
-     createPieChart("pieChart3", [5, 15, 40], ["orange", "pink", "brown"], ["M", "N", "O"]);
+     createPieChart("pieChart1", [10, 20, 30], ["red", "blue", "green"], ["Academic Books", "Novels Books", "Dissertations Books"]);
+     createPieChart("pieChart2", [15, 25, 35], ["yellow", "purple", "cyan"], ["Study Rooms", "Meeting Rooms", "Research Rooms"]);
+     createPieChart("pieChart3", [5, 15, 40], ["orange", "pink", "brown"], ["Staffs", "Researchers", "Students"]);
      // Function for Animating Numbers
      function animateCount(elementId, targetNumber, duration = 2000) {
          let start = 0;
