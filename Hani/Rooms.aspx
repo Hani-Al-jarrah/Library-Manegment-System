@@ -20,7 +20,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            background-color:#2C3E50;
             color: white;
         }
 

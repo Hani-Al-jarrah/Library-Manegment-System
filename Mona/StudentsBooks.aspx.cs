@@ -58,7 +58,7 @@ namespace Group5.Mona
                     string statusText = book.Status;
                     string borrowDateText = "";
                     string returnDateText = "";
-                    string statusColor = "black"; // Default text color
+                    string statusColor = "#87BF87"; // Default text color
 
                     if (isBorrowed)
                     {

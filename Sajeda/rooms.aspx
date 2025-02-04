@@ -264,7 +264,7 @@ small{
     <form id="form1" runat="server">
         <div>
         <div class="container">
-            <h2 class="text-center text-dark">Available Rooms</h2>
+            <h2 class="text-center text-dark">Rooms history</h2>
             
             <table class="table table-striped mt-4">
                 <thead>

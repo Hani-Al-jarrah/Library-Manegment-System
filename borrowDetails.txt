@@ -3,3 +3,4 @@
 102,Artificial Intelligence A Modern Approach,Stuart Russell,2025-02-05,2025-02-27,Request Rejected
 109,The Pragmatic Programmer,Andrew Hunt,2025-02-06,2025-02-14,Request Approved
 105,Computer Networks,Andrew S. Tanenbaum,2025-02-06,2025-02-08,Request Rejected
+108,The Drifter Chronicles,Greg Caye,2025-02-06,2025-02-19,Request Approved

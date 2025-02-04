@@ -274,6 +274,18 @@
     margin-bottom: 0;
     text-align: center;
 }
+		.bx-controls-direction a{
+			background-color:#F1C40F;
+		}
+		.medium-icon{
+			color:#F1C40F;
+		}
+		#contact .medium-icon{
+			color:#F1C40F;
+		}
+		.foot{
+			background-color:#2C3E50;
+		}
 	</style>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -496,22 +508,22 @@
   					<div class="panel panel-default">
    						<div class="panel-heading" role="tab" id="headingOne">
       						<h4 class="panel-title">
-        						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        						<a role="button" data-toggle="collapse"style="background-color:#F4F1DE; color:#2C3E50;" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           							Horizon began with a simple idea
         						</a>
       						</h4>
     					</div>
    						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      						<div class="panel-body">
-        						<p>We saw a need for a modern, intuitive library management system, and that's how Horizon</p>
+      						<div class="panel-body" style="background-color:#F4F1DE; color:#2C3E50;" >
+        						<p style="background-color:#F4F1DE; color:#2C3E50;">We saw a need for a modern, intuitive library management system, and that's how Horizon</p>
       						</div>
    						 </div>
  					 </div>
 
     				<div class="panel panel-default">
-   						<div class="panel-heading" role="tab" id="headingTwo">
+   						<div class="panel-heading" role="tab" id="headingTwo" style="background-color:#F4F1DE; color:#2C3E50;">
       						<h4 class="panel-title">
-        						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        						<a role="button" data-toggle="collapse" style="background-color:#F4F1DE; color:#2C3E50;" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           							High Quality Team
         						</a>
       						</h4>
@@ -523,10 +535,10 @@
    						 </div>
  					 </div>
 
- 					 <div class="panel panel-default">
+ 					 <div class="panel panel-default" style="background-color:#F4F1DE; color:#2C3E50;">
    						<div class="panel-heading" role="tab" id="headingThree">
       						<h4 class="panel-title">
-        						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+        						<a role="button" data-toggle="collapse" style="background-color:#F4F1DE; color:#2C3E50;" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
           							Software Development Expertise
         						</a>
       						</h4>
