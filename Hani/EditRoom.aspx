@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
     <style>
-        body{
-            background-color:#2C3E50;
-
-        }
+            body {
+        background-color: #2C3E50;
+        color: #F4F1DE;
+        /*            font-family: Garamond;*/
+    }
 
 
 
