@@ -296,6 +296,40 @@ namespace Group5.Hani
             pnlTimePicker.CssClass += " open"; // Show the panel by adding the "open" class
         }
 
+        //protected void rptRooms_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        //{
+        //    if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+        //    {
+        //        Button btnCancel = (Button)e.Item.FindControl("btnCancel");
+        //        Label lblStatus = (Label)e.Item.FindControl("lblStatus");
+        //        DropDownList ddlStartTime = (DropDownList)e.Item.FindControl("ddlStartTime");
+
+        //        Button reserveButton = (Button)e.Item.FindControl("btnReserve");
+        //        string roomId = reserveButton.CommandArgument;
+        //        string status = GetReservationStatus(roomId);
+
+        //        lblStatus.Text = $"Status: {status}";
+        //        lblStatus.CssClass = "status-label " + (status == "Available" ? "status-available" : status == "Pending" ? "status-pending" : "status-reserved");
+
+        //        btnCancel.Visible = (status == "Reserved" || status == "Cancel Pending");
+        //        btnCancel.Enabled = (status != "Cancel Pending");
+
+        //        // Fill dropdown with time slots
+        //        if (ddlStartTime != null && ddlStartTime.Items.Count == 0)
+        //        {
+        //            for (int hour = 0; hour < 24; hour++)
+        //            {
+        //                ddlStartTime.Items.Add(new ListItem($"{hour}:00 - {(hour + 2) % 24}:00", hour.ToString()));
+        //            }
+        //        }
+        //    }
+        //}
+
+
+
+
+
+
         protected void rptRooms_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
@@ -303,8 +337,8 @@ namespace Group5.Hani
                 Button btnCancel = (Button)e.Item.FindControl("btnCancel");
                 Label lblStatus = (Label)e.Item.FindControl("lblStatus");
                 DropDownList ddlStartTime = (DropDownList)e.Item.FindControl("ddlStartTime");
-
                 Button reserveButton = (Button)e.Item.FindControl("btnReserve");
+
                 string roomId = reserveButton.CommandArgument;
                 string status = GetReservationStatus(roomId);
 
@@ -313,6 +347,11 @@ namespace Group5.Hani
 
                 btnCancel.Visible = (status == "Reserved" || status == "Cancel Pending");
                 btnCancel.Enabled = (status != "Cancel Pending");
+
+                // Hide Reserve button if status is "Reserved"
+                reserveButton.Visible = !(status == "Reserved" || status == "Cancel Pending"  || status == "Pending");
+
+
 
                 // Fill dropdown with time slots
                 if (ddlStartTime != null && ddlStartTime.Items.Count == 0)
@@ -324,6 +363,10 @@ namespace Group5.Hani
                 }
             }
         }
+
+
+
+
         protected void btnApprove_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;

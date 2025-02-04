@@ -33,6 +33,15 @@ namespace Group5.Suhaib
         protected global::System.Web.UI.WebControls.TextBox name;
 
         /// <summary>
+        /// email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox email;
+
+        /// <summary>
         /// phone control.
         /// </summary>
         /// <remarks>
@@ -69,15 +78,6 @@ namespace Group5.Suhaib
         protected global::System.Web.UI.WebControls.TextBox uniID;
 
         /// <summary>
-        /// email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
-
-        /// <summary>
         /// Female control.
         /// </summary>
         /// <remarks>
@@ -112,6 +112,15 @@ namespace Group5.Suhaib
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
 
         /// <summary>
         /// submit control.
