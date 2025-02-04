@@ -88,12 +88,11 @@
         <!-- Navbar Start -->
       <nav class=" head">
     <img src="img/logo11.png" alt="Logo" class="logo" />
-    <asp:LinkButton ID="btnBackToDashboard" runat="server" CssClass="btn btn-primary btn-dashboard" OnClick="btnBackToDashboard_Click">
-        <i class="bi bi-arrow-left-circle"></i> Back to Dashboard
-    </asp:LinkButton>
+    <asp:HyperLink ID="btnBackToDashboard" runat="server" CssClass="btn btn-primary btn-dashboard" NavigateUrl="/Habib/Habib1.aspx">
+    <i class="bi bi-arrow-left-circle"></i> Back to Dashboard
+</asp:HyperLink>
+
 </nav>
-
-
         <!-- Navbar End -->
         <div class="container">
             <h2 class="text-center">Book Management</h2>

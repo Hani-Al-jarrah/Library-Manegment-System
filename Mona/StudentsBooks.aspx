@@ -19,17 +19,7 @@
             margin-top: 50px;
         }
 
-        .btn-custom {
-            background-color: #F1C40F;
-            color: #2C3E50;
-            border: none;
-            font-weight: bold;
-        }
-
-            .btn-custom:hover {
-                background-color: #2C3E50;
-                color: #F1C40F;
-            }
+        
 
         .card {
             background-color: #F4F1DE;
@@ -230,6 +220,19 @@
         .foot {
             box-shadow: 0.4vw 0.4vw 0.9vw black;
         }
+
+        .btn-custom {
+    background-color: #F1C40F;
+    color: #2C3E50;
+    border: none;
+    font-weight: bold;
+}
+
+    .btn-custom:hover {
+/*        background-color: #DEC55F;*/
+        color: black;
+        transform:scale(1.05);
+    }
     </style>
 </head>
 <body>
@@ -287,7 +290,7 @@
                         <asp:TextBox ID="txtReturnDate" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
                     </div>
                     <div class="modal-footer">
-                        <asp:Button ID="btnConfirmBorrow" runat="server" CssClass="btn btn-primary" Text="Confirm Borrow" OnClick="btnConfirmBorrow_Click" />
+                        <asp:Button ID="btnConfirmBorrow" runat="server" CssClass="btn btn-primary btn-custom" Text="Confirm Borrow" OnClick="btnConfirmBorrow_Click" />
                     </div>
                 </div>
             </div>
