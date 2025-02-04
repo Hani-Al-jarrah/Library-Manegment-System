@@ -327,7 +327,7 @@ small{
                         </div>
 
                         <!-- Message -->
-                        <asp:Label ID="Editmessage" runat="server" Visible="false" CssClass="text-danger mt-3"></asp:Label>
+                        <asp:Label ID="validationMessage" runat="server" Visible="false" CssClass="text-danger mt-3"></asp:Label>
                     </div>
                 </div>
             </div>

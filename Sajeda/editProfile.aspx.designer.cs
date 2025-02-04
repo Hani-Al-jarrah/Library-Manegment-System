@@ -150,13 +150,13 @@ namespace Group5
         protected global::System.Web.UI.WebControls.Button cancel;
 
         /// <summary>
-        /// Editmessage control.
+        /// validationMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Editmessage;
+        protected global::System.Web.UI.WebControls.Label validationMessage;
 
         /// <summary>
         /// Image1 control.
