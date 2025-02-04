@@ -1602,9 +1602,76 @@
             transform: translateY(0);
         }
     }
-
-    p:ac
+            .chart-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+.chart {
+    width: 30% !important;
+    height: 20% !important;
+}
     /*style cards*/
+            .stats-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+ padding: 76px 10px;        }
+
+        /* Statistic Box */
+        .stat-box {
+            flex: 1;
+            min-width: 220px;
+            padding: 30px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background-size: cover;
+            background-blend-mode: overlay;
+        }
+
+        /* Unique Backgrounds */
+        .customers { background: linear-gradient(45deg, #007bff, #00c6ff); }
+        .books { background: linear-gradient(45deg, #dc3545, #ff6a00); }
+        .rooms { background: linear-gradient(45deg, #6f42c1, #9d50bb); }
+        .revenue { background: url('https://source.unsplash.com/400x300/?money') center/cover, rgba(40, 167, 69, 0.8); }
+
+        /* Icon Styling */
+        .stat-box i {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        /* Charts Container */
+        .chart-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .chart {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .stats-container, .chart-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
 </style>
 <body>
     <form id="form1" runat="server">
@@ -1661,89 +1728,32 @@
 
                     <asp:MultiView ID="multiView" runat="server" ActiveViewIndex="0">
                         <asp:View ID="viewDashboard" runat="server">
-                            <div class="order">
-                                <div class="head">
-                                    <h3>Recent Orders</h3>
-                                    <i class="fas fa-search"></i>
-                                    <i class="fas fa-filter"></i>
+                            
+                                <!-- Statistics Boxes -->
+    <div class="stats-container">
+        <div class="stat-box customers">
+            <i class="fas fa-users"></i>
+            Customers: <span id="customersCount">0</span>
+        </div>
+        <div class="stat-box books">
+            <i class="fas fa-book"></i>
+            Books: <span id="booksCount">0</span>
+        </div>
+        <div class="stat-box rooms">
+            <i class="fas fa-door-open"></i>
+            Rooms Available: <span id="roomsAvailableCount">0</span>
+        </div>
+        <div class="stat-box revenue">
+            <i class="fas fa-dollar-sign"></i>
+            Revenue: $<span id="revenueCount">0</span>
+        </div>
+    </div>
+                                <div class="chart-container">
+                                    <canvas id="pieChart1" class="chart"></canvas>
+                                    <canvas id="pieChart2" class="chart"></canvas>
+                                    <canvas id="pieChart3" class="chart"></canvas>
                                 </div>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>User</th>
-                                            <th>Order Date</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
-                                            <!-- Added Action column -->
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <p>User Name</p>
-                                            </td>
-                                            <td>07-05-2023</td>
-                                            <td><span class="status pending">Pending</span></td>
-                                            <td>
-                                                <button class="approved-btn">Approved</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p>User Name</p>
-                                            </td>
-                                            <td>07-05-2023</td>
-                                            <td><span class="status pending">Pending</span></td>
-                                            <td>
-                                                <button class="approved-btn">Approved</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p>User Name</p>
-                                            </td>
-                                            <td>07-05-2023</td>
-                                            <td><span class="status pending">Pending</span></td>
-                                            <td>
-                                                <button class="approved-btn">Approved</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p>User Name</p>
-                                            </td>
-                                            <td>07-05-2023</td>
-                                            <td><span class="status pending">Pending</span></td>
-                                            <td>
-                                                <button class="approved-btn">Approved</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p>User Name</p>
-                                            </td>
-                                            <td>07-05-2023</td>
-                                            <td><span class="status pending">Pending</span></td>
-                                            <td>
-                                                <button class="approved-btn">Approved</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <p>User Name 2</p>
-                                            </td>
-                                            <td>08-05-2023</td>
-                                            <td><span class="status complete">Complete</span></td>
-                                            <td>
-                                                <button class="approved-btn">Approved</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- New Chart Section for Weekly Sales -->
-                            <div class="chart-container">
-                                <div class="head">
-                                    <h3>Weekly Sales</h3>
-                                </div>
-                                <div class="chart-wrapper">
-                                    <canvas id="weeklySalesChart"></canvas>
-                                </div>
-                            </div>
+
                         </asp:View>
 
                         <!-- Books View -->
@@ -1916,6 +1926,64 @@
              }
          });
      });
+     function createPieChart(canvasId, data, backgroundColors, labels) {
+         new Chart(document.getElementById(canvasId), {
+             type: 'pie',
+             data: {
+                 labels: labels,
+                 datasets: [{
+                     data: data,
+                     backgroundColor: backgroundColors
+                 }]
+             }
+         });
+     }
+
+     createPieChart("pieChart1", [10, 20, 30], ["red", "blue", "green"], ["A", "B", "C"]);
+     createPieChart("pieChart2", [15, 25, 35], ["yellow", "purple", "cyan"], ["X", "Y", "Z"]);
+     createPieChart("pieChart3", [5, 15, 40], ["orange", "pink", "brown"], ["M", "N", "O"]);
+     // Function for Animating Numbers
+     function animateCount(elementId, targetNumber, duration = 2000) {
+         let start = 0;
+         const increment = targetNumber / (duration / 16); // Update every 16ms (~60fps)
+         const element = document.getElementById(elementId);
+
+         function updateCount() {
+             start += increment;
+             if (start < targetNumber) {
+                 element.innerText = Math.floor(start);
+                 requestAnimationFrame(updateCount);
+             } else {
+                 element.innerText = targetNumber; // Ensure it ends exactly on target
+             }
+         }
+         updateCount();
+     }
+
+     // Start Animations
+     animateCount("customersCount", 150);
+     animateCount("booksCount", 500);
+     animateCount("roomsAvailableCount", 10);
+     animateCount("revenueCount", 25000); // Revenue in $
+
+     // Function to Create Pie Charts
+     function createPieChart(canvasId, data, backgroundColors, labels) {
+         new Chart(document.getElementById(canvasId), {
+             type: 'pie',
+             data: {
+                 labels: labels,
+                 datasets: [{
+                     data: data,
+                     backgroundColor: backgroundColors
+                 }]
+             }
+         });
+     }
+
+     // Pie Charts Data
+     createPieChart("pieChart1", [10, 5], ["green", "red"], ["Rooms Available", "Rooms Reserved"]);
+     createPieChart("pieChart2", [250, 250], ["yellow", "purple"], ["Issued Books", "Available Books"]);
+     createPieChart("pieChart3", [90, 60], ["blue", "gray"], ["New Customers", "Returning Customers"]);
  </script>
 </body>
 </html>
