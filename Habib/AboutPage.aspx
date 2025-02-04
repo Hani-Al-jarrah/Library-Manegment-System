@@ -6,7 +6,7 @@
 <head runat="server">
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<title>Adventure Bootstrap Template</title>
+	<title>About Page</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,9 +50,15 @@
 	<!-- Google web font
    ================================================== -->
 	<link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
+	    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+
+    </script>
 	<style>
 		body {
 			background-color: #2C3E50;
+			    font-family: "Heebo", sans-serif;
+
 		}
 
 		#work .col-md-4 {
@@ -62,7 +68,20 @@
 			padding: 42px;
 			transition: all 0.4s linear;
 		}
-
+		.form-control{
+			color:white;
+		}
+		#btnSubmit{
+			padding: 10px 28%;
+			background-color: transparent;
+			outline: none;
+			border: 3px solid;
+			transition: all 0.4s ease-in-out;
+		}
+		#btnSubmit:hover{
+			border:3px solid #F1C40F;
+			color:#F1C40F;
+		}
 		#work:hover .col-md-4:hover {
 			border: 4px solid #F1C40F;
 		}
@@ -194,14 +213,14 @@
 				border-right: 4px solid #F1C40F;
 			}
 
-		#contact input[type="submit"] {
-			background: #2C3E50;
-			border: 4px solid transparent;
-			color: #ffffff;
-			letter-spacing: 1px;
-			margin-top: 18px;
-			height: 58px;
-		}
+#contact input[type="submit"] {
+    background: #000000 !important;
+    border: 4px solid transparent !important;
+    color: #ffffff !important;
+    letter-spacing: 1px;
+    margin-top: 18px;
+    height: 58px;
+}
 
 			#contact input[type="submit"]:hover {
 				border: 4px solid #F1C40F;
@@ -232,7 +251,9 @@
 			color: #F1C40F;
 			letter-spacing: 1px;
 		}
-
+		.navbar {
+			background-color:rgba(44, 62, 80, 0.9) !important;
+		}
 		#contact .contact-detail {
 			background: transparent;
 			border: 4px solid #F1C40F;
@@ -283,18 +304,15 @@
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-            
-				<!-- <li><a href="#home" class="smoothScroll">HOME</a></li> -->
-                
 				<li><a href="/Habib/Home.aspx" class="smoothScroll">Home</a></li>
 				<li><a href="/Mona/StudentsBooks.aspx" class="smoothScroll">Books</a></li>
 				<li><a href="/Hani/Rooms.aspx" class="smoothScroll">Rooms</a></li>
 				<li><a href="AboutPage.aspx" class="smoothScroll">About</a></li>
 				<li><a href="/Habib/Contact.aspx" class="smoothScroll">Contact</a></li>
 				<li><a href="/Suhaib/Loginpage.aspx" class="smoothScroll">Login</a></li>
+            <a href="/Sajeda/Profile.aspx" class="btn py-4  d-none d-lg-block"><i class="fa fa-user" style="font-size:30px;color:white"></i></a>
 			</ul>
 		</div>
-
 	</div>
 </section>
 
@@ -550,22 +568,22 @@
 
 			<!-- Contact form section
 			================================================== -->
-			<div class="col-md-offset-1 col-md-10 col-sm-12">
+			<div class="col-md-offset-1 col-md-10 col-sm-12" style="color:white;">
 				<form action="#" method="post" class="wow fadeInUp" data-wow-delay="0.6s">
 					<div class="col-md-4 col-sm-6">
-						<input type="text" class="form-control" placeholder="Name" name="name">
+						<input type="text" class="form-control" placeholder="Name" name="name" id="name">
 					</div>
 					<div class="col-md-4 col-sm-6">
-						<input type="email" class="form-control" placeholder="Email" name="email">
+						<input type="email" class="form-control" placeholder="Email" name="email" id="email">
 					</div>
 					<div class="col-md-4 col-sm-12">
-						<input type="text" class="form-control" placeholder="Subject" name="subject">
+						<input type="text" class="form-control" placeholder="Subject" name="subject" id="subject">
 					</div>
 					<div class="col-md-12 col-sm-12">
-						<textarea class="form-control" placeholder="Message" rows="7" name"message"></textarea>
+						<textarea class="form-control" placeholder="Message" rows="7" name"message" id="message"></textarea>
 					</div>
 					<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
-						<input type="submit" class="form-control" value="SHOOT MESSAGE">
+					       <button type="button" id="btnSubmit" onclick="sendEmail()">Send</button>
 					</div>
 				</form>
 			</div>
@@ -575,11 +593,11 @@
 			<div class="contact-detail col-md-12 col-sm-12">
 				<div class="col-md-6 col-sm-6">
 					<h3><i class="icon-envelope medium-icon wow bounceIn" data-wow-delay="0.6s"></i> EMAIL</h3>
-					<p>contact@company.com</p>
+					<p>Habeeb.alafeef6@gmail.com</p>
 				</div>
 				<div class="col-md-6 col-sm-6">
 					<h3><i class="icon-phone medium-icon wow bounceIn" data-wow-delay="0.6s"></i> PHONES</h3>
-					<p>030-030-0330 | 070-070-7777</p>
+					<p>077885555558</p>
 				</div>
 			</div>
 
@@ -639,5 +657,44 @@
 <script src="js/jquery.parallax.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("ak8XwcvPwPsxFSSIU");
+    })();
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+        navUl.classList.toggle('active');
+    });
+    (function () {
+        emailjs.init("ak8XwcvPwPsxFSSIU");
+    })();
+    function sendEmail() {
+        const parms = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+        };
+        console.log("Form Data:", parms);
+        const serviceid = "service_kwvtdxr";
+        const templateid = "template_c3k59vb";
+        emailjs.send(serviceid, templateid, parms)
+            .then(function (response) {
+                console.log("EmailJS Response:", response);
+                if (response.status === 200) {
+                    alert("Email sent successfully!");
+                } else {
+                    alert("Failed to send the email. Please try again.");
+                }
+            }, function (error) {
+                console.error("EmailJS error:", error);
+                alert("Failed to send the email. Please try again.");
+            });
+    }
+</script>
 </body>
 </html>

@@ -43,14 +43,19 @@ namespace Group5
                         File.WriteAllText(fileLoged, studentnum.Text);
                         content[i] = $"{user[0]},{user[1]},{user[2]},{user[3]},{user[4]},{user[5]},{user[6]},{user[7]}";
 
-                        Response.Write("<script>alert('information changed!');</script>");
+                        //Response.Write("<script>alert('information changed!');</script>");
 
                         break;
                     }
                 }
                 File.WriteAllLines(filePath, content);
+
+                validationMessage.Text = "Saved successfully!";
+                validationMessage.ForeColor = System.Drawing.Color.GreenYellow;
+                validationMessage.Visible = true;
+                return;
             }
-            Response.Redirect("Profile.aspx");
+            //Response.Redirect("Profile.aspx");
         }
 
 
