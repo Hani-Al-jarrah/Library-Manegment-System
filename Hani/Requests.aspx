@@ -6,7 +6,13 @@
 <head runat="server">
     <title>Admin - Manage Requets</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
+      <style>
+         body {
+      background-color: #2C3E50;
+      color: #F4F1DE;
+      /*            font-family: Garamond;*/
+  }
+  </style>
 </head>
 <body>    <form id="form1" runat="server">
         <div class="container mt-4">

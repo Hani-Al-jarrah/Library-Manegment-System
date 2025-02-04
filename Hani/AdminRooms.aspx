@@ -55,10 +55,11 @@
     <title>Admin - Manage Rooms</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
-                .bg-dark {
-    --bs-bg-opacity: 1;
-    background-color: #2C3E50 !important;
-}
+           body {
+        background-color: #2C3E50;
+        color: #F4F1DE;
+        /*            font-family: Garamond;*/
+    }
     </style>
     <script type="text/javascript">
         function confirmDelete(roomId) {

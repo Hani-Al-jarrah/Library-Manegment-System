@@ -388,12 +388,12 @@ namespace Group5.Mona
             }
         }
 
-        protected void btnBackToDashboard_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Habib1.aspx");
-            lblError.Visible = false;
+        //protected void btnBackToDashboard_Click(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("Habib1.aspx");
+        //    lblError.Visible = false;
 
-        }
+        //}
     }
 
     public class BorrowDetails
