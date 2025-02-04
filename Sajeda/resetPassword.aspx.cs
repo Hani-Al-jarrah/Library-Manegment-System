@@ -161,9 +161,12 @@ namespace Group5
             }
         }
 
+      
 
-
-
+        protected void setNewPassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("resetPassword.aspx");
+        }
     }
 
 

@@ -287,7 +287,8 @@ small{
         <h5 class="mt-3 text-dark"></h5>
         <div class="d-grid gap-2 mt-3">
             <asp:Button ID="Button5" runat="server" Text="Edit Information" class="btn profile-button"/>
-            <asp:Button ID="resetPassword" runat="server" Text="Reset Password" class="btn profile-button" OnClick="resetPassword_Click1"/>
+            <%--<asp:Button ID="resetPassword" runat="server" Text="Reset Password" class="btn profile-button" onClick="resetPassword_Click"/>--%>
+            <asp:Button ID="setNewPassword" runat="server" Text="Reset Password" CssClass="btn profile-button" OnClick="setNewPassword_Click"/>
             <asp:Button ID="editimg" runat="server" Text="Update Image" class="btn profile-button" OnClick="editimg_Click"/>
             <asp:Button ID="showBooks" runat="server" Text="View Books" class="btn profile-button" OnClick="showBooks_Click"/>
             <asp:Button ID="showRooms" runat="server" Text="View Rooms" class="btn profile-button" OnClick="showRooms_Click"/>
