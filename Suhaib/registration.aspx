@@ -89,6 +89,8 @@
                                                         <label class="form-label" for="form3Example1m">Full name</label>
                                                     </div>
 
+
+
                                                     <div data-mdb-input-init class="form-outline">
 
                                                         <asp:TextBox ID="phone" runat="server" class="form-control form-control-lg"></asp:TextBox>
@@ -98,7 +100,7 @@
 
                                             </div>
 
-                                            <div class="row">
+                                       <%--     <div class="row">--%>
                                                 <div class="col-md-6 mb-4">
                                                     <div data-mdb-input-init class="form-outline">
 
@@ -107,7 +109,7 @@
                                                     </div>
                                                 </div>
 
-
+                                             
 
                                                 <div class="col-md-6 mb-4">
                                                     <div data-mdb-input-init class="form-outline">
@@ -115,7 +117,7 @@
                                                         <asp:TextBox ID="conpassword" runat="server" class="form-control form-control-lg" TextMode="Password"></asp:TextBox>
                                                         <label class="form-label" for="form3Example1m1">Confirm Password</label>
                                                     </div>
-                                                </div>
+                                              <%--  </div>--%>
 
 
 

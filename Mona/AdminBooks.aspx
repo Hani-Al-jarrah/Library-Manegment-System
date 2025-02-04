@@ -41,7 +41,7 @@
         }
 
 
-     
+
         /* Footer */
         .footer {
             margin-left: 30vw;
@@ -57,43 +57,41 @@
             text-decoration: none;
         }
 
-.navbar {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-}
+        .navbar {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
 
-.head {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;            
-    padding: 0 0vw;                
-    margin: 0;                    
-}
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 0vw;
+            margin: 0;
+        }
 
-.logo {
-    width: 12vw;                  
-    margin: 0;                    
-}
+        .logo {
+            width: 12vw;
+            margin: 0;
+        }
 
-.btn-dashboard {
-    margin-right: 1vw;
-}
-
+        .btn-dashboard {
+            margin-right: 1vw;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server" enctype="multipart/form-data">
         <!-- Navbar Start -->
-      <nav class=" head">
-    <img src="img/logo11.png" alt="Logo" class="logo" />
-    <asp:LinkButton ID="btnBackToDashboard" runat="server" CssClass="btn btn-primary btn-dashboard" OnClick="btnBackToDashboard_Click">
-        <i class="bi bi-arrow-left-circle"></i> Back to Dashboard
-    </asp:LinkButton>
-</nav>
+        <nav class=" head">
+            <img src="img/logo11.png" alt="Logo" class="logo" />
+            <asp:HyperLink ID="btnBackToDashboard" runat="server" CssClass="btn btn-primary btn-dashboard" NavigateUrl="/Habib/Habib1.aspx">
+    <i class="bi bi-arrow-left-circle"></i> Back to Dashboard
+            </asp:HyperLink>
 
-
+        </nav>
         <!-- Navbar End -->
         <div class="container">
             <h2 class="text-center">Book Management</h2>

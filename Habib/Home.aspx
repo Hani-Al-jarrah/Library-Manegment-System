@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
        <meta charset="utf-8">
-    <title>eLEARNING - eLearning HTML Template</title>
+    <title>Horizon Library</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -32,7 +32,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <style>
 
         :root {
@@ -76,6 +75,7 @@ body{
     bottom: 45px;
     z-index: 99;
 }
+
 
 
 /*** Spinner ***/
@@ -237,7 +237,7 @@ small{
 
 .header-carousel .owl-nav {
     position: absolute;
-    top: 50%;
+    top: 83%;
     right: 8%;
     transform: translateY(-50%);
     display: flex;
@@ -264,6 +264,37 @@ small{
     background:#F1C40F !important;
     border-color: white !important;
 }
+
+/*owl Testmonial*/
+        .owl-carousel .owl-nav button.owl-prev,
+        .owl-carousel .owl-nav button.owl-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+/*            background-color: rgba(0, 0, 0, 0.5) !important;*/
+            color: white !important;
+            border: none;
+            padding: 10px;
+            font-size: 40px;
+            line-height: 1;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev:hover,
+        .owl-carousel .owl-nav button.owl-next:hover {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev {
+            left: -50px;
+        }
+
+        .owl-carousel .owl-nav button.owl-next {
+            right: -50px;
+        }
+
+/*owl Testmonial*/
 
 .page-header {
     background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-1.jpg);
@@ -535,7 +566,7 @@ small{
                 <a href="/Habib/Contact.aspx" class="nav-item nav-link">Contact Us</a>
                 <a href="/Suhaib/Loginpage.aspx" class="nav-item nav-link">LogOut</a>
             </div>
-            <a href="/Sajeda/Profile.aspx" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user"></i></a>
+            <a href="/Sajeda/Profile.aspx" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-user" style="font-size:25px"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -552,8 +583,7 @@ small{
                                     <h5 class="text-uppercase mb-3 animated slideInDown" style="color: #F1C40F;">Your Digital Library Hub</h5>
                                     <h1 class="display-3 text-white animated slideInDown">Smart University Library Management System</h1>
                                     <p class="fs-5 text-white mb-4 pb-2">Explore, Borrow, and Learn – All in One Place!</p>
-                                    <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" style="border: solid 1px white;">Read More</a>
-                                    <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                    <a href="AboutPage.aspx" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" style="border: solid 1px white;">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -568,8 +598,7 @@ small{
                                     <h5 class="text-uppercase mb-3 animated slideInDown" style="color: #F1C40F;">Innovative Library Solutions for Modern Learning</h5>
                                     <h1 class="display-3 text-white animated slideInDown">Empowering Knowledge, Simplifying Access</h1>
                                     <p class="fs-5 text-white mb-4 pb-2">Your Gateway to a Smarter Library!</p>
-                                    <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                    <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                    <a href="AboutPage.aspx" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" style="border: solid 1px white;">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -579,6 +608,7 @@ small{
         </div>
     <!-- Carousel End -->
 
+      <!-- <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>--> 
 
     <!-- Service Start -->
     <div class="container-xxl py-5">
@@ -597,8 +627,8 @@ small{
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
                             <i class="fa fa-3x fa-globe text-primary mb-4" style="color:#2C3E50 !important;"></i>
-                            <h5 class="mb-3">Student & Faculty Access</h5>
-                            <p>A seamless experience tailored for university students and professors.</p>
+                            <h5 class="mb-3">Student & Faculty Access search</h5>
+                            <p>A seamless experience tailored for university students.</p>
                         </div>
                     </div>
                 </div>
@@ -660,7 +690,7 @@ small{
                             <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>International Certificate</p>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="" style="border: solid 1px white;">Read More</a>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="AboutPage.aspx" style="border: solid 1px white;">Read More</a>
                 </div>
             </div>
         </div>
@@ -813,7 +843,7 @@ small{
                     <h5 class="mb-0">Tariq</h5>
                     <p>Profession</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0" id="ss">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="mb-0" id="ss">This library management system has simplified our operations and made it easier for both staff and patrons to find what they need.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
@@ -821,7 +851,7 @@ small{
                     <h5 class="mb-0">Nabil</h5>
                     <p>Profession</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0" id="ss">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="mb-0" id="ss">This system has improved our patron experience immensely, making it easier for them to access resources and manage their accounts.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
@@ -829,7 +859,7 @@ small{
                     <h5 class="mb-0">Rami</h5>
                     <p>Profession</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                        <p class="mb-0" id="ss">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="mb-0" id="ss">The comprehensive features of this library management system have streamlined everything from cataloging to circulation.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
@@ -837,7 +867,7 @@ small{
                     <h5 class="mb-0">Zayd</h5>
                     <p>Profession</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0" id="ss">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                            <p class="mb-0" id="ss">We're incredibly satisfied with this library management system – it's been a game-changer for our library.</p>
                     </div>
                 </div>
             </div>
@@ -850,9 +880,9 @@ small{
 <div class="foot container-fluid footer text-light pt-5 mt-5">
     <div class="container py-1">
         <div class="row g-5 justify-content-between" style="padding-bottom: 25px;">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" style="margin-top:39px">
                 <h4 class="mb-3">
-                    <asp:Image ID="Image1" runat="server" ImageUrl="Images/Screenshot_2025-01-31_020111-removebg-preview.png" AlternateText="My Image" />
+			        <asp:Image ID="Image11" runat="server" ImageUrl="~/Mona/img/logo11.png" height="50px" AlternateText="My Image" />
                 </h4>
                 <p>The Library Management System streamlines book borrowing, room reservations, and feedback management for students and administrators in a university library.</p>
             </div>
@@ -904,6 +934,33 @@ small{
                  autoplaySpeed: 1000, // 1 second transition speed
                  nav: true, // Enable navigation arrows
                  dots: false // Enable dots navigation
+             });
+         });
+         $(document).ready(function () {
+             // Header Carousel
+             $(".header-carousel").owlCarousel({
+                 items: 1,
+                 loop: true,
+                 autoplay: true,
+                 autoplayTimeout: 5000,
+                 autoplaySpeed: 1000,
+                 nav: true,
+                 dots: false
+             });
+
+             // Testimonial Carousel
+             $(".testimonial-carousel").owlCarousel({
+                 items: 1,
+                 loop: true,
+                 autoplay: true,
+                 autoplayTimeout: 5000,
+                 autoplaySpeed: 1000,
+                 nav: true,
+                 dots: false,
+                 navText: [
+                     '<i class="fa fa-chevron-left"></i>',
+                     '<i class="fa fa-chevron-right"></i>'
+                 ]
              });
          });
      </script>
