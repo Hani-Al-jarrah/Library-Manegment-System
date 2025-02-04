@@ -74,7 +74,10 @@ namespace Group5.Mona
             File.AppendAllLines(filePath, new[] { newBook });
 
             LoadBooks();
-            lblError.Visible = false;
+            lblError.Text = "Book Added Successfully!";
+            lblError.Visible = true;
+            lblError.CssClass = "text-Success";
+            //lblError.Visible = false;
         }
 
         private bool IsBookIdExists(string bookId)
@@ -175,6 +178,8 @@ namespace Group5.Mona
                 //    imgPreview.Visible = false; // Hide if no image is available
                 //}
             }
+            lblError.Visible = false;
+
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
@@ -202,6 +207,8 @@ namespace Group5.Mona
                 File.WriteAllLines(filePath, lines);
 
                 LoadBooks(); // Refresh the book list
+                lblError.Visible = false;
+
             }
         }
 
@@ -277,8 +284,10 @@ namespace Group5.Mona
 
             File.WriteAllLines(filePath, lines);
             LoadBooks();
-
-            lblError.Visible = false;
+            lblError.Text = "Book Updated Successfully!";
+            lblError.Visible = true;
+            lblError.CssClass = "text-Success";
+            //lblError.Visible = false;
             btnUpdate.Visible = false;
             btnAdd.Visible = true;
         }
@@ -286,11 +295,15 @@ namespace Group5.Mona
         protected void btnApprove_Click(object sender, EventArgs e)
         {
             UpdateRequestStatus(((Button)sender).CommandArgument, "Request Approved");
+            lblError.Visible = false;
+
         }
 
         protected void btnReject_Click(object sender, EventArgs e)
         {
             UpdateRequestStatus(((Button)sender).CommandArgument, "Request Rejected");
+            lblError.Visible = false;
+
         }
 
         private void UpdateRequestStatus(string bookId, string newStatus)
@@ -317,11 +330,15 @@ namespace Group5.Mona
         protected void btnDownloadBooksPDF_Click(object sender, EventArgs e)
         {
             ExportGridToPDF(gvBooks, "BookList.pdf");
+            lblError.Visible = false;
+
         }
 
         protected void btnDownloadRequestsPDF_Click(object sender, EventArgs e)
         {
             ExportGridToPDF(gvRequestedBooks, "BorrowRequests.pdf");
+            lblError.Visible = false;
+
         }
 
         private void ExportGridToPDF(GridView gridView, string fileName)
@@ -374,6 +391,8 @@ namespace Group5.Mona
         protected void btnBackToDashboard_Click(object sender, EventArgs e)
         {
             Response.Redirect("Habib1.aspx");
+            lblError.Visible = false;
+
         }
     }
 
